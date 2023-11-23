@@ -6,5 +6,8 @@ from flask_wtf.file import FileField, FileAllowed
 class UserLoginForm(FlaskForm):
     pass
 
-class UserUpdateForm(FlaskForm):
+class AddUserForm(FlaskForm):
+    pass
+
+class UpdateUserForm(FlaskForm):
     pass

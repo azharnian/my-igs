@@ -1,0 +1,132 @@
+2023-11-23 18:52:40,154 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-23 18:52:40,154 - INFO - [33mPress CTRL+C to quit[0m
+2023-11-23 18:52:40,158 - INFO -  * Restarting with stat
+2023-11-23 18:52:40,702 - WARNING -  * Debugger is active!
+2023-11-23 18:52:40,728 - INFO -  * Debugger PIN: 215-490-203
+2023-11-23 18:52:49,722 - INFO - 127.0.0.1 - - [23/Nov/2023 18:52:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-11-23 18:52:50,427 - INFO - 127.0.0.1 - - [23/Nov/2023 18:52:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-11-23 18:52:50,515 - INFO - 127.0.0.1 - - [23/Nov/2023 18:52:50] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2023-11-23 18:52:50,518 - INFO - 127.0.0.1 - - [23/Nov/2023 18:52:50] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2023-11-23 18:52:50,537 - INFO - 127.0.0.1 - - [23/Nov/2023 18:52:50] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2023-11-23 18:52:50,666 - INFO - 127.0.0.1 - - [23/Nov/2023 18:52:50] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 18:54:11,397 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/project/utils.py', reloading
+2023-11-23 18:54:11,565 - INFO -  * Restarting with stat
+2023-11-23 18:54:12,914 - WARNING -  * Debugger is active!
+2023-11-23 18:54:12,932 - INFO -  * Debugger PIN: 215-490-203
+2023-11-23 18:54:15,228 - INFO - index executed successfully by Guest
+2023-11-23 18:54:15,229 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:15] "GET / HTTP/1.1" 200 -
+2023-11-23 18:54:15,302 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-11-23 18:54:36,429 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2023-11-23 18:54:36,463 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:36] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 18:54:36,507 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:36] "GET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2023-11-23 18:54:36,509 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:36] "GET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2023-11-23 18:54:36,538 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:36] "GET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2023-11-23 18:54:36,601 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:36] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 18:54:59,476 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2023-11-23 18:54:59,490 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:59] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 18:54:59,534 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:59] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-11-23 18:54:59,535 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:59] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-11-23 18:54:59,552 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:59] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 18:54:59,603 - INFO - 127.0.0.1 - - [23/Nov/2023 18:54:59] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 18:56:38,885 - INFO - index executed successfully by Guest
+2023-11-23 18:56:38,887 - INFO - 127.0.0.1 - - [23/Nov/2023 18:56:38] "GET / HTTP/1.1" 200 -
+2023-11-23 18:57:00,277 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-23 18:57:00,277 - INFO - [33mPress CTRL+C to quit[0m
+2023-11-23 18:57:00,279 - INFO -  * Restarting with stat
+2023-11-23 18:57:00,825 - WARNING -  * Debugger is active!
+2023-11-23 18:57:00,837 - INFO -  * Debugger PIN: 215-490-203
+2023-11-23 18:57:05,810 - INFO - index executed successfully by Guest
+2023-11-23 18:57:05,811 - INFO - 127.0.0.1 - - [23/Nov/2023 18:57:05] "GET / HTTP/1.1" 200 -
+2023-11-23 18:57:08,772 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2023-11-23 18:57:08,803 - INFO - 127.0.0.1 - - [23/Nov/2023 18:57:08] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 18:57:08,851 - INFO - 127.0.0.1 - - [23/Nov/2023 18:57:08] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-11-23 18:57:08,852 - INFO - 127.0.0.1 - - [23/Nov/2023 18:57:08] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-11-23 18:57:08,871 - INFO - 127.0.0.1 - - [23/Nov/2023 18:57:08] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 18:59:31,017 - INFO - index executed successfully by Guest
+2023-11-23 18:59:31,018 - INFO - 127.0.0.1 - - [23/Nov/2023 18:59:31] "GET / HTTP/1.1" 200 -
+2023-11-23 18:59:36,070 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2023-11-23 18:59:36,083 - INFO - 127.0.0.1 - - [23/Nov/2023 18:59:36] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 18:59:36,130 - INFO - 127.0.0.1 - - [23/Nov/2023 18:59:36] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-11-23 18:59:36,132 - INFO - 127.0.0.1 - - [23/Nov/2023 18:59:36] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-11-23 18:59:36,143 - INFO - 127.0.0.1 - - [23/Nov/2023 18:59:36] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 18:59:43,272 - INFO - 127.0.0.1 - - [23/Nov/2023 18:59:43] "[33mGET /profile HTTP/1.1[0m" 404 -
+2023-11-23 19:01:50,104 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-23 19:01:50,105 - INFO - [33mPress CTRL+C to quit[0m
+2023-11-23 19:01:50,107 - INFO -  * Restarting with stat
+2023-11-23 19:01:50,726 - WARNING -  * Debugger is active!
+2023-11-23 19:01:50,740 - INFO -  * Debugger PIN: 215-490-203
+2023-11-23 19:01:54,031 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2023-11-23 19:01:54,056 - INFO - 127.0.0.1 - - [23/Nov/2023 19:01:54] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 19:01:54,409 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2023-11-23 19:01:54,421 - INFO - 127.0.0.1 - - [23/Nov/2023 19:01:54] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 19:01:54,480 - INFO - 127.0.0.1 - - [23/Nov/2023 19:01:54] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-11-23 19:01:54,484 - INFO - 127.0.0.1 - - [23/Nov/2023 19:01:54] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-11-23 19:01:54,505 - INFO - 127.0.0.1 - - [23/Nov/2023 19:01:54] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:02:53,942 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/project/utils.py', reloading
+2023-11-23 19:02:54,087 - INFO -  * Restarting with stat
+2023-11-23 19:02:55,514 - WARNING -  * Debugger is active!
+2023-11-23 19:02:55,531 - INFO -  * Debugger PIN: 215-490-203
+2023-11-23 19:02:56,053 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info. by
+2023-11-23 19:02:56,081 - INFO - 127.0.0.1 - - [23/Nov/2023 19:02:56] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 19:02:56,130 - INFO - 127.0.0.1 - - [23/Nov/2023 19:02:56] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-11-23 19:02:56,134 - INFO - 127.0.0.1 - - [23/Nov/2023 19:02:56] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-11-23 19:02:56,152 - INFO - 127.0.0.1 - - [23/Nov/2023 19:02:56] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:02:56,196 - INFO - 127.0.0.1 - - [23/Nov/2023 19:02:56] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:03:09,815 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/project/utils.py', reloading
+2023-11-23 19:03:09,950 - INFO -  * Restarting with stat
+2023-11-23 19:03:10,490 - WARNING -  * Debugger is active!
+2023-11-23 19:03:10,499 - INFO -  * Debugger PIN: 215-490-203
+2023-11-23 19:03:11,983 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2023-11-23 19:03:12,002 - INFO - 127.0.0.1 - - [23/Nov/2023 19:03:12] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 19:03:12,036 - INFO - 127.0.0.1 - - [23/Nov/2023 19:03:12] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-11-23 19:03:12,037 - INFO - 127.0.0.1 - - [23/Nov/2023 19:03:12] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-11-23 19:03:12,046 - INFO - 127.0.0.1 - - [23/Nov/2023 19:03:12] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:03:12,095 - INFO - 127.0.0.1 - - [23/Nov/2023 19:03:12] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:04:16,692 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2023-11-23 19:04:16,706 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:16] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 19:04:16,752 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:16] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-11-23 19:04:16,753 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:16] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-11-23 19:04:16,775 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:16] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:04:16,830 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:16] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:04:18,702 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2023-11-23 19:04:18,715 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:18] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 19:04:18,753 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:18] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-11-23 19:04:18,753 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:18] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-11-23 19:04:18,804 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:18] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:04:18,855 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:18] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:04:20,233 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2023-11-23 19:04:20,246 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:20] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 19:04:20,281 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:20] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-11-23 19:04:20,284 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:20] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-11-23 19:04:20,306 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:20] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:04:20,356 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:20] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:04:20,649 - ERROR - An error occurred in about: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2023-11-23 19:04:20,661 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:20] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2023-11-23 19:04:20,700 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:20] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-11-23 19:04:20,701 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:20] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-11-23 19:04:20,723 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:20] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:04:20,773 - INFO - 127.0.0.1 - - [23/Nov/2023 19:04:20] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-11-23 19:05:43,297 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/project/utils.py', reloading
+2023-11-23 19:05:43,482 - INFO -  * Restarting with stat
+2023-11-23 19:10:09,980 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-23 19:10:09,982 - INFO - [33mPress CTRL+C to quit[0m
+2023-11-23 19:10:09,984 - INFO -  * Restarting with stat
+2023-11-23 19:10:10,545 - WARNING -  * Debugger is active!
+2023-11-23 19:10:10,558 - INFO -  * Debugger PIN: 215-490-203
+2023-11-23 19:10:14,211 - INFO - about executed successfully by Guest
+2023-11-23 19:10:14,212 - INFO - 127.0.0.1 - - [23/Nov/2023 19:10:14] "GET /about HTTP/1.1" 200 -
+2023-11-23 19:10:48,257 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/project/routes.py', reloading
+2023-11-23 19:10:48,407 - INFO -  * Restarting with stat
+2023-11-23 19:10:49,044 - WARNING -  * Debugger is active!
+2023-11-23 19:10:49,053 - INFO -  * Debugger PIN: 215-490-203
+2023-11-23 19:10:52,127 - INFO - 127.0.0.1 - - [23/Nov/2023 19:10:52] "GET /about HTTP/1.1" 200 -
+2023-11-23 19:11:13,635 - INFO - 127.0.0.1 - - [23/Nov/2023 19:11:13] "GET /about HTTP/1.1" 200 -
+2023-11-23 19:11:21,501 - INFO - 127.0.0.1 - - [23/Nov/2023 19:11:21] "GET /about HTTP/1.1" 200 -
+2023-11-23 19:11:21,682 - INFO - 127.0.0.1 - - [23/Nov/2023 19:11:21] "GET /about HTTP/1.1" 200 -
+2023-11-23 19:11:21,976 - INFO - 127.0.0.1 - - [23/Nov/2023 19:11:21] "GET /about HTTP/1.1" 200 -
+2023-11-23 19:11:22,120 - INFO - 127.0.0.1 - - [23/Nov/2023 19:11:22] "GET /about HTTP/1.1" 200 -
+2023-11-23 19:28:54,288 - INFO - 127.0.0.1 - - [23/Nov/2023 19:28:54] "GET /about HTTP/1.1" 200 -

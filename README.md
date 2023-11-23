@@ -2,7 +2,7 @@
 
 ## Installation
 
-0. You must ppdate Python into 3.12.0 version
+0. You must update Python into 3.12.0 version
 
    Download here : https://www.python.org/downloads/
 
@@ -19,7 +19,7 @@
 
 3. Change into the directory
     ```bash
-    cd your-flask-app
+    cd my-igs
 
 
 4. Create environtment
