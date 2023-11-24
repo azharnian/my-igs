@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -6,8 +8,10 @@
 body{
     height: 100vh;
     width: 100vw;
+    color: white;
     background-color: #172D51;
     overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
 }
 header{
     height: fit-content;
@@ -19,21 +23,49 @@ header{
 
 header div.container{
     margin-top: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 90px;
+    margin-right: 90px;
     width: 1440px;
-    height: 10vh;
-    background-color: white;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
+    color: white;
 }
 
 header div.container div.logo{
-    width: 100px;
-    height: 100%;
-    background-color: black;
+    width: 160px;
+    height: 40px;
+    background-image: url(assets/Logo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+header div.left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+header div.left div.call{
+    width: 29px;
+    height: 29px;
+    background-image: url(assets/Icon.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    transition: 0.2s ease-in-out
 }
 
+header div.left div.call:hover{
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+}
+
+header div.left div.language{
+    font-size: 1em;
+    cursor: pointer;
+}
 
 
 section.content{
@@ -46,11 +78,201 @@ section.content{
 
 section.content div.container{
     width: 1440px;
-    height: 80vh;
-    margin-top: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
-    background-color: black;
+    height: fit-content;
+    margin-top: 40px;
+    margin-left: 90px;
+    margin-right: 90px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 40px;
+}
+
+section.content div.container div.left{
+    width: 50%;
+    height: 100%;
+    padding-top: 6px;
+    
+    display: flex;  
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+section.content div.container div.left div.top{
+    display: flex;
+    flex-direction: column;
+    gap: 16.2px;
+    
+}
+
+section.content div.container div.left div.top h1{
+    font-size: 32px;
+    margin-top: 10px;
+    word-wrap: break-word;
+    font-weight: 300;
+    padding-bottom: 6.7;
+}
+
+section.content div.container div.left div.top h2{
+    font-size: 24px;
+    word-wrap: break-word;
+    font-weight: 300;
+}
+
+section.content div.container div.left div.bottom div.image{
+    margin-top: 50px;
+    width: 465px;
+    height: 343px;
+    background-image: url(assets/Photo.png);
+    
+    background-size: 100% 100%;
+}
+
+section.content div.container div.right{
+    width: 47%;
+    height: 100%;
+    padding-top: 6px;
+    display: flex;  
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 32px;
+    color: white;
+}
+
+section.content div.container div.right div.inputbox{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 100%;
+    height: 64px;
+}
+
+section.content div.container div.right div.inputbox label{
+    color: white;
+    font-size: 12px;
+    font-family: Lato;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+section.content div.container div.right div.inputbox input{
+    background-color: transparent;
+    border: none;
+    height: fit-content;
+    width: 100%;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: #C5D1D8;
+    font-weight: 300;
+    padding-bottom: 6px;
+    font-size: 24px;
+}
+
+section.content div.container div.right div.inputbox input::placeholder{
+    color: #C5D1D8;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+section.content div.container div.right div.inputbox:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+section.content div.container div.right div.inputbox:nth-child(3) div.input{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 432px;
+    height: 64px;
+}
+
+section.content div.container div.right div.inputbox:nth-child(3) div.input input{
+    width: 432px;
+}
+
+section.content div.container div.right div.inputbox:nth-child(3) div.captcha{
+    width: 86px;
+    height: 56px;
+    background-image: url(assets/image.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section.content div.container div.right div.inputbox:nth-child(3) div.change{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.content div.container div.right div.inputbox:nth-child(3) div.change a{
+    color: white;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 800;
+    text-decoration: underline;
+    text-align: center;
+    word-wrap: break-word
+}
+
+section.content div.container button{
+    height: 40px;
+    width: 103px;
+    border-radius: 200px;
+    border: none;
+    background: #008873;
+    color: white;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.12px;
+    cursor: pointer;
+    word-wrap: break-word;
+    transition: 0.2s ease;
+}
+
+section.content div.container button:hover,
+section.content div.container button:focus{
+    background: #036758;
+    transition: 0.2s ease;
+}
+
+section.content div.container a#Register,
+section.content div.container a#Forgot{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+section.content div.container a#Register:hover,
+section.content div.container a#Forgot:hover{
+    text-decoration: underline;
+}
+
+div.arrow{
+    display: none;
+    position: absolute;
+    background-image: url(assets/down-arrow-4846.png);
+    width: 13px;
+    height: 13px;
+    transform: translate(25px, -14px);
+    background-size: 100% 100%;
+    transition: 0.2s ease;
+    filter: brightness(2);
+}
+
+div.language:hover div.arrow{
+    display: flex;
 }
 
 footer{
@@ -59,3 +281,6 @@ footer{
     background-color: #121F26;
     display: flex;
 }
+
+
+
