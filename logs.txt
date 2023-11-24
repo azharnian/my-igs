@@ -147,3 +147,11 @@
 2023-11-24 07:41:11,569 - INFO -  * Restarting with stat
 2023-11-24 07:41:12,196 - WARNING -  * Debugger is active!
 2023-11-24 07:41:12,208 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 13:29:18,219 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-24 13:29:18,220 - INFO - [33mPress CTRL+C to quit[0m
+2023-11-24 13:29:18,222 - INFO -  * Restarting with stat
+2023-11-24 13:29:18,821 - WARNING -  * Debugger is active!
+2023-11-24 13:29:18,843 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 13:29:32,063 - INFO - index executed successfully by Guest
+2023-11-24 13:29:32,064 - INFO - 127.0.0.1 - - [24/Nov/2023 13:29:32] "GET / HTTP/1.1" 200 -

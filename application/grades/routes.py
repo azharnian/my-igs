@@ -1,8 +1,13 @@
 from flask import Blueprint, render_template
 from flask_login import login_required
 
-from application.grades.forms import *
-from application.grades.resources import *
+from application.grades.forms.subjects import *
+from application.grades.forms.grade_types import *
+from application.grades.forms.grades import *
+
+from application.grades.resources.subjects import *
+from application.grades.resources.grade_types import *
+from application.grades.resources.grades import *
 
 grades = Blueprint('grades', __name__)
 
