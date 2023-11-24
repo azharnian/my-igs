@@ -15,6 +15,8 @@ class Location(db.Model, BaseModel):
     created_by = db.Column(db.Integer, db.ForeignKey('users.id'), default=1)
     code = db.Column(db.String(256), unique=True, nullable=False)
     name = db.Column(db.String(256), nullable=False)
+    longitude = db.Column(db.Float, default=0.0)
+    latitude = db.Column(db.Float, default=0.0)
     note = db.Column(db.Text)
 
     attendances = db.relationship("Attendance", backref = "attendances_in_location", lazy = True)

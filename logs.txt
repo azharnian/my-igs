@@ -261,3 +261,91 @@
 2023-11-24 14:14:47,876 - INFO - 127.0.0.1 - - [24/Nov/2023 14:14:47] "GET / HTTP/1.1" 200 -
 2023-11-24 14:14:52,211 - INFO - api_ executed successfully by Guest
 2023-11-24 14:14:52,212 - INFO - 127.0.0.1 - - [24/Nov/2023 14:14:52] "GET /api HTTP/1.1" 200 -
+2023-11-24 15:18:17,769 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-24 15:18:17,770 - INFO - [33mPress CTRL+C to quit[0m
+2023-11-24 15:18:17,772 - INFO -  * Restarting with stat
+2023-11-24 15:18:18,424 - WARNING -  * Debugger is active!
+2023-11-24 15:18:18,436 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:18:22,717 - INFO - index executed successfully by Guest
+2023-11-24 15:18:22,720 - INFO - 127.0.0.1 - - [24/Nov/2023 15:18:22] "GET / HTTP/1.1" 200 -
+2023-11-24 15:18:46,026 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/logs/resources.py', reloading
+2023-11-24 15:18:46,199 - INFO -  * Restarting with stat
+2023-11-24 15:18:47,372 - WARNING -  * Debugger is active!
+2023-11-24 15:18:47,389 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:18:51,565 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/locations.py', reloading
+2023-11-24 15:18:51,717 - INFO -  * Restarting with stat
+2023-11-24 15:18:52,453 - WARNING -  * Debugger is active!
+2023-11-24 15:18:52,464 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:19:04,728 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/attendance_types.py', reloading
+2023-11-24 15:19:04,898 - INFO -  * Restarting with stat
+2023-11-24 15:19:06,107 - WARNING -  * Debugger is active!
+2023-11-24 15:19:06,120 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:19:09,222 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/attendances.py', reloading
+2023-11-24 15:19:09,408 - INFO -  * Restarting with stat
+2023-11-24 15:19:10,188 - WARNING -  * Debugger is active!
+2023-11-24 15:19:10,202 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:19:13,296 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/shift_members.py', reloading
+2023-11-24 15:19:13,457 - INFO -  * Restarting with stat
+2023-11-24 15:19:14,287 - WARNING -  * Debugger is active!
+2023-11-24 15:19:14,298 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:19:18,439 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/shifts.py', reloading
+2023-11-24 15:19:18,603 - INFO -  * Restarting with stat
+2023-11-24 15:19:19,759 - WARNING -  * Debugger is active!
+2023-11-24 15:19:19,775 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:19:22,877 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/status.py', reloading
+2023-11-24 15:19:23,034 - INFO -  * Restarting with stat
+2023-11-24 15:19:23,983 - WARNING -  * Debugger is active!
+2023-11-24 15:19:23,995 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:19:37,282 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/grades/resources/grade_types.py', reloading
+2023-11-24 15:19:37,466 - INFO -  * Restarting with stat
+2023-11-24 15:19:38,606 - WARNING -  * Debugger is active!
+2023-11-24 15:19:38,621 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:19:41,743 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/grades/resources/grades.py', reloading
+2023-11-24 15:19:41,930 - INFO -  * Restarting with stat
+2023-11-24 15:19:42,923 - WARNING -  * Debugger is active!
+2023-11-24 15:19:42,938 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:19:46,034 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/grades/resources/subjects.py', reloading
+2023-11-24 15:19:46,354 - INFO -  * Restarting with stat
+2023-11-24 15:19:47,391 - WARNING -  * Debugger is active!
+2023-11-24 15:19:47,405 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:20:22,105 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/grades/resources/subjects.py', reloading
+2023-11-24 15:20:22,260 - INFO -  * Restarting with stat
+2023-11-24 15:20:22,983 - WARNING -  * Debugger is active!
+2023-11-24 15:20:22,992 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:20:30,175 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/grades/resources/grades.py', reloading
+2023-11-24 15:20:30,342 - INFO -  * Restarting with stat
+2023-11-24 15:20:31,167 - WARNING -  * Debugger is active!
+2023-11-24 15:20:31,179 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:20:36,307 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/grades/resources/grade_types.py', reloading
+2023-11-24 15:20:36,476 - INFO -  * Restarting with stat
+2023-11-24 15:20:37,197 - WARNING -  * Debugger is active!
+2023-11-24 15:20:37,209 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:20:42,325 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/status.py', reloading
+2023-11-24 15:20:42,485 - INFO -  * Restarting with stat
+2023-11-24 15:20:43,319 - WARNING -  * Debugger is active!
+2023-11-24 15:20:43,332 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:20:45,416 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/shifts.py', reloading
+2023-11-24 15:20:45,569 - INFO -  * Restarting with stat
+2023-11-24 15:20:46,454 - WARNING -  * Debugger is active!
+2023-11-24 15:20:46,466 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:20:50,574 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/shift_members.py', reloading
+2023-11-24 15:20:50,746 - INFO -  * Restarting with stat
+2023-11-24 15:20:51,612 - WARNING -  * Debugger is active!
+2023-11-24 15:20:51,623 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:20:55,735 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/attendances.py', reloading
+2023-11-24 15:20:55,877 - INFO -  * Restarting with stat
+2023-11-24 15:20:56,711 - WARNING -  * Debugger is active!
+2023-11-24 15:20:56,722 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:20:59,803 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/attendance_types.py', reloading
+2023-11-24 15:20:59,976 - INFO -  * Restarting with stat
+2023-11-24 15:21:01,010 - WARNING -  * Debugger is active!
+2023-11-24 15:21:01,023 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:21:04,199 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/attendances/resources/locations.py', reloading
+2023-11-24 15:21:04,357 - INFO -  * Restarting with stat
+2023-11-24 15:21:05,490 - WARNING -  * Debugger is active!
+2023-11-24 15:21:05,503 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 15:21:09,613 - INFO -  * Detected change in '/Users/anasazhar/Desktop/projects/my-igs/application/logs/resources.py', reloading
+2023-11-24 15:21:09,779 - INFO -  * Restarting with stat
+2023-11-24 15:21:10,662 - WARNING -  * Debugger is active!
+2023-11-24 15:21:10,674 - INFO -  * Debugger PIN: 215-490-203
