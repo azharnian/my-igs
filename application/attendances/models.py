@@ -17,7 +17,7 @@ class Location(db.Model, BaseModel):
     name = db.Column(db.String(256), nullable=False)
     note = db.Column(db.Text)
 
-    attendances = db.relationship("Attendance", backref = "attendances", lazy = True)
+    attendances = db.relationship("Attendance", backref = "attendances_in_location", lazy = True)
 
     def __repr__(self):
         return f'{self.id} - {self.code} - {self.name}'
@@ -64,7 +64,7 @@ class Status(db.Model, BaseModel): #masuk , izin, sakit, dispensasi
     name = db.Column(db.String(256), nullable=False)
     note = db.Column(db.Text)
 
-    attendances = db.relationship("Attendance", backref = "attendances", lazy = True)
+    attendances = db.relationship("Attendance", backref = "attendances_in_status", lazy = True)
 
     def __repr__(self):
         return f'{self.id} - {self.code} - {self.name}'
@@ -79,7 +79,7 @@ class AttendanceType(db.Model, BaseModel):
     name = db.Column(db.String(256), nullable=False)
     note = db.Column(db.Text)
 
-    attendances = db.relationship("Attendance", backref = "attendances", lazy = True)
+    attendances = db.relationship("Attendance", backref = "attendances_in_type", lazy = True)
 
     def __repr__(self):
         return f'{self.id} - {self.name}'

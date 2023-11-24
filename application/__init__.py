@@ -23,6 +23,7 @@ def create_app(config_class=Settings):
     cors.init_app(app)
 
     from application.project.routes import projects
+    from application.apis.routes import api
     from application.users.routes import users
     from application.achievements.routes import achievements
     from application.certificates.routes import certificates
@@ -30,6 +31,7 @@ def create_app(config_class=Settings):
     from application.grades.routes import grades
 
     app.register_blueprint(projects)
+    app.register_blueprint(api)
     app.register_blueprint(users)
     app.register_blueprint(achievements)
     app.register_blueprint(certificates)
