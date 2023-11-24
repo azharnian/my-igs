@@ -282,16 +282,16 @@ footer {
     width: 100vw;
     background-color: #121f26;
     display: flex;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-left: 60px;
-    padding-right: 60px;
 }
 footer .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 24px;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 24px;
 }
 footer .container .top {
   margin-bottom: 16px;
@@ -305,7 +305,7 @@ footer .container .top a {
 }
 footer .container span {
   height: 1px;
-  width: calc(100vw - 120px);
+  width: calc(1440px - 90px);
   background-color: gray;
   display: flex;
   justify-content: center;
