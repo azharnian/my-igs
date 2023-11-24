@@ -69,7 +69,7 @@ header div.left div.language{
 
 
 section.content{
-    height: fit-content;
+    height: 65vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -86,6 +86,7 @@ section.content div.container{
     justify-content: space-between;
     flex-direction: row;
     gap: 40px;
+    
 }
 
 section.content div.container div.left{
@@ -282,6 +283,7 @@ footer {
     width: 100vw;
     background-color: #121f26;
     display: flex;
+    justify-content: center;
 }
 footer .container {
     display: flex;
