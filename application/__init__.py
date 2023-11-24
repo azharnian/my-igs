@@ -26,11 +26,15 @@ def create_app(config_class=Settings):
     from application.users.routes import users
     from application.achievements.routes import achievements
     from application.certificates.routes import certificates
+    from application.attendances.routes import attendances
+    from application.grades.routes import grades
 
     app.register_blueprint(projects)
     app.register_blueprint(users)
     app.register_blueprint(achievements)
     app.register_blueprint(certificates)
+    app.register_blueprint(attendances)
+    app.register_blueprint(grades)
 
     return app
 

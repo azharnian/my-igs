@@ -130,3 +130,20 @@
 2023-11-23 19:11:21,976 - INFO - 127.0.0.1 - - [23/Nov/2023 19:11:21] "GET /about HTTP/1.1" 200 -
 2023-11-23 19:11:22,120 - INFO - 127.0.0.1 - - [23/Nov/2023 19:11:22] "GET /about HTTP/1.1" 200 -
 2023-11-23 19:28:54,288 - INFO - 127.0.0.1 - - [23/Nov/2023 19:28:54] "GET /about HTTP/1.1" 200 -
+2023-11-24 07:10:00,251 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-24 07:10:00,252 - INFO - [33mPress CTRL+C to quit[0m
+2023-11-24 07:10:00,254 - INFO -  * Restarting with stat
+2023-11-24 07:10:00,861 - WARNING -  * Debugger is active!
+2023-11-24 07:10:00,878 - INFO -  * Debugger PIN: 215-490-203
+2023-11-24 07:10:08,914 - INFO - index executed successfully by Guest
+2023-11-24 07:10:08,915 - INFO - 127.0.0.1 - - [24/Nov/2023 07:10:08] "GET / HTTP/1.1" 200 -
+2023-11-24 07:10:09,371 - INFO - 127.0.0.1 - - [24/Nov/2023 07:10:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-11-24 07:10:12,194 - INFO - about executed successfully by Guest
+2023-11-24 07:10:12,195 - INFO - 127.0.0.1 - - [24/Nov/2023 07:10:12] "GET /about HTTP/1.1" 200 -
+2023-11-24 07:41:11,565 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-24 07:41:11,567 - INFO - [33mPress CTRL+C to quit[0m
+2023-11-24 07:41:11,569 - INFO -  * Restarting with stat
+2023-11-24 07:41:12,196 - WARNING -  * Debugger is active!
+2023-11-24 07:41:12,208 - INFO -  * Debugger PIN: 215-490-203
