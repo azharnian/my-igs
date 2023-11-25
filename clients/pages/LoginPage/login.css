@@ -112,7 +112,7 @@ section.content{
 }
 
 section.content div.container{
-    margin-bottom: 10vh;
+    margin-bottom: 8vh;
     width: 1440px;
     margin-top: 20px;
     height: fit-content;
@@ -298,6 +298,7 @@ section.content div.container a#Forgot:hover{
 }
 
 footer {
+
     position: absolute;
     bottom: 0px;
     height: fit-content;
@@ -352,13 +353,13 @@ footer .container .bottom {
 footer .container .bottom .left {
   word-wrap: break-word;
   opacity: 0.5;
-  font-size: 11px;
+  font-size: 14px;
 }
 footer .container .bottom .right {
   float: right;
 }
 footer .container .bottom .right a {
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   color: #fff;
   padding-left: 20px;
