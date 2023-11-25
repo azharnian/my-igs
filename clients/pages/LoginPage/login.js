@@ -14,4 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
             header.classList.remove("fixed");
         }
     }
+
+    var hiddenLanguage = document.querySelector(".hidden-nav-language")
+    var language = document.querySelector(".language");
+    language.addEventListener('click', function(){
+        
+    })
 });

@@ -1,4 +1,4 @@
-@media screen and (max-width: 3000px){
+@media screen and (max-width: 2000px){
     section.content div.container{
         width: 1350px;
     }
@@ -8,7 +8,8 @@
 
 @media screen and (max-width: 1540px) {
     footer{
-        margin-top: 2px;
+        margin-top: -2px;
+        transform: translateY(-10px);
         position: relative;
     }
     section.content{
@@ -24,6 +25,32 @@
     }
     footer .container span{
         width: calc(1440px - 200px);
+    }
+}
+
+@media screen and (max-width: 1300px){
+    section.content div.container{
+        gap: 0px;
+    }
+    section.content div.container div.left{
+        width: 40%;
+    }
+    section.content div.container div.left div.bottom div.image{
+        width: 400px;
+        height: 278px;
+    }
+    footer .container{
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    footer .container span{
+        width: calc(1440px - 400px);
+    }
+    section.content div.container div.right div.inputbox:nth-child(3) div.input input{
+        width: 300px;
+    }
+    section.content div.container div.right div.inputbox:nth-child(3) div.change{
+        width: 32px;
     }
 }
 
