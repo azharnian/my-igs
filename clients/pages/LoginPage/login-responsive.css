@@ -1,0 +1,21 @@
+
+@media screen and (max-width: 1540px) {
+    footer{
+        margin-top: 2px;
+        position: relative;
+    }
+    section.content{
+        height: fit-content;
+        position: relative;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}
+

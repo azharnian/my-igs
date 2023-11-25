@@ -13,23 +13,38 @@ body{
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
 }
+div.blank{
+    width: 100vw;
+    height: 80px;
+    background: transparent;
+}
 header {
-  height: fit-content;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: 0.2s ease;
+    position: fixed;
+    top: 0px;
+    padding-bottom: 30px;
 }
 
+
 header div.container{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 90px;
     margin-right: 90px;
-    width: 1440px;
+    width: 1375px;
     height: fit-content;
     display: flex;
     justify-content: space-between;
     color: white;
+    z-index: 100;
+}
+
+header.fixed{
+    background-color: #23343F;
 }
 
 header div.container div.logo{
@@ -41,35 +56,54 @@ header div.container div.logo{
     background-repeat: no-repeat;
     cursor: pointer;
 }
-header div.left{
+header div.container div.left{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
 }
-header div.left div.call{
-    width: 29px;
-    height: 29px;
-    background-image: url(assets/Icon.png);
+header div.container div.left div.call{
+    width: 25px;
+    height: 25px;
+    background-image: url(assets/bx-phone.svg);
+    
     background-repeat: no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
     transition: 0.2s ease-in-out
 }
 
-header div.left div.call:hover{
+header div.container div.left div.call:hover{
     opacity: 0.7;
     transition: 0.2s ease-in-out;
 }
 
-header div.left div.language{
-    font-size: 1em;
+header div.container div.left div.language{
+    font-size: 1.1em;
+    font-weight: 500;
     cursor: pointer;
 }
 
+header div.container div.left div.language div.arrow{
+    display: none;
+    position: absolute;
+    background-image: url(assets/arrow.svg);
+    width: 25px;
+    height: 25px;
+    transform: translate(25px, -23px);
+    background-size: 100% 100%;
+    transition: 0.2s ease;
+    background-position: center;
+    filter: brightness(2);
+}
+
+header div.container div.left div.language:hover div.arrow{
+    display: flex;
+}
 
 section.content{
-    height: 65vh;
+    position: absolute;
+    height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -77,9 +111,10 @@ section.content{
 }
 
 section.content div.container{
+    margin-bottom: 8vh;
     width: 1440px;
+    margin-top: 20px;
     height: fit-content;
-    margin-top: 40px;
     margin-left: 90px;
     margin-right: 90px;
     display: flex;
@@ -198,7 +233,7 @@ section.content div.container div.right div.inputbox:nth-child(3) div.input inpu
 section.content div.container div.right div.inputbox:nth-child(3) div.captcha{
     width: 86px;
     height: 56px;
-    background-image: url(assets/image.png);
+    background-image: none;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -210,6 +245,7 @@ section.content div.container div.right div.inputbox:nth-child(3) div.change{
     font-weight: bold;
     height: 70%;
     display: flex;
+    transform: translateY(15px);
     justify-content: center;
     align-items: center;
 }
@@ -218,7 +254,7 @@ section.content div.container div.right div.inputbox:nth-child(3) div.change a{
     color: white;
     font-size: 16px;
     font-family: Lato;
-    font-weight: 800;
+    font-weight: 500;
     text-decoration: underline;
     text-align: center;
     word-wrap: break-word
@@ -251,7 +287,7 @@ section.content div.container a#Register,
 section.content div.container a#Forgot{
     color: white;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 16px;
 }
 
@@ -260,23 +296,8 @@ section.content div.container a#Forgot:hover{
     text-decoration: underline;
 }
 
-div.arrow{
-    display: none;
-    position: absolute;
-    background-image: url(assets/down-arrow-4846.png);
-    width: 13px;
-    height: 13px;
-    transform: translate(25px, -14px);
-    background-size: 100% 100%;
-    transition: 0.2s ease;
-    filter: brightness(2);
-}
-
-div.language:hover div.arrow{
-    display: flex;
-}
-
 footer {
+
     position: absolute;
     bottom: 0px;
     height: fit-content;
@@ -304,10 +325,17 @@ footer .container .top a {
   color: #fff;
   word-wrap: break-word;
   font-size: 14px;
+  transition: 0.2s ease;
 }
+
+footer .container .top a:hover{
+    opacity: 0.8;
+}
+
 footer .container span {
-  height: 1px;
+  height: 0.1px;
   width: calc(1440px - 90px);
+  opacity: 0.5;
   background-color: gray;
   display: flex;
   justify-content: center;
@@ -319,6 +347,7 @@ footer .container .bottom {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
 }
 footer .container .bottom .left {
   word-wrap: break-word;
@@ -333,4 +362,9 @@ footer .container .bottom .right a {
   text-decoration: none;
   color: #fff;
   padding-left: 20px;
+  transition: 0.2s ease;
+}
+
+footer .container .bottom .right a:hover{
+    opacity: 0.8;
 }
