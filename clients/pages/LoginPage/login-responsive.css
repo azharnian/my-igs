@@ -8,8 +8,8 @@
 
 @media screen and (max-width: 1540px) {
     footer{
-        margin-top: -2px;
-        transform: translateY(-10px);
+        margin-top: -10px;
+        transform: translateY(20px);
         position: relative;
     }
     section.content{
@@ -46,16 +46,269 @@
     footer .container span{
         width: calc(1440px - 400px);
     }
+    section.content div.container div.right div.inputbox:nth-child(3) div.input{
+        width: fit-content;
+    }
     section.content div.container div.right div.inputbox:nth-child(3) div.input input{
-        width: 300px;
+        width: 290px;
     }
     section.content div.container div.right div.inputbox:nth-child(3) div.change{
-        width: 32px;
+        width: fit-content;
     }
+
 }
 
 @media screen and (max-width: 768px) {
-
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: fit-content;
+        width: 100vw;
+        color: white;
+        background-color: #1d324f;
+        overflow-x: hidden;
+        font-family: "Lato", sans-serif;
+      }
+      header .container {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      header .container .logo {
+        width: 80px;
+        height: 20px;
+        background-image: url(assets/Logo.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      header .left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+      }
+      header .left .call {
+        height: 14.5px;
+        width: 14.5px;
+        background-image: url(assets/Icon.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+      header div.left div.call:hover {
+        opacity: 0.7;
+        transition: 0.2s ease-in-out;
+      }
+      header div.left div.language {
+        font-size: 0.7em;
+        cursor: pointer;
+      }
+      section.content {
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 15px;
+        /* margin-bottom: 40px; */
+      }
+      section.content .container {
+        width: 100%;
+        height: fit-content;
+      }
+      section.content .container .left {
+        margin-bottom: 20px;
+      }
+      section.content .container .left .top h1 {
+        font-size: 24px;
+        margin-top: 10px;
+        word-wrap: break-word;
+        font-weight: 300;
+        padding-bottom: 6.7;
+      }
+      section.content .container .left .top h2 {
+        font-size: 16px;
+        font-weight: 300;
+      }
+      section.content .container .left .bottom {
+        display: none;
+      }
+      section.content .container .right {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 16px;
+      }
+      section.content .container .right .inputbox {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+        width: 100%;
+        height: 64px;
+      }
+      section.content div.container div.right div.inputbox label {
+        color: white;
+        font-size: 14px;
+        font-family: "Lato", sans-serif;
+        font-weight: 500;
+        line-height: 22px;
+      }
+      section.content div.container div.right div.inputbox input {
+        background-color: transparent;
+        border: none;
+        height: fit-content;
+        width: 100%;
+        border-bottom: 1px solid white;
+        outline: none;
+        color: #c5d1d8;
+        font-weight: 300;
+        padding-bottom: 6px;
+        font-size: 16px;
+      }
+      section.content div.container div.right div.inputbox input::placeholder {
+        color: #c5d1d8;
+        font-size: 16px;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        word-wrap: break-word;
+      }
+      section.content div.container div.right div.inputbox:nth-child(3) {
+        display: flex;
+        flex-direction: row;
+        /* gap: 16px; */
+      }
+      section.content div.container div.right div.inputbox:nth-child(3) div.input {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+        width: 100%;
+      }
+      section.content div.container div.right div.inputbox:nth-child(3) div.change {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      section.content div.container div.right div.inputbox:nth-child(3) div.change a {
+        color: white;
+        font-size: 12px;
+        font-family: "Lato", sans-serif;
+        font-weight: 800;
+        text-decoration: underline;
+        text-align: center;
+        word-wrap: break-word;
+      }
+      section.content .container button {
+        height: 40px;
+        width: 103px;
+        border-radius: 200px;
+        background: #0073c0;
+        color: #fff;
+        font-size: 14px;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.12px;
+        cursor: pointer;
+        word-wrap: break-word;
+        transition: 0.2 ease;
+      }
+      section.content div.container button:hover,
+      section.content div.container button:focus {
+        background: #016fb8;
+        transition: 0.2s ease;
+      }
+      section.content div.container a#Register,
+      section.content div.container a#Forgot {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+      }
+    
+      footer {
+        position: absolute;
+        bottom: 0px;
+        height: fit-content;
+        width: 100%;
+        background-color: #151d2a;
+        display: flex;
+        justify-content: center;
+      }
+      footer .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #fff;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        margin-left: 15px;
+        margin-right: 15px;
+        gap: 16px;
+      }
+      footer .container .top {
+        /* margin-bottom: 16px; */
+        display: flex;
+        justify-content: space-between;
+      }
+      footer .container .top a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+        word-wrap: break-word;
+      }
+      footer .container .top a:hover {
+        color: #ffffffb4;
+        transition: 0.2 ease;
+      }
+      footer .container span {
+        height: 1px;
+        width: 100%;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      footer .container .bottom {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 16px;
+      }
+      footer .container .bottom .right {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+      }
+      footer .container .bottom .right a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+      }
+      footer .container .bottom .left {
+        word-wrap: break-word;
+        opacity: 0.5;
+        font-size: 12px;
+      }
 }
 @media screen and (max-width: 480px) {
 

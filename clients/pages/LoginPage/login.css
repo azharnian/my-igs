@@ -12,6 +12,7 @@ body{
     background-color: #172D51;
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 div.blank{
     width: 100vw;
