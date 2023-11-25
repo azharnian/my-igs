@@ -1,0 +1,36 @@
+@media screen and (max-width: 3000px){
+    section.content div.container{
+        width: 1350px;
+    }
+}
+
+
+
+@media screen and (max-width: 1540px) {
+    footer{
+        margin-top: 2px;
+        position: relative;
+    }
+    section.content{
+        height: fit-content;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    footer .container{
+        margin-left: 190px;
+        margin-right: 190px;
+    }
+    footer .container span{
+        width: calc(1440px - 200px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}
+

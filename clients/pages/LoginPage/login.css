@@ -25,7 +25,7 @@
     margin-top: 30px;
     margin-left: 90px;
     margin-right: 90px;
-    width: 1440px;
+    width: 1375px;
     height: fit-content;
     display: flex;
     justify-content: space-between;
@@ -77,8 +77,8 @@
 
   section.content div.container {
     width: 1440px;
+    margin-top: 20px;
     height: fit-content;
-    margin-top: 40px;
     margin-left: 90px;
     margin-right: 90px;
     display: flex;
@@ -195,7 +195,7 @@
   section.content div.container div.right div.inputbox:nth-child(3) div.captcha {
     width: 86px;
     height: 56px;
-    background-image: url(assets/image.png);
+    background-image: none;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -207,6 +207,7 @@
     font-weight: bold;
     height: 70%;
     display: flex;
+    transform: translateY(15px);
     justify-content: center;
     align-items: center;
   }
@@ -215,7 +216,7 @@
     color: white;
     font-size: 16px;
     font-family: Lato;
-    font-weight: 800;
+    font-weight: 500;
     text-decoration: underline;
     text-align: center;
     word-wrap: break-word;
@@ -248,7 +249,7 @@
   section.content div.container a#Forgot {
     color: white;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 16px;
   }
 
