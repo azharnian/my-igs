@@ -44,6 +44,7 @@ header div.container{
 }
 
 header.fixed{
+    z-index: 100;
     background-color: #23343F;
 }
 
