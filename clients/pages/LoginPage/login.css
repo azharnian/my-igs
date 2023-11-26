@@ -103,6 +103,10 @@ header div.container div.left div.language:hover div.arrow{
     display: flex;
 }
 
+header div.container div.hide-nav{
+    display: none;
+}
+
 section.content{
     position: absolute;
     height: 80vh;
@@ -122,7 +126,7 @@ section.content div.container{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    gap: 40px;
+    gap: 100px;
     
 }
 
@@ -217,12 +221,14 @@ section.content div.container div.right div.inputbox input::placeholder{
 section.content div.container div.right div.inputbox:nth-child(3){
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 16px;
 }
 
 section.content div.container div.right div.inputbox:nth-child(3) div.input{
     display: flex;
     flex-direction: column-reverse;
+
     gap: 10px;
     width: 432px;
     height: 64px;
@@ -235,7 +241,7 @@ section.content div.container div.right div.inputbox:nth-child(3) div.input inpu
 section.content div.container div.right div.inputbox:nth-child(3) div.captcha{
     width: 86px;
     height: 56px;
-    background-image: none;
+    background: black;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -243,6 +249,7 @@ section.content div.container div.right div.inputbox:nth-child(3) div.captcha{
 
 section.content div.container div.right div.inputbox:nth-child(3) div.change{
     color: white;
+    width: 100px;
     text-decoration: none;
     font-weight: bold;
     height: 70%;
@@ -369,4 +376,9 @@ footer .container .bottom .right a {
 
 footer .container .bottom .right a:hover{
     opacity: 0.8;
+}
+
+footer div.container div.top a:nth-child(4),
+footer div.container div.top a:nth-child(5){
+    display: none;
 }
