@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var navbar = document.querySelector("#nav");
     var header = document.querySelector("header")
     var sticky = navbar.offsetTop;
-
+    //nav background color
     window.onscroll = function() {
         myFunction();
     };
@@ -20,4 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
     language.addEventListener('click', function(){
         
     })
+    //hidenav responsive
+    var smthng
+    //language nav
+    var smthng
+
 });
