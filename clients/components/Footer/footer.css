@@ -1,0 +1,77 @@
+footer {
+
+    position: absolute;
+    bottom: 0px;
+    height: fit-content;
+    width: 100vw;
+    background-color: var(--secondary-color-1);
+    display: flex;
+    justify-content: center;
+}
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 24px;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 24px;
+}
+footer .container .top {
+  margin-bottom: 16px;
+}
+footer .container .top a {
+  padding-right: 70px;
+  text-decoration: none;
+  color: #fff;
+  word-wrap: break-word;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+footer .container .top a:hover{
+    opacity: 0.8;
+}
+
+footer .container span{
+  height: 0.1px;
+  width: calc(1440px - 90px);
+  opacity: 0.5;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+footer .container .bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+footer .container .bottom .left {
+  word-wrap: break-word;
+  opacity: 0.5;
+  font-size: 14px;
+}
+footer .container .bottom .right {
+  float: right;
+}
+footer .container .bottom .right a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  padding-left: 20px;
+  transition: 0.2s ease;
+}
+
+footer .container .bottom .right a:hover{
+    opacity: 0.8;
+}
+
+footer div.container div.top a:nth-child(4),
+footer div.container div.top a:nth-child(5){
+    display: none;
+}

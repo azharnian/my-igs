@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //language nav
     var smthng
 
+    //footer
     let date = new Date();
     document.getElementById("yearText").innerHTML = date.getFullYear();
 
