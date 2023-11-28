@@ -3,11 +3,11 @@ from wtforms import IntegerField, StringField, PasswordField, BooleanField, Subm
 from wtforms.validators import DataRequired, Optional
 from flask_wtf.file import FileField, FileAllowed
 
-class UserLoginForm(FlaskForm):
+class AddSubjectForm(FlaskForm):
     pass
 
-class AddUserForm(FlaskForm):
+class UploadSubjectsForm(FlaskForm):
     pass
 
-class UpdateUserForm(FlaskForm):
+class UpdateSubjectForm(AddSubjectForm):
     pass

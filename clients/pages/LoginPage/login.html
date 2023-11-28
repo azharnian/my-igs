@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
     <title>MyIGS LoginPage</title>
     <link rel="stylesheet" href="login.css" />
-    <link rel="stylesheet" href="login-responsive.css">
+    <link rel="stylesheet" href="login-responsive.css" />
   </head>
   <body>
     <div class="blank"></div>
@@ -36,48 +36,59 @@
             </div>
             
         </div>
-    </header>
-    <section class="content">
-        <div class="container">
-            <div class="left">
-                <div class="top">
-                    <h1>Selamat Datang di My<span style="font-weight: bold;">IGS</span></h1>
-                    <h2>Internet Banking yang mengerti Kebutuhanmu</h2>
-                </div>
-                <div class="bottom">
-                    <div class="image">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="right">
-                <div class="inputbox firstinput">
-                    <input id="User" type="username" placeholder="Ketik User ID">
-                    <label for="">User ID</label>
-                </div>
-                <div class="inputbox">
-                    <input id="Password" type="password" placeholder="Ketik Password">
-                    <label for="">Password</label>
-                </div>
-                <div class="inputbox">
-                    <div class="input">
-                        <input id="CaptchaCode" type="text" placeholder="Masukkan Kode">
-                        <label for="">Masukkan kode di samping</label>
-                    </div>
-                    <div class="captcha">
-
-                    </div>
-                    <div class="change">
-                        <a href="#">Ganti Kode</a>
-                    </div>
-                </div>
-                <button id="login">
-                    Login
-                </button>
-                <a href="#" id="Register">Belum punya User ID</a>
-                <a href="#" id="Forgot">Saya lupa User ID atau Password</a>
-            </div>
+      <div class="container" id="nav">
+        <div class="logo"></div>
+        <div class="left">
+          <div class="call"></div>
+          <div class="language">
+            ID
+            <div class="arrow"></div>
+          </div>
         </div>
+        <button class="hamburger">
+          <div class="bar"></div>
+        </button>
+      </div>
+    </header>
+    <nav class="mobile-nav">
+      <a href="#">MY IGS</a>
+      <a href="#">HUBUNGI KAMI</a>
+    </nav>
+    <section class="content">
+      <div class="container">
+        <div class="left">
+          <div class="top">
+            <h1>Selamat Datang di My<span style="font-weight: bold">IGS</span></h1>
+            <h2>Internet Banking yang mengerti Kebutuhanmu</h2>
+          </div>
+          <div class="bottom">
+            <div class="image"></div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="inputbox firstinput">
+            <input id="User" type="username" placeholder="Ketik User ID" />
+            <label for="">User ID</label>
+          </div>
+          <div class="inputbox">
+            <input id="Password" type="password" placeholder="Ketik Password" />
+            <label for="">Password</label>
+          </div>
+          <div class="inputbox">
+            <div class="input">
+              <input id="CaptchaCode" type="text" placeholder="Masukkan Kode" />
+              <label for="">Masukkan kode di samping</label>
+            </div>
+            <div class="captcha"></div>
+            <div class="change">
+              <a href="#">Ganti Kode</a>
+            </div>
+          </div>
+          <button id="login">Login</button>
+          <a href="#" id="Register">Belum punya User ID</a>
+          <a href="#" id="Forgot">Saya lupa User ID atau Password</a>
+        </div>
+      </div>
     </section>
     <footer>
       <div class="container">

@@ -1,0 +1,39 @@
+from functools import wraps
+import logging
+
+from flask_login import current_user
+
+from application import login_manager
+from application.users.models import User
+from application.logs.resources import *
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+def log_activity(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        try:
+            user = current_user.username
+        except:
+            user = 'Guest'
+        try:
+            result = func(*args, **kwargs)
+            data = {
+                'level':'INFO', 
+                'message':f"{func.__name__} executed successfully by {user}"
+            }
+            create_log(data)
+            logging.info(f"{func.__name__} executed successfully by {user}")
+            return result
+        except Exception as e:
+            data = {
+                'level':'ERROR', 
+                'message':f"An error occurred in {func.__name__}: {str(e)} by {user}"
+            }
+            create_log(data)
+            logging.error(f"An error occurred in {func.__name__}: {str(e)}")
+            raise e
+
+    return wrapper
