@@ -104,10 +104,6 @@ header div.container div.left div.language div.arrow {
 header div.container div.left div.language:hover div.arrow {
   display: flex;
 }
-
-header div.container div.hide-nav {
-  display: none;
-}
 header div.container button.hamburger {
   display: none;
 }
