@@ -1,0 +1,18 @@
+:root {
+    --primary-color: #872341;
+    
+    /* Secondary Colors */
+    --secondary-color-1: #3C4D64;
+    --secondary-color-2: #6A7D95; 
+    
+    /* Tertiary Colors */
+    --tertiary-color-1: #AA3943; 
+    --tertiary-color-2: #C3616C; 
+    --tertiary-color-3: #E6A2A9;
+
+    /* Logo Image */
+    --logo-primary: igs-logos.png;
+    --logo-dark: igs-gray.png;
+    --logo-invert: igs-invert.png;
+}
+  

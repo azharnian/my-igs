@@ -25,4 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //language nav
     var smthng
 
+    let date = new Date();
+    document.getElementById("yearText").innerHTML = date.getFullYear();
+
 });
