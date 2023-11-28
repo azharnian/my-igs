@@ -21,8 +21,35 @@ document.addEventListener("DOMContentLoaded", () => {
         
     })
     //hidenav responsive
-    var smthng
+        var smthng
     //language nav
-    var smthng
-
+        var languagebtn = document.getElementById("langBtn")
+        var languagenav = document.getElementById("langNav")
+        var firstInput = document.querySelector(".firstinput")
+        languagebtn.addEventListener("click", ()=>{
+            languagenav.classList.toggle("show")
+            firstInput.classList.toggle("disabledcursor")
+        })
+        //selecting all exc LanguageNav (kelemahan (select satu satu)))
+        var content = document.querySelector("section")
+        var footer = document.querySelector("footer")
+        var headerLogo = document.querySelector(".logo")
+        var callLogo = document.querySelector(".call")
+        content.addEventListener("click", ()=>{
+            languagenav.classList.remove("show")
+            firstInput.classList.remove("disabledcursor")
+        })
+        footer.addEventListener("click", ()=>{
+            languagenav.classList.remove("show")
+            firstInput.classList.remove("disabledcursor")
+        })
+        headerLogo.addEventListener("click", ()=>{
+            languagenav.classList.remove("show")
+            firstInput.classList.remove("disabledcursor")
+        })
+        callLogo.addEventListener("click", ()=>{
+            languagenav.classList.remove("show")
+            firstInput.classList.remove("disabledcursor")
+        })
+        
 });
