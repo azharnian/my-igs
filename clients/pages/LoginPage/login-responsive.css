@@ -1,183 +1,281 @@
-@media screen and (max-width: 2000px){
-    section.content div.container{
-        width: 1350px;
-    }
+@media screen and (max-width: 2000px) {
+  section.content div.container {
+    width: 1350px;
+  }
 }
 
-
-
 @media screen and (max-width: 1540px) {
-    footer{
-        margin-top: -10px;
-        transform: translateY(20px);
-        position: relative;
-    }
-    section.content{
-        height: fit-content;
-        position: relative;
-    }
+  footer {
+    margin-top: -10px;
+    transform: translateY(20px);
+    position: relative;
+  }
+  section.content {
+    height: fit-content;
+    position: relative;
+  }
 }
 
 @media screen and (max-width: 1400px) {
-    footer .container{
-        margin-left: 190px;
-        margin-right: 190px;
-    }
-    footer .container span{
-        width: calc(1440px - 200px);
-    }
-    section.content div.container div.right div.inputbox:nth-child(3) div.input input{
-      width: 380px;
-    }
+  footer .container {
+    margin-left: 190px;
+    margin-right: 190px;
+  }
+  footer .container span {
+    width: calc(1440px - 200px);
+  }
+  section.content div.container div.right div.inputbox:nth-child(3) div.input input {
+    width: 380px;
+  }
 }
 
-@media screen and (max-width: 1300px){
-    section.content div.container{
-        gap: 0px;
-    }
-    section.content div.container div.left{
-        width: 40%;
-    }
-    section.content div.container div.left div.bottom div.image{
-        width: 400px;
-        height: 278px;
-    }
-    footer .container{
-        margin-left: 250px;
-        margin-right: 250px;
-    }
-    footer .container span{
-        width: calc(1440px - 400px);
-    }
-    section.content div.container div.right div.inputbox:nth-child(3) div.input{
-        width: fit-content;
-    }
-    section.content div.container div.right div.inputbox:nth-child(3) div.input input{
-        width: 250px;
-    }
-    section.content div.container div.right div.inputbox:nth-child(3) div.change{
-        width: 100px;
-    }
-    footer div.container div.bottom div.right{
-        display: none;
-    }
-    footer div.container div.top a:nth-child(4),
-    footer div.container div.top a:nth-child(5){
-      display: inline-block;
-    }
+@media screen and (max-width: 1300px) {
+  section.content div.container {
+    gap: 0px;
+  }
+  section.content div.container div.left {
+    width: 40%;
+  }
+  section.content div.container div.left div.bottom div.image {
+    width: 400px;
+    height: 278px;
+  }
+  footer .container {
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+  footer .container span {
+    width: calc(1440px - 400px);
+  }
+  section.content div.container div.right div.inputbox:nth-child(3) div.input {
+    width: fit-content;
+  }
+  section.content div.container div.right div.inputbox:nth-child(3) div.input input {
+    width: 250px;
+  }
+  section.content div.container div.right div.inputbox:nth-child(3) div.change {
+    width: 100px;
+  }
+  footer div.container div.bottom div.right {
+    display: none;
+  }
+  footer div.container div.top a:nth-child(4),
+  footer div.container div.top a:nth-child(5) {
+    display: inline-block;
+  }
 }
 
 @media screen and (max-width: 1100px) {
-    section.content div.container{
-      margin-left: 40px;
-      margin-right: 50px;
-      gap: 80px;
-    }
-    section.content div.container div.left div.bottom div.image{
-      width: 365px;
-      margin-top: 25px;
-      height: 243px;
-    }
-    section.content div.container div.right div.inputbox:nth-child(3) div.input input{
-      width: 232px;
-    }
-    header div.container{
-      margin-left: 40px;
-      margin-right: 45px;
-    }
-
-    footer .container{
-      margin-left: 410px;
-      margin-right: 430px;
+  section.content div.container {
+    margin-left: 40px;
+    margin-right: 50px;
+    gap: 80px;
   }
-    footer .container span{
-      width: calc(1440px - 510px);
-    }
+  section.content div.container div.left div.bottom div.image {
+    width: 365px;
+    margin-top: 25px;
+    height: 243px;
+  }
+  section.content div.container div.right div.inputbox:nth-child(3) div.input input {
+    width: 232px;
+  }
+  header div.container {
+    margin-left: 40px;
+    margin-right: 45px;
+  }
+
+  footer .container {
+    margin-left: 410px;
+    margin-right: 430px;
+  }
+  footer .container span {
+    width: calc(1440px - 510px);
+  }
 }
 @media screen and (max-width: 1000px) {
-  div.blank{
+  div.blank {
     width: 100vw;
   }
-  header{
+  header {
     width: 100vw;
   }
-  header div.container div.left{
+  header div.container div.left {
     display: none;
   }
-  header div.container{
+  header div.container {
     margin-top: 20px;
     margin-left: 25px;
     margin-right: 47px;
+    display: flex;
+    align-items: center;
   }
-  header div.container div.logo{
+  header div.container div.logo {
     width: 130px;
     height: 30px;
   }
-  header div.container div.hide-nav{
-    display: block;
-    height: 30px;
-    width: 30px;
-    background-image: url(assets/menu.svg);
-    background-size: 100% 100%;
+  /*Hamburger-menu*/
+  header div.container div.hide-nav {
+    display: flex;
+    flex-direction: column;
+    height: 19px;
+    justify-content: space-between;
+    position: relative;
   }
-  section.content{
+  header div.container div.hide-nav input {
+    position: absolute;
+    left: -10px;
+    top: -6px;
+    width: 50px;
+    height: 33px;
+    opacity: 0;
+    cursor: pointer;
+  }
+  header div.container div.hide-nav span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.5s;
+  }
+  /*Hamburger-menu animation*/
+  header div.container div.hide-nav span:nth-child(2) {
+    transform-origin: 0 0;
+  }
+  header div.container div.hide-nav span:nth-child(4) {
+    transform-origin: 0 100%;
+  }
+  header div.container div.hide-nav input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+  }
+  header div.container div.hide-nav input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+  }
+  header div.container div.hide-nav input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+  }
+  header div.container div.hide-nav input:checked ~ ul {
+    position: absolute;
+  }
+  header div.container button.hamburger {
+    position: relative;
+    display: block;
+    width: 28px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  header div.container button.hamburger div.bar,
+  button.hamburger:before,
+  button.hamburger:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+  header div.container button.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+  header div.container button.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-7px, -7px);
+  }
+  header div.container button.hamburger.is-active div.bar {
+    opacity: 0;
+  }
+  nav.mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: #23343f;
+    padding-top: 100px;
+    transition: 0.4s;
+  }
+  nav.mobile-nav.is-active {
+    left: 0;
+  }
+  nav.mobile-nav a {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff54;
+  }
+  nav.mobile-nav a:hover {
+    color: #ffffff4b;
+  }
+  section.content {
     width: 100vw;
     transform: translateY(10px);
   }
-  section.content div.container{
+  section.content div.container {
     width: 100vw;
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
     gap: 50px;
   }
-  section.content div.container div.left div.bottom div.image{
+  section.content div.container div.left div.bottom div.image {
     display: none;
   }
-  section.content div.container div.left{
+  section.content div.container div.left {
     width: 100%;
   }
-  section.content div.container div.left div.top h2{
+  section.content div.container div.left div.top h2 {
     display: none;
   }
-  section.content div.container div.right div.inputbox{
+  section.content div.container div.right div.inputbox {
     position: relative;
   }
-  section.content div.container div.right div.inputbox input{
+  section.content div.container div.right div.inputbox input {
     font-size: 17px;
     width: 100%;
   }
-  section.content div.container div.right div.inputbox:nth-child(3) div.input input{
+  section.content div.container div.right div.inputbox:nth-child(3) div.input input {
     width: 80vw;
-  } 
-  section.content div.container div.right{
+  }
+  section.content div.container div.right {
     width: 100%;
   }
-  section.content div.container div.right div.inputbox input::placeholder{
+  section.content div.container div.right div.inputbox input::placeholder {
     font-size: 17px;
   }
-  section.content div.container div.right div.inputbox div.change{
+  section.content div.container div.right div.inputbox div.change {
     position: absolute;
     top: 45px;
     left: -19px;
   }
-  section.content div.container div.right div.inputbox:nth-child(3) div.change a{
+  section.content div.container div.right div.inputbox:nth-child(3) div.change a {
     font-size: 13px;
     font-weight: 400;
   }
-  section.content div.container div.right button{
+  section.content div.container div.right button {
     margin-top: 30px;
     height: 30px;
     width: 93px;
     font-weight: 400;
   }
-  footer{
+  footer {
     overflow-y: hidden;
     width: 100vw;
     height: fit-content;
-    
   }
-  footer div.container{
+  footer div.container {
     margin-left: 25px;
     margin-right: 25px;
     display: flex;
@@ -188,8 +286,7 @@
     margin-top: 20px;
   }
 
-  footer div.container div.top{
-    
+  footer div.container div.top {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -198,114 +295,106 @@
     gap: 20px;
     flex-direction: column;
   }
-  footer div.container div.top a{
+  footer div.container div.top a {
     font-weight: 550;
   }
-  footer div.container div.bottom{
+  footer div.container div.bottom {
     display: flex;
   }
-  footer div.container div.bottom div.left{
+  footer div.container div.bottom div.left {
     font-size: 10px;
     opacity: 0.9;
   }
-  footer div.container span{
+  footer div.container span {
     width: 92vw;
     height: 0.1px;
   }
 }
-@media screen and (max-width:800px){
-  header div.container{
+@media screen and (max-width: 800px) {
+  header div.container {
     margin-top: 20px;
     margin-left: 17px;
     margin-right: 38px;
   }
-  footer div.container span{
+  footer div.container span {
     width: 92vw;
     height: 0.1px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  div.blank{
+  div.blank {
     width: 100vw;
   }
-  header{
+  header {
     width: 100vw;
   }
-  header div.container div.left{
+  header div.container div.left {
     display: none;
   }
-  header div.container{
+  header div.container {
     margin-top: 20px;
     margin-left: 30px;
     margin-right: 30px;
   }
-  header div.container div.logo{
+  header div.container div.logo {
     width: 130px;
     height: 30px;
   }
-  header div.container div.hide-nav{
-    display: block;
-    height: 30px;
-    width: 30px;
-    background-image: url(assets/menu.svg);
-    background-size: 100% 100%;
-  }
-  section.content{
+  section.content {
     width: 100vw;
     transform: translateY(10px);
   }
-  section.content div.container{
+  section.content div.container {
     width: 100vw;
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
     gap: 50px;
   }
-  section.content div.container div.left div.bottom div.image{
+  section.content div.container div.left div.bottom div.image {
     display: none;
   }
-  section.content div.container div.left{
+  section.content div.container div.left {
     width: 100%;
   }
-  section.content div.container div.left div.top h2{
+  section.content div.container div.left div.top h2 {
     display: none;
   }
-  section.content div.container div.right div.inputbox{
+  section.content div.container div.right div.inputbox {
     position: relative;
   }
-  section.content div.container div.right div.inputbox input{
+  section.content div.container div.right div.inputbox input {
     font-size: 17px;
     width: 100%;
   }
-  section.content div.container div.right{
+  section.content div.container div.right {
     width: 100%;
   }
-  section.content div.container div.right div.inputbox input::placeholder{
+  section.content div.container div.right div.inputbox input::placeholder {
     font-size: 17px;
   }
-  section.content div.container div.right div.inputbox div.change{
+  section.content div.container div.right div.inputbox div.change {
     position: absolute;
     top: 45px;
     left: -19px;
   }
-  section.content div.container div.right div.inputbox:nth-child(3) div.change a{
+  section.content div.container div.right div.inputbox:nth-child(3) div.change a {
     font-size: 13px;
     font-weight: 400;
   }
-  section.content div.container div.right button{
+  section.content div.container div.right button {
     margin-top: 30px;
     height: 30px;
     width: 93px;
     font-weight: 400;
   }
-  footer{
+  footer {
     overflow-y: hidden;
     width: 100vw;
     height: fit-content;
-    
   }
-  footer div.container{
+  footer div.container {
     margin-left: 25px;
     margin-right: 25px;
     display: flex;
@@ -316,8 +405,7 @@
     margin-top: 20px;
   }
 
-  footer div.container div.top{
-    
+  footer div.container div.top {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -326,19 +414,18 @@
     gap: 20px;
     flex-direction: column;
   }
-  footer div.container div.top a{
+  footer div.container div.top a {
     font-weight: 550;
   }
-  footer div.container div.bottom{
+  footer div.container div.bottom {
     display: flex;
   }
-  footer div.container div.bottom div.left{
+  footer div.container div.bottom div.left {
     font-size: 10px;
     opacity: 0.9;
   }
-  footer div.container span{
+  footer div.container span {
     width: 85vw;
     height: 0.1px;
   }
 }
-
