@@ -301,7 +301,7 @@ section.content div.container button{
 
 section.content div.container button:hover,
 section.content div.container button:focus{
-    background: #036758;
+    background: var(--tertiary-color-1);
     transition: 0.2s ease;
 }
 
