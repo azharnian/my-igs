@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet');
 
+:root {
+    --primary-color: #22092C;
+    
+    /* Secondary Colors */
+    --secondary-color-1: #3C4D64;
+    --secondary-color-2: #6A7D95; 
+    
+    /* Tertiary Colors */
+    --tertiary-color-1: #872341; 
+    --tertiary-color-2: #BE3144; 
+    --tertiary-color-3: #F05941;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -9,7 +22,7 @@ body{
     height: fit-content;
     width: 100vw;
     color: white;
-    background-color: #172D51;
+    background-color: var(--primary-color);
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
@@ -54,10 +67,10 @@ header.fixed {
 
 header div.container div.logo{
     width: 160px;
-    height: 40px;
-    background-image: url(assets/Logo.png);
+    height: 50px;
+    background-image: url(assets/igs-invert.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     cursor: pointer;
     z-index: 101;
@@ -251,13 +264,13 @@ section.content div.container div.left div.top h2 {
   font-weight: 300;
 }
 
-section.content div.container div.left div.bottom div.image {
-  margin-top: 50px;
-  width: 465px;
-  height: 343px;
-  background-image: url(assets/Photo.png);
-
-  background-size: 100% 100%;
+section.content div.container div.left div.bottom div.image{
+    margin-top: 50px;
+    width: 465px;
+    height: 343px;
+    background-image: url();
+    
+    background-size: 100% 100%;
 }
 
 section.content div.container div.right{
@@ -361,27 +374,27 @@ section.content div.container div.right div.inputbox:nth-child(3) div.change a {
   word-wrap: break-word;
 }
 
-section.content div.container button {
-  height: 40px;
-  width: 103px;
-  border-radius: 200px;
-  border: none;
-  background: #008873;
-  color: white;
-  font-size: 16px;
-  font-family: Lato;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0.12px;
-  cursor: pointer;
-  word-wrap: break-word;
-  transition: 0.2s ease;
+section.content div.container button{
+    height: 40px;
+    width: 103px;
+    border-radius: 200px;
+    border: none;
+    background: var(--tertiary-color-3);
+    color: white;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.12px;
+    cursor: pointer;
+    word-wrap: break-word;
+    transition: 0.2s ease;
 }
 
 section.content div.container button:hover,
-section.content div.container button:focus {
-  background: #036758;
-  transition: 0.2s ease;
+section.content div.container button:focus{
+    background: var(--tertiary-color-1);
+    transition: 0.2s ease;
 }
 
 section.content div.container a#Register,
@@ -398,13 +411,14 @@ section.content div.container a#Forgot:hover {
 }
 
 footer {
-  position: absolute;
-  bottom: 0px;
-  height: fit-content;
-  width: 100vw;
-  background-color: #121f26;
-  display: flex;
-  justify-content: center;
+
+    position: absolute;
+    bottom: 0px;
+    height: fit-content;
+    width: 100vw;
+    background-color: var(--secondary-color-1);
+    display: flex;
+    justify-content: center;
 }
 footer .container {
   display: flex;
@@ -432,7 +446,7 @@ footer .container .top a:hover {
   opacity: 0.8;
 }
 
-footer .container span {
+footer .container span{
   height: 0.1px;
   width: calc(1440px - 90px);
   opacity: 0.5;

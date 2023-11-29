@@ -42,40 +42,46 @@
       <a href="#">HUBUNGI KAMI</a>
     </nav>
     <section class="content">
-      <div class="container">
-        <div class="left">
-          <div class="top">
-            <h1>Selamat Datang di My<span style="font-weight: bold">IGS</span></h1>
-            <h2>Internet Banking yang mengerti Kebutuhanmu</h2>
-          </div>
-          <div class="bottom">
-            <div class="image"></div>
-          </div>
-        </div>
-        <div class="right">
-          <div class="inputbox firstinput">
-            <input id="User" type="username" placeholder="Ketik User ID" />
-            <label for="User">User ID</label>
-          </div>
-          <div class="inputbox">
-            <input id="Password" type="password" placeholder="Ketik Password" />
-            <label for="Password">Password</label>
-          </div>
-          <div class="inputbox">
-            <div class="input">
-              <input id="CaptchaCode" type="text" placeholder="Masukkan Kode" />
-              <label for="">Masukkan kode di samping</label>
+        <div class="container">
+            <div class="left">
+                <div class="top">
+                    <h1>Selamat Datang di My<span style="font-weight: bold;">IGS</span></h1>
+                    <h2>Layanan persekolahan yang mengerti kebutuhanmu.</h2>
+                </div>
+                <div class="bottom">
+                    <div class="image">
+                        
+                    </div>
+                </div>
             </div>
-            <div class="captcha"></div>
-            <div class="change">
-              <a href="#">Ganti Kode</a>
+            <div class="right">
+                <div class="inputbox">
+                    <input id="User" type="username" placeholder="Ketik User ID">
+                    <label for="User">User ID</label>
+                </div>
+                <div class="inputbox">
+                    <input id="Password" type="password" placeholder="Ketik Password">
+                    <label for="Password">Password</label>
+                </div>
+                <div class="inputbox">
+                    <div class="input">
+                        <input id="CaptchaCode" type="text" placeholder="Masukkan Kode">
+                        <label for="CaptchaCode">Masukkan kode di samping</label>
+                    </div>
+                    <div class="captcha">
+
+                    </div>
+                    <div class="change">
+                        <a href="#">Ganti Kode</a>
+                    </div>
+                </div>
+                <button id="login">
+                    Login
+                </button>
+                <a href="#" id="Register">Belum punya User ID</a>
+                <a href="#" id="Forgot">Saya lupa User ID atau Password</a>
             </div>
-          </div>
-          <button id="login">Login</button>
-          <a href="#" id="Register">Belum punya User ID</a>
-          <a href="#" id="Forgot">Saya lupa User ID atau Password</a>
         </div>
-      </div>
     </section>
     <footer>
       <div class="container">
@@ -89,7 +95,7 @@
         <span></span>
         <div class="bottom">
           <div class="left">
-            <p>&copy - PT Bank Permata Tbk berizin dan diawasi oleh Otoritas Jasa Keuangan dan merupakan peserta penjaminan Lembaga Penjamin Simpanan.</p>
+            <p>&copy <small id="yearText"></small> - Ignatius Global School Palembang.</p>
           </div>
           <div class="right">
             <a href="#">Syarat dan Ketentuan</a>
