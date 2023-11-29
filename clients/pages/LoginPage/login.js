@@ -52,5 +52,5 @@ document.addEventListener("DOMContentLoaded", () => {
             languagenav.classList.remove("show")
             firstInput.classList.remove("disabledcursor")
         })
-        
+    
 });
