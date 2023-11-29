@@ -1,5 +1,5 @@
 @media screen and (max-width: 6000px) {
-  section.content div.container {
+  section.content form {
     width: 1350px;
   }
 }
@@ -26,7 +26,6 @@
     bottom: 0px;
     height: fit-content;
     width: 100vw;
-    background-color: #121f26;
     display: flex;
     justify-content: center;
   }
@@ -40,60 +39,45 @@
   footer .container span {
     width: calc(1440px - 200px);
   }
-  section.content div.container div.right div.inputbox:nth-child(3) div.input input {
-    width: 380px;
-  }
 }
 
 @media screen and (max-width: 1300px) {
-  section.content div.container {
+  section.content form {
     gap: 0px;
   }
-  section.content div.container div.left {
+  section.content form div.left {
     width: 40%;
   }
-  section.content div.container div.left div.bottom div.image {
+  section.content form div.left div.bottom div.image {
     width: 400px;
     height: 278px;
   }
-  footer .container {
+  footer form {
     margin-left: 250px;
     margin-right: 250px;
   }
-  footer .container span {
+  footer form span {
     width: calc(1440px - 400px);
   }
-  section.content div.container div.right div.inputbox:nth-child(3) div.input {
-    width: fit-content;
-  }
-  section.content div.container div.right div.inputbox:nth-child(3) div.input input {
-    width: 250px;
-  }
-  section.content div.container div.right div.inputbox:nth-child(3) div.change {
-    width: 100px;
-  }
-  footer div.container div.bottom div.right {
+  footer form div.bottom div.right {
     display: none;
   }
-  footer div.container div.top a:nth-child(4),
-  footer div.container div.top a:nth-child(5) {
+  footer form div.top a:nth-child(4),
+  footer form div.top a:nth-child(5) {
     display: inline-block;
   }
 }
 
 @media screen and (max-width: 1100px) {
-  section.content div.container {
+  section.content form {
     margin-left: 40px;
     margin-right: 50px;
     gap: 80px;
   }
-  section.content div.container div.left div.bottom div.image {
+  section.content form div.left div.bottom div.image {
     width: 365px;
     margin-top: 25px;
     height: 243px;
-  }
-  section.content div.container div.right div.inputbox:nth-child(3) div.input input {
-    width: 232px;
   }
   header div.container {
     margin-left: 40px;
@@ -220,48 +204,41 @@
     width: 100vw;
     transform: translateY(10px);
   }
-  section.content div.container {
+  section.content form {
     width: 100vw;
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
     gap: 50px;
   }
-  section.content div.container div.left div.bottom div.image {
+  section.content form div.left div.bottom div.image {
     display: none;
   }
-  section.content div.container div.left {
+  section.content form div.left {
     width: 100%;
   }
-  section.content div.container div.left div.top h2 {
+  section.content form div.left div.top h2 {
     display: none;
   }
-  section.content div.container div.right div.inputbox {
+  section.content form div.right div.inputbox {
     position: relative;
   }
-  section.content div.container div.right div.inputbox input {
+  section.content form div.right div.inputbox input {
     font-size: 17px;
     width: 100%;
   }
-  section.content div.container div.right div.inputbox:nth-child(3) div.input input {
-    width: 80vw;
-  }
-  section.content div.container div.right {
+  section.content form div.right {
     width: 100%;
   }
-  section.content div.container div.right div.inputbox input::placeholder {
+  section.content form div.right div.inputbox input::placeholder {
     font-size: 17px;
   }
-  section.content div.container div.right div.inputbox div.change {
+  section.content form div.right div.inputbox div.change {
     position: absolute;
     top: 45px;
     left: -19px;
   }
-  section.content div.container div.right div.inputbox:nth-child(3) div.change a {
-    font-size: 13px;
-    font-weight: 400;
-  }
-  section.content div.container div.right button {
+  section.content form div.right button {
     margin-top: 30px;
     height: 30px;
     width: 93px;
@@ -342,45 +319,41 @@
     width: 100vw;
     transform: translateY(10px);
   }
-  section.content div.container {
+  section.content form {
     width: 100vw;
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
     gap: 50px;
   }
-  section.content div.container div.left div.bottom div.image {
+  section.content form div.left div.bottom div.image {
     display: none;
   }
-  section.content div.container div.left {
+  section.content form div.left {
     width: 100%;
   }
-  section.content div.container div.left div.top h2 {
+  section.content form div.left div.top h2 {
     display: none;
   }
-  section.content div.container div.right div.inputbox {
+  section.content form div.right div.inputbox {
     position: relative;
   }
-  section.content div.container div.right div.inputbox input {
+  section.content form div.right div.inputbox input {
     font-size: 17px;
     width: 100%;
   }
-  section.content div.container div.right {
+  section.content form div.right {
     width: 100%;
   }
-  section.content div.container div.right div.inputbox input::placeholder {
+  section.content form div.right div.inputbox input::placeholder {
     font-size: 17px;
   }
-  section.content div.container div.right div.inputbox div.change {
+  section.content form div.right div.inputbox div.change {
     position: absolute;
     top: 45px;
     left: -19px;
   }
-  section.content div.container div.right div.inputbox:nth-child(3) div.change a {
-    font-size: 13px;
-    font-weight: 400;
-  }
-  section.content div.container div.right button {
+  section.content form div.right button {
     margin-top: 30px;
     height: 30px;
     width: 93px;

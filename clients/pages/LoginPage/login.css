@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet');
 
-:root {
-    --primary-color: #22092C;
-    
-    /* Secondary Colors */
-    --secondary-color-1: #3C4D64;
-    --secondary-color-2: #6A7D95; 
-    
-    /* Tertiary Colors */
-    --tertiary-color-1: #872341; 
-    --tertiary-color-2: #BE3144; 
-    --tertiary-color-3: #F05941;
-}
-
 * {
   margin: 0px;
   padding: 0px;
@@ -62,18 +49,19 @@ header div.container {
 
 header.fixed {
   z-index: 100;
-  background-color: #23343f;
+  background-color: var(--secondary-color-2);
 }
 
 header div.container div.logo{
     width: 160px;
-    height: 50px;
+    height: 65px;
     background-image: url(assets/igs-invert.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-repeat: no-repeat;
     cursor: pointer;
     z-index: 101;
+    transform: translateY(-14px);
 }
 header div.container div.left {
   display: flex;
@@ -89,7 +77,8 @@ header div.container div.left div.call{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
-    transition: 0.2s ease-in-out
+    transition: 0.2s ease-in-out;
+    transform: translateY(-13px);
 }
 
 header div.container div.left div.call:hover {
@@ -103,6 +92,7 @@ header div.container div.left div.language{
     cursor: pointer;
     z-index: 101;
     user-select: none;
+    transform: translateY(-14px);
 }
 
 header div.container div.left div.language div.arrow{
@@ -221,7 +211,7 @@ section.content {
   align-items: center;
 }
 
-section.content div.container {
+section.content form {
   margin-bottom: 8vh;
   width: 1440px;
   margin-top: 20px;
@@ -234,7 +224,7 @@ section.content div.container {
   gap: 100px;
 }
 
-section.content div.container div.left {
+section.content form div.left {
   width: 50%;
   height: 100%;
   padding-top: 6px;
@@ -244,13 +234,13 @@ section.content div.container div.left {
   flex-direction: column;
 }
 
-section.content div.container div.left div.top {
+section.content form div.left div.top {
   display: flex;
   flex-direction: column;
   gap: 16.2px;
 }
 
-section.content div.container div.left div.top h1 {
+section.content form div.left div.top h1 {
   font-size: 32px;
   margin-top: 10px;
   word-wrap: break-word;
@@ -258,13 +248,13 @@ section.content div.container div.left div.top h1 {
   padding-bottom: 6.7;
 }
 
-section.content div.container div.left div.top h2 {
+section.content form div.left div.top h2 {
   font-size: 24px;
   word-wrap: break-word;
   font-weight: 300;
 }
 
-section.content div.container div.left div.bottom div.image{
+section.content form div.left div.bottom div.image{
     margin-top: 50px;
     width: 465px;
     height: 343px;
@@ -273,7 +263,7 @@ section.content div.container div.left div.bottom div.image{
     background-size: 100% 100%;
 }
 
-section.content div.container div.right{
+section.content form div.right{
     width: 47%;
     height: 100%;
     padding-top: 6px;
@@ -283,9 +273,10 @@ section.content div.container div.right{
     gap: 32px;
     user-select: none;
     color: white;
+    transform: translateY(15px);
 }
 
-section.content div.container div.right div.inputbox{
+section.content form div.right div.inputbox{
     display: flex;
     flex-direction: column-reverse;
     gap: 10px;
@@ -294,7 +285,7 @@ section.content div.container div.right div.inputbox{
     user-select: none;
 }
 
-section.content div.container div.right div.inputbox label {
+section.content form div.right div.inputbox label {
   color: white;
   font-size: 12px;
   font-family: Lato;
@@ -302,7 +293,7 @@ section.content div.container div.right div.inputbox label {
   line-height: 22px;
 }
 
-section.content div.container div.right div.inputbox input {
+section.content form div.right div.inputbox input {
   background-color: transparent;
   border: none;
   height: fit-content;
@@ -315,66 +306,14 @@ section.content div.container div.right div.inputbox input {
   font-size: 24px;
 }
 
-section.content div.container div.right div.inputbox input::placeholder {
+section.content form div.right div.inputbox input::placeholder {
   color: #c5d1d8;
   font-size: 24px;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
 }
-
-section.content div.container div.right div.inputbox:nth-child(3) {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-section.content div.container div.right div.inputbox:nth-child(3) div.input {
-  display: flex;
-  flex-direction: column-reverse;
-
-  gap: 10px;
-  width: 432px;
-  height: 64px;
-}
-
-section.content div.container div.right div.inputbox:nth-child(3) div.input input {
-  width: 432px;
-}
-
-section.content div.container div.right div.inputbox:nth-child(3) div.captcha {
-  width: 86px;
-  height: 56px;
-  background: black;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-section.content div.container div.right div.inputbox:nth-child(3) div.change {
-  color: white;
-  width: 100px;
-  text-decoration: none;
-  font-weight: bold;
-  height: 70%;
-  display: flex;
-  transform: translateY(15px);
-  justify-content: center;
-  align-items: center;
-}
-
-section.content div.container div.right div.inputbox:nth-child(3) div.change a {
-  color: white;
-  font-size: 16px;
-  font-family: Lato;
-  font-weight: 500;
-  text-decoration: underline;
-  text-align: center;
-  word-wrap: break-word;
-}
-
-section.content div.container button{
+section.content form button{
     height: 40px;
     width: 103px;
     border-radius: 200px;
@@ -391,22 +330,22 @@ section.content div.container button{
     transition: 0.2s ease;
 }
 
-section.content div.container button:hover,
-section.content div.container button:focus{
+section.content form button:hover,
+section.content form button:focus{
     background: var(--tertiary-color-1);
     transition: 0.2s ease;
 }
 
-section.content div.container a#Register,
-section.content div.container a#Forgot {
+section.content form a#Register,
+section.content form a#Forgot {
   color: white;
   text-decoration: none;
   font-weight: 400;
   font-size: 16px;
 }
 
-section.content div.container a#Register:hover,
-section.content div.container a#Forgot:hover {
+section.content form a#Register:hover,
+section.content form a#Forgot:hover {
   text-decoration: underline;
 }
 
