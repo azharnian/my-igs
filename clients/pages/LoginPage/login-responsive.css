@@ -210,6 +210,8 @@
     padding-left: 30px;
     padding-right: 30px;
     gap: 50px;
+    margin-left: 0px;
+    margin-right: 10px;
   }
   section.content form div.left div.bottom div.image {
     display: none;
@@ -362,7 +364,7 @@
   footer {
     overflow-y: hidden;
     width: 100vw;
-    height: 20vh;
+    height: 40vh;
   }
   footer div.container {
     margin-left: 25px;
@@ -370,8 +372,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-evenly;
     width: 100%;
-    height: 100%;
     margin-top: 20px;
   }
 
