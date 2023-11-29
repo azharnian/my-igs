@@ -1,5 +1,6 @@
 from application import db
 from application.project.models import BaseModel
+from datetime import datetime
 
 class CertificateType(db.Model, BaseModel):
 
@@ -8,8 +9,8 @@ class CertificateType(db.Model, BaseModel):
     name          = db.Column(db.String(32), nullable = False)
     online        = db.Column(db.Bool, default = False)
     level         = db.Column(db.String(32), nullable = False)
-    status        = db.Column(db.bool, nullable = False)
-    created_date  = db.Column(db.DateTime, nullable = False)
+    status        = db.Column(db.bool, default = True)
+    created_date  = db.Column(db.DateTime, nullable = False, default=datetime.utcnow)
 
     certi_type    = db.relationship("Certificate", foreign_keys="Certificate.certi_type_id", backref="type", lazy=True)
 
