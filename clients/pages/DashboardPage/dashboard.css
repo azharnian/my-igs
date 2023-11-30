@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: fit-content;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(0, 128, 122);
+}
+header {
+  width: 100%;
+  height: fit-content;
+  background-color: #1d324f;
+  font-weight: 400;
+}
+header div.header--container {
+  margin-left: 90px;
+  margin-right: 90px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header div.header--container div.header--logo {
+  background-image: url(assets/igs-invert.png);
+  width: 65px;
+  height: 65px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* background-color: aliceblue; */
+}
+header div.header--container ul.header--bar {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  /* padding-right: 100px; */
+  list-style: none;
+}
+header div.header--container ul.header--bar a {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 55px;
+}
+header div.header--container div.header--account {
+  height: fit-content;
+  width: 204px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header div.header--container div.header--account div.header--mail {
+  height: 24px;
+  width: 24px;
+  background-image: url(assets/mail.svg);
+}
+header div.header--container div.header--account div.header--icon {
+  height: 22px;
+  width: 22px;
+  background-image: url(assets/basket.svg);
+  background-size: contain;
+}
+header div.header--container div.header--account div.header--call {
+  height: 24px;
+  width: 24px;
+  background-image: url(assets/phone.svg);
+}
+header div.header--container div.header--account div.header--language {
+  height: 24px;
+  width: 24px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 1000;
+}
+header div.header--container div.header--account div.header--prof {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: pink;
+}
+section.content {
+  margin-top: 50px;
+  margin-left: 90px;
+  margin-right: 90px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+section.content div.left h1 {
+  font-size: 70px;
+  /* font-weight: 100; */
+  margin-bottom: 10px;
+}
+section.content div.left h2 {
+  font-size: 30px;
+  font-weight: 200;
+  margin-bottom: 24px;
+}
+section.content div.left div.box {
+  width: fit-content;
+  height: fit-content;
+}
+section.content div.left div.box div.bar {
+  height: 64px;
+  width: 294px;
+  border-radius: 54px;
+  border: 1px solid #fff;
+  /* background-color: lightblue; */
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+section.content div.right {
+  width: 400px;
+  height: fit-content;
+  /* background-color: #1d324f; */
+}
+section.content div.right div.info h3 {
+  font-size: 20px;
+  font-weight: 100;
+  margin-top: 21px;
+}
+section.content div.right div.shelf {
+  width: 100%;
+  height: fit-content;
+  margin-top: 20px;
+}
+section.content div.right div.shelf div.tabungan {
+  height: 240px;
+  background-color: #1d324f;
+  border-radius: 12px;
+}
+section.content div.right div.shelf div.box {
+  height: 120px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #1d324f;
+  margin-top: 8px;
+}
+section.content div.right div.shelf div.tabungan div.top {
+  height: 50%;
+}
+section.content div.right div.shelf div.tabungan div.bottom {
+  height: 50%;
+}
