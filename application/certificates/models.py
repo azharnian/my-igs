@@ -21,7 +21,6 @@ class Certificate(db.Model, BaseModel):
     awardee_id    = db.Column(db.Integer, db.ForeignKey("users.id"), nullable = False)
     certi_type_id = db.Column(db.Integer, db.ForeignKey("certificate_types.id"), nullable = False)
     score         = db.Column(db.Integer, nullable = False)
-    input_by      = db.Column(db.Integer, db.ForeignKey("users.id"), nullable = False)
     description   = db.Column(db.String(256), nullable = False)
     started_date  = db.Column(db.DateTime, nullable = False)
     expired_date  = db.Column(db.DateTime, nullable = False)
