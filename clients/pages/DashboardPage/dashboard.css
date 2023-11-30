@@ -49,6 +49,9 @@ header div.header--container ul.header--bar a {
   text-decoration: none;
   padding-right: 55px;
 }
+header div.header--container ul.header--bar a:hover {
+  color: #ffffff8a;
+}
 header div.header--container div.header--account {
   height: fit-content;
   width: 204px;
@@ -121,6 +124,13 @@ section.content div.left div.box div.bar {
   justify-content: center;
   align-items: center;
   font-size: 16px;
+}
+section.content div.left div.box div.bar a {
+  text-decoration: none;
+  color: #fff;
+}
+section.content div.left div.box div.bar:hover {
+  background-color: #1d324f;
 }
 section.content div.right {
   width: 400px;
