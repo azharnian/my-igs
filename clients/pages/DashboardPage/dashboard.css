@@ -12,12 +12,11 @@ body {
   height: fit-content;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
-  background-color: rgb(0, 128, 122);
+  overflow-x: hidden;
 }
 header {
   width: 100%;
   height: fit-content;
-  background-color: #1d324f;
   font-weight: 400;
 }
 header div.header--container {
@@ -30,27 +29,25 @@ header div.header--container {
   align-items: center;
 }
 header div.header--container div.header--logo {
-  background-image: url(assets/igs-invert.png);
+  background-image: url(assets/igs-logos.png);
   width: 65px;
   height: 65px;
   background-repeat: no-repeat;
   background-size: contain;
-  /* background-color: aliceblue; */
 }
 header div.header--container ul.header--bar {
   width: fit-content;
   display: flex;
   align-items: center;
-  /* padding-right: 100px; */
   list-style: none;
 }
 header div.header--container ul.header--bar a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   padding-right: 55px;
 }
 header div.header--container ul.header--bar a:hover {
-  color: #ffffff8a;
+  color: gray;
 }
 header div.header--container div.header--account {
   height: fit-content;
@@ -62,18 +59,18 @@ header div.header--container div.header--account {
 header div.header--container div.header--account div.header--mail {
   height: 24px;
   width: 24px;
-  background-image: url(assets/mail.svg);
+  background-image: url(assets/mail-2.svg);
 }
 header div.header--container div.header--account div.header--icon {
   height: 22px;
   width: 22px;
-  background-image: url(assets/basket.svg);
+  background-image: url(assets/basket-2.svg);
   background-size: contain;
 }
 header div.header--container div.header--account div.header--call {
   height: 24px;
   width: 24px;
-  background-image: url(assets/phone.svg);
+  background-image: url(assets/phone-2.svg);
 }
 header div.header--container div.header--account div.header--language {
   height: 24px;
@@ -82,7 +79,6 @@ header div.header--container div.header--account div.header--language {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   font-weight: 1000;
 }
 header div.header--container div.header--account div.header--prof {
@@ -95,7 +91,7 @@ section.content {
   margin-top: 50px;
   margin-left: 90px;
   margin-right: 90px;
-  color: #fff;
+  height: 1000px;
   display: flex;
   justify-content: space-between;
 }
@@ -106,7 +102,7 @@ section.content div.left h1 {
 }
 section.content div.left h2 {
   font-size: 30px;
-  font-weight: 200;
+  font-weight: 400;
   margin-bottom: 24px;
 }
 section.content div.left div.box {
@@ -117,7 +113,7 @@ section.content div.left div.box div.bar {
   height: 64px;
   width: 294px;
   border-radius: 54px;
-  border: 1px solid #fff;
+  border: 1px solid #000000;
   /* background-color: lightblue; */
   margin-bottom: 8px;
   display: flex;
@@ -127,10 +123,10 @@ section.content div.left div.box div.bar {
 }
 section.content div.left div.box div.bar a {
   text-decoration: none;
-  color: #fff;
+  color: #000000;
 }
 section.content div.left div.box div.bar:hover {
-  background-color: #1d324f;
+  background-color: gray;
 }
 section.content div.right {
   width: 400px;
@@ -139,7 +135,7 @@ section.content div.right {
 }
 section.content div.right div.info h3 {
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 400;
   margin-top: 21px;
 }
 section.content div.right div.shelf {
@@ -149,19 +145,202 @@ section.content div.right div.shelf {
 }
 section.content div.right div.shelf div.tabungan {
   height: 240px;
-  background-color: #1d324f;
   border-radius: 12px;
+}
+section.content div.right div.shelf div.tabungan div.top {
+  height: 50%;
+  border-bottom: 1px solid #4b4a54;
+  background-color: #4b4a54;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+section.content div.right div.shelf div.tabungan div.top div.left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section.content div.right div.shelf div.tabungan div.top div.left div.profile {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 14px;
+}
+section.content div.right div.shelf div.tabungan div.top div.left div.quantity {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  color: #fff;
+}
+section.content div.right div.shelf div.tabungan div.top div.scroll {
+  height: 48px;
+  width: 48px;
+  background-image: url(assets/chevron-right-2.svg);
+}
+section.content div.right div.shelf div.tabungan div.bottom {
+  height: 50%;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: #4b4a54e0;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+}
+section.content div.right div.shelf div.tabungan div.bottom div.drawer1 {
+  width: 33%;
+  border-right: 1px solid #151d2a;
+  display: flex;
+  align-items: last baseline;
+  justify-content: center;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+section.content div.right div.shelf div.tabungan div.bottom div.drawer2 {
+  width: 33%;
+  border-right: 1px solid #151d2a;
+  display: flex;
+  align-items: last baseline;
+  justify-content: center;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+section.content div.right div.shelf div.tabungan div.bottom div.drawer3 {
+  width: 34%;
+  display: flex;
+  align-items: last baseline;
+  justify-content: center;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+section.content div.right div.shelf div.box:nth-child(2) {
+  background-color: #545d6b;
+  padding-left: 32px;
+  padding-right: 32px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+section.content div.right div.shelf div.box:nth-child(2) div.left {
+  width: 230px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+section.content div.right div.shelf div.box:nth-child(2) div.left div.prof {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+section.content div.right div.shelf div.box:nth-child(2) div.right {
+  height: 48px;
+  width: 48px;
+  background-image: url(assets/chevron-right-2.svg);
+}
+section.content div.right div.shelf div.box:nth-child(3) {
+  /* background-color: #007780; */
+  background-color: #597180;
+}
+section.content div.right div.shelf div.box:nth-child(4) {
+  /* background-color: #12a889; */
+  background-color: #5d8791;
+}
+section.content div.right div.shelf div.box:nth-child(5) {
+  /* background-color: #87d47c; */
+  background-color: #679c9b;
+}
+section.content div.right div.shelf div.box:nth-child(6) {
+  background-color: #7db19f;
 }
 section.content div.right div.shelf div.box {
   height: 120px;
   width: 100%;
   border-radius: 12px;
-  background-color: #1d324f;
   margin-top: 8px;
 }
-section.content div.right div.shelf div.tabungan div.top {
-  height: 50%;
+footer {
+  position: static;
+  bottom: 0px;
+  height: fit-content;
+  width: 100vw;
+  background-color: var(--secondary-color-1);
+  display: flex;
+  justify-content: center;
 }
-section.content div.right div.shelf div.tabungan div.bottom {
-  height: 50%;
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  margin-top: 24px;
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-bottom: 24px;
+}
+footer .container .top {
+  margin-bottom: 16px;
+}
+footer .container .top a {
+  padding-right: 70px;
+  text-decoration: none;
+  color: #fff;
+  word-wrap: break-word;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+footer .container .top a:hover {
+  opacity: 0.8;
+}
+
+footer .container span {
+  height: 0.1px;
+  width: calc(1440px - 90px);
+  opacity: 0.5;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+footer .container .bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+footer .container .bottom .left {
+  word-wrap: break-word;
+  opacity: 0.5;
+  font-size: 14px;
+}
+footer .container .bottom .right {
+  float: right;
+}
+footer .container .bottom .right a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  padding-left: 20px;
+  transition: 0.2s ease;
+}
+
+footer .container .bottom .right a:hover {
+  opacity: 0.8;
+}
+
+footer div.container div.top a:nth-child(4),
+footer div.container div.top a:nth-child(5) {
+  display: none;
 }
