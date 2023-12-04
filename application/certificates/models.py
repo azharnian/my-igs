@@ -12,7 +12,7 @@ class CertificateType(db.Model, BaseModel):
     status        = db.Column(db.bool, default = True)
     created_date  = db.Column(db.DateTime, nullable = False, default=datetime.utcnow)
 
-    certi_type    = db.relationship("Certificate", foreign_keys="Certificate.certi_type_id", backref="type", lazy=True)
+    certi_type    = db.relationship("Certificate", backref="type", lazy=True)
 
 class Certificate(db.Model, BaseModel):
 
