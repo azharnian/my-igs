@@ -92,6 +92,7 @@
     width: 100vw;
   }
   header {
+    height: 90px;
     width: 100vw;
   }
   header div.container div.left {
@@ -105,99 +106,30 @@
     align-items: center;
   }
   header div.container div.logo {
-    width: 150px;
-    height: 50px;
+    width: 160px;
+    height: 60px;
     transform: translate(8px, -5px);
 
   }
-  /*Hamburger-menu*/
-  header div.container div.hide-nav {
-    display: flex;
-    flex-direction: column;
-    height: 19px;
-    justify-content: space-between;
-    position: relative;
-  }
-  header div.container div.hide-nav input {
-    position: absolute;
-    left: -10px;
-    top: -6px;
-    width: 50px;
-    height: 33px;
-    opacity: 0;
-    cursor: pointer;
-  }
-  header div.container div.hide-nav span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 3px;
-    transition: all 0.5s;
-  }
-  /*Hamburger-menu animation*/
   header div.container button.hamburger {
     position: relative;
     display: block;
-    width: 28px;
+    width: 50px;
     cursor: pointer;
     appearance: none;
     background: none;
     outline: none;
     border: none;
-    transform: translateY(-5px);
+    transform: translate(18px, -5px);
+    height: 50px;
+    background-image: url(assets/menu.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: 0.2s ease;
   }
-  header div.container button.hamburger div.bar,
-  button.hamburger:before,
-  button.hamburger:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0px;
-    transition: 0.4s;
-  }
-  header div.container button.hamburger.is-active:before {
-    transform: rotate(-45deg) translate(-6px, 6px);
-  }
-  header div.container button.hamburger.is-active:after {
-    transform: rotate(45deg) translate(-7px, -7px);
-  }
-  header div.container button.hamburger.is-active div.bar {
-    opacity: 0;
-  }
-  nav.mobile-nav {
-    position: fixed;
-    bottom: 0;
-    left: 100%;
-    width: 100%;
-    height: 100vh;
-    display: block;
-    z-index: 98;
-    background-color: #23343f;
-    padding-top: 100px;
-    transition: 0.4s;
-    transform: translateY(-2px);
-  }
-  nav.mobile-nav.is-active {
-    left: 0;
-  }
-  nav.mobile-nav a {
-    padding-left: 30px;
-    padding-right: 30px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 100;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ffffff54;
-  }
-  nav.mobile-nav a:hover {
-    color: #ffffff4b;
+
+  header div.container button.hamburger.HideNavMode{
+    animation: shrinking 0.5s linear;
   }
   section.content {
     width: 100vw;

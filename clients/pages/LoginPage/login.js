@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   //hidenav responsive
   const hamburger_menu = document.querySelector("button.hamburger");
-  const mobile_menu = document.querySelector("nav.mobile-nav");
+  const body = document.querySelector("body");
 
   hamburger_menu.addEventListener("click", function () {
-    hamburger_menu.classList.toggle("is-active");
-    mobile_menu.classList.toggle("is-active");
+    hamburger_menu.classList.toggle("HideNavMode");
+    body.classList.toggle("HideNavMode");
   });
 
     //language nav
