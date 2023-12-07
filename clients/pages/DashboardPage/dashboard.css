@@ -9,10 +9,11 @@
 }
 body {
   width: 100vw;
-  height: fit-content;
+  min-height: 100vh;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 header {
   width: 100%;
@@ -88,12 +89,14 @@ header div.header--container div.header--account div.header--prof {
   background-color: pink;
 }
 section.content {
-  margin-top: 50px;
+  padding-top: 50px;
   margin-left: 90px;
   margin-right: 90px;
+  margin-bottom: 50px;
   height: 1000px;
   display: flex;
   justify-content: space-between;
+  /* margin-top: auto; */
 }
 section.content div.left h1 {
   font-size: 70px;
@@ -269,15 +272,13 @@ section.content div.right div.shelf div.box {
   margin-top: 8px;
 }
 footer {
-  position: static;
-  bottom: 0px;
-  height: fit-content;
-  width: 100vw;
   background-color: var(--secondary-color-1);
+  margin-top: auto;
   display: flex;
   justify-content: center;
 }
-footer .container {
+footer div.container {
+  width: calc((100vw - 180px));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -287,10 +288,10 @@ footer .container {
   margin-right: 90px;
   margin-bottom: 24px;
 }
-footer .container .top {
+footer div.container div.top {
   margin-bottom: 16px;
 }
-footer .container .top a {
+footer div.container div.top a {
   padding-right: 70px;
   text-decoration: none;
   color: #fff;
@@ -298,14 +299,12 @@ footer .container .top a {
   font-size: 14px;
   transition: 0.2s ease;
 }
-
-footer .container .top a:hover {
+footer div.container div.top a:hover {
   opacity: 0.8;
 }
-
-footer .container span {
+footer div.container span {
   height: 0.1px;
-  width: calc(1440px - 90px);
+  width: calc(1440 - 90px);
   opacity: 0.5;
   background-color: gray;
   display: flex;
@@ -313,34 +312,28 @@ footer .container span {
   align-items: center;
   margin-bottom: 16px;
 }
-footer .container .bottom {
+footer div.container div.bottom {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
 }
-footer .container .bottom .left {
+footer div.container div.bottom div.left {
   word-wrap: break-word;
   opacity: 0.5;
   font-size: 14px;
 }
-footer .container .bottom .right {
+footer div.container div.bottom div.right {
   float: right;
 }
-footer .container .bottom .right a {
+footer div.container div.bottom div.right a {
   font-size: 14px;
   text-decoration: none;
   color: #fff;
   padding-left: 20px;
   transition: 0.2s ease;
 }
-
-footer .container .bottom .right a:hover {
+footer div.container div.bottom div.right a:hover {
   opacity: 0.8;
-}
-
-footer div.container div.top a:nth-child(4),
-footer div.container div.top a:nth-child(5) {
-  display: none;
 }
