@@ -12,7 +12,7 @@ class AchievementType(db.Model, BaseModel):
     created_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     status = db.Column(db.Boolean, default=True)
     online = db.Column(db.Boolean, default=False)
-    
+
     achievements = db.relationship('AchievementType', backref='achievements_in type')
 
 class Achievement(db.Model, BaseModel):
@@ -22,7 +22,7 @@ class Achievement(db.Model, BaseModel):
     name = db.Column(db.String(128), nullable=False)
     organizer = db.Column(db.String(128), nullable=False)
     student_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    type_id = db.Column(db.Integer, db.ForeignKey('achievement_types.id'), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey('achievement_types.id'), nullable=False)
     input_by = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     description = db.Column(db.String(256))
     comp_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow) #tanggal lomba
