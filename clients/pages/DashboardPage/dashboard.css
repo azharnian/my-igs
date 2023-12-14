@@ -16,9 +16,14 @@ body {
   flex-direction: column;
 }
 header {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: fit-content;
   font-weight: 400;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 header div.header--container {
   margin-left: 90px;
@@ -88,15 +93,20 @@ header div.header--container div.header--account div.header--prof {
   border-radius: 50%;
   background-color: pink;
 }
+header div.header--container button.hamburger {
+  display: none;
+}
+nav.mobile-nav {
+  display: none;
+}
 section.content {
-  padding-top: 50px;
+  padding-top: 120px;
   margin-left: 90px;
   margin-right: 90px;
   margin-bottom: 50px;
-  height: 1000px;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
-  /* margin-top: auto; */
 }
 section.content div.left h1 {
   font-size: 70px;
@@ -113,8 +123,6 @@ section.content div.left div.box {
   height: fit-content;
 }
 section.content div.left div.box div.bar {
-  height: 64px;
-  width: 294px;
   border-radius: 54px;
   border: 1px solid #000000;
   /* background-color: lightblue; */
@@ -123,6 +131,10 @@ section.content div.left div.box div.bar {
   justify-content: center;
   align-items: center;
   font-size: 16px;
+  height: 64px;
+  width: fit-content;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 section.content div.left div.box div.bar a {
   text-decoration: none;
@@ -180,6 +192,12 @@ section.content div.right div.shelf div.tabungan div.top div.left div.quantity {
   flex-direction: column;
   align-content: center;
   color: #fff;
+}
+section.content div.right div.shelf div.tabungan div.top div.left div.quantity h3 {
+  font-size: 14px;
+}
+section.content div.right div.shelf div.tabungan div.top div.left div.quantity h2 {
+  font-size: 26px;
 }
 section.content div.right div.shelf div.tabungan div.top div.scroll {
   height: 48px;
@@ -278,7 +296,7 @@ footer {
   justify-content: center;
 }
 footer div.container {
-  width: calc((100vw - 180px));
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -336,4 +354,8 @@ footer div.container div.bottom div.right a {
 }
 footer div.container div.bottom div.right a:hover {
   opacity: 0.8;
+}
+footer div.container div.top a:nth-child(4),
+footer div.container div.top a:nth-child(5) {
+  display: none;
 }

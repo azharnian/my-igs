@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="dashboard.css" />
-    <script src="dashboard.js"></script>
+    <link rel="stylesheet" href="dashboard-responsive.css" />
   </head>
   <body>
     <header>
@@ -26,8 +26,21 @@
           </div>
           <div class="header--prof"></div>
         </div>
+        <button class="hamburger">
+          <div class="bar"></div>
+        </button>
       </div>
     </header>
+    <nav class="mobile-nav">
+      <div class="mobile-menu">
+        <a href="#">HOME</a>
+        <div class="line"></div>
+        <a href="#">ACCOUNTS</a>
+        <div class="line"></div>
+        <a href="#">SERVICES</a>
+        <div class="line"></div>
+      </div>
+    </nav>
     <section class="content">
       <div class="left">
         <h1><span style="font-weight: 100">Halo, </span><span style="font-weight: 500">Anas.</span></h1>
@@ -50,8 +63,8 @@
               <div class="left">
                 <div class="profile"></div>
                 <div class="quantity">
-                  <h3 style="font-size: 14px">Tabungan</h3>
-                  <h2 style="font-size: 26px">Rp 15,810.06</h2>
+                  <h3>Tabungan</h3>
+                  <h2>Rp 15,810.06</h2>
                 </div>
               </div>
               <div class="scroll"></div>
@@ -88,6 +101,8 @@
           <a href="#">Tentang MyIGS</a>
           <a href="#">Fitur Layanan</a>
           <a href="#">Hubungi Kami</a>
+          <a href="#">Syarat dan Ketentuan</a>
+          <a href="#">Kebijakan Privasi</a>
         </div>
         <span></span>
         <div class="bottom">
@@ -102,4 +117,5 @@
       </div>
     </footer>
   </body>
+  <script src="dashboard.js"></script>
 </html>
