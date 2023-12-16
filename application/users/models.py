@@ -25,7 +25,32 @@ class User(db.Model, UserMixin, BaseModel):
     is_staff = db.Column(db.Boolean, nullable = False, default = False)
     is_student = db.Column(db.Boolean, nullable = False, default = False)
 
+    #Relation with Attendance
+    user_attendance = db.relationship('Attendance', backref='user_attendance', lazy=True)
+    attendance_input = db.relationship('Attendance', backref='attendance_input', lazy=True)
 
+    #Relation with AttendanceType
+    attendancetype_input = db.relationship('AttendanceType', backref='attendancetype_input', lazy=True)
+
+    #Relation with Location
+    location_input = db.relationship('Location', backref='location_input', lazy=True)
+
+    #Relation with Status
+    status_input = db.relationship('Status', backref='status_input', lazy=True)
+
+    #Relation with Shift
+    shift_input = db.relationship('Shift', backref='shift_input', lazy=True)
+
+    #Relation with ShiftMember
+    user_shift = db.relationship('ShiftMember', backref='user_shift', lazy=True)
+    shift_input = db.relationship('ShiftMember', backref='shift_input', lazy=True)
+
+    #Relation with Achievement
+    user_achievement = db.relationship('Achievement', backref='user_achievement', lazy=True)
+    achievement_input = db.relationship('Achievement', backref='achievement_input', lazy=True)
+
+    #Relation with Certificate
+    user_certificate = db.relationship('Certificate', backref='user_certificate', lazy=True)
 
     def __repr__(self):
         return f"{self.id} - {self.username} - {self.fullname}"
