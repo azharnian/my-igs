@@ -485,14 +485,6 @@ nav.mobile-nav div.header button.hamburger_Second{
     width: 92vw;
     height: 0.1px;
   }
-  nav.mobile-nav div.header div.language{
-    font-size: 1.5em;
-    font-weight: 500;
-    cursor: pointer;
-    z-index: inherit;
-    user-select: none;
-    transform: translateY(10px);
-  }
 }
 
 @media screen and (max-width: 500px) {
