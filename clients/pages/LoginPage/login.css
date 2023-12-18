@@ -60,7 +60,7 @@ header div.container div.logo{
     background-repeat: no-repeat;
     cursor: pointer;
     z-index: 101;
-    transform: translateY(-14px);
+    transform: translate(-5px, -14px);
 }
 header div.container div.left {
   display: flex;
@@ -200,6 +200,7 @@ header div.container button.hamburger {
 }
 nav.mobile-nav {
   display: none;
+  transition: 2s ease;
 }
 section.content {
   position: absolute;

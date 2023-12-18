@@ -15,14 +15,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   //hidenav responsive
-  const hamburger_menu = document.querySelector("button.hamburger");
+  const hamburger_menu = document.querySelector(".hamburger");
+  const hamburger_menuSec = document.querySelector(".hamburger_Second")
   const body = document.querySelector("body");
+  const HideNav = document.querySelector("#HideNav")
 
   hamburger_menu.addEventListener("click", function () {
     hamburger_menu.classList.toggle("HideNavMode");
-    body.classList.toggle("HideNavMode");
+    hamburger_menuSec.classList.remove("HideNavMode");
+    function bodyNav(){
+      body.classList.toggle("HideNavMode");
+      HideNav.classList.toggle("HideNavMode");
+    }
+    setTimeout(bodyNav, 349)
   });
-
+  
+  hamburger_menuSec.addEventListener("click", function () {
+    hamburger_menuSec.classList.toggle("HideNavMode");
+    hamburger_menu.classList.remove("HideNavMode");
+    function bodyNav(){
+      body.classList.toggle("HideNavMode");
+      HideNav.classList.toggle("HideNavMode");
+    }
+    setTimeout(bodyNav, 349)
+  });
     //language nav
         var languagebtn = document.getElementById("langBtn")
         var languagenav = document.getElementById("langNav")
@@ -52,5 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
             languagenav.classList.remove("show")
             firstInput.classList.remove("disabledcursor")
         })
-    
+  //languageNav Mobile
+        var languagebtnS = document.getElementById("langBtn2")
+        var arrow = document.querySelector("#arrow")
+        var languagenavS = document.getElementById("langNav2")
+        languagebtnS.addEventListener("click", ()=>{
+            arrow.classList.toggle("show")
+            languagenavS.classList.toggle("show")
+        })
 });

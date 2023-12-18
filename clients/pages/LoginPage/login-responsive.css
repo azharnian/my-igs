@@ -108,7 +108,7 @@
   header div.container div.logo {
     width: 160px;
     height: 60px;
-    transform: translate(8px, -5px);
+    transform: translate(-2px, -5px);
 
   }
   header div.container button.hamburger {
@@ -120,17 +120,250 @@
     background: none;
     outline: none;
     border: none;
-    transform: translate(18px, -5px);
+    transform: translate(16px, -5px);
     height: 50px;
     background-image: url(assets/menu.svg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    transition: 0.2s ease;
+    transition: 0.35s ease;
   }
 
   header div.container button.hamburger.HideNavMode{
-    animation: shrinking 0.5s linear;
+    transform: translate(-50%, -50%);
+    animation: shrinking 0.35s linear;
+    scale: 0%;
   }
+
+  @keyframes shrinking{
+    0%{
+      transform: scale(1) rotate(180deg);
+    }
+    100%{
+      transform: scale(0) rotate(360deg);
+    }
+  }
+
+  body.HideNavMode{
+    overflow-y: hidden;
+  }
+  body.HideNavMode header{
+    display: none;
+  }
+
+  
+  body.HideNavMode div.blank{
+    display: none;
+  }
+  body.HideNavMode section.content{
+    display: none;
+  }
+  body.hideNavMode footer{
+    display: none;
+  }
+
+  body.HideNavMode nav#HideNav.HideNavMode{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #121f26;
+    z-index: 1000;
+    transition: 0.5s ease;
+    animation: showup 0.5s linear;
+    opacity: 1;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @keyframes showup{
+
+  }
+  
+  nav.mobile-nav div.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 90px;
+    width: 100%;
+  }
+  nav.mobile-nav div.header div.language{
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: inherit;
+    user-select: none;
+    transform: translateY(20px);
+  }
+
+  nav.mobile-nav div.header div.language div.arrow{
+    display: flex;
+    position: absolute;
+    background-image: url(assets/arrow.svg);
+    width: 25px;
+    height: 25px;
+    transform: translate(25px, -25px);
+    background-size: 100% 100%;
+    transition: 0.2s ease;
+    background-position: center;
+    filter: brightness(2);
+    z-index: inherit;
+  }
+
+  nav.mobile-nav div.header div.language div.show {
+    transform: translate(25px, -25px) rotate(180deg);
+  }
+  nav.mobile-nav div.header div.languageHide{
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 95px;
+    height: 110px;
+    background-color: white;
+    position: absolute;
+    border-radius: 5px;
+    transform: translate(-12px, 60px);
+    z-index: inherit;
+}
+
+nav.mobile-nav div.header div.languageHide.show{
+  display: flex;
+  animation: opacity 0.2s linear;
+}
+
+
+@keyframes opacity{
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+nav.mobile-nav div.header div.languageHide.show::before{
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 9px solid #fff;
+  position: absolute;
+  transform: translate(15px , -59px);
+  animation: opactiy 0.2s linear;
+}
+
+nav.mobile-nav div.header div.languageHide li{
+  padding-left: 20px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 40%;
+  list-style-type: none;
+}
+
+nav.mobile-nav div.header div.languageHide li:hover{
+padding-left: 20px;
+color: black;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+gap: 10px;
+width: 100%;
+height: 40%;
+list-style-type: none;
+background-color: black;
+}
+
+nav.mobile-nav div.header div.languageHide li#en{
+  gap: 7px;
+}
+
+nav.mobile-nav div.header div.languageHide span.line{
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  opacity: 0.7;
+}
+
+nav.mobile-nav div.header div.languageHide li span.check{
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-image: url(assets/check.svg);
+  background-size: 100% 100%;
+  background-position: center;
+  transform: translateY(-2px);
+}
+
+nav.mobile-nav div.header button.hamburger_Second{
+  animation: popoff 1s linear;
+  position: relative;
+  display: block;
+  width: 50px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  transform: translate(0px, 0px);
+  height: 50px;
+  background-image: url(assets/cross.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+@keyframes popoff{
+  0%{
+
+  }
+  100%{
+    
+  }
+}
+
+  nav.mobile-nav section.container{
+    height: calc(100vh - 90px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: lighter;
+  }
+  nav.mobile-nav section.container a{
+    color: white;
+    text-decoration: none;
+  }
+
+  nav.mobile-nav section.container a:hover{
+    opacity: 0.7;
+  }
+  nav.mobile-nav section.container span{
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    background-color: gray;
+    left: 0px;
+  }
+
+  nav.mobile-nav section.container span.one{
+    transform: translateY(30px);
+  }
+
+  nav.mobile-nav section.container span.two{
+    transform: translateY(80px);
+  }
+
+
   section.content {
     width: 100vw;
     transform: translateY(10px);
@@ -235,6 +468,14 @@
     margin-left: 17px;
     margin-right: 38px;
   }
+  header div.container div.logo{
+    transform: translate(5px, -5px);
+  }
+
+  header div.container button.hamburger {
+    transform: translate(6px, -5px); 
+  }
+
   footer{
     overflow: hidden;
     position: relative;
