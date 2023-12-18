@@ -195,7 +195,7 @@
     cursor: pointer;
     z-index: inherit;
     user-select: none;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
 
   nav.mobile-nav div.header div.language div.arrow{
@@ -224,7 +224,7 @@
     background-color: white;
     position: absolute;
     border-radius: 5px;
-    transform: translate(-12px, 60px);
+    transform: translate(-12px, 50px);
     z-index: inherit;
 }
 
@@ -485,7 +485,14 @@ nav.mobile-nav div.header button.hamburger_Second{
     width: 92vw;
     height: 0.1px;
   }
-
+  nav.mobile-nav div.header div.language{
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: inherit;
+    user-select: none;
+    transform: translateY(10px);
+  }
 }
 
 @media screen and (max-width: 500px) {
