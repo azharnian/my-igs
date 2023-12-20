@@ -67,16 +67,25 @@ header div.header--container div.header--account div.header--mail {
   width: 24px;
   background-image: url(assets/mail-2.svg);
 }
+header div.header--container div.header--account div.header--mail:hover {
+  opacity: 0.5;
+}
 header div.header--container div.header--account div.header--icon {
   height: 22px;
   width: 22px;
   background-image: url(assets/basket-2.svg);
   background-size: contain;
 }
+header div.header--container div.header--account div.header--icon:hover {
+  opacity: 0.5;
+}
 header div.header--container div.header--account div.header--call {
   height: 24px;
   width: 24px;
   background-image: url(assets/phone-2.svg);
+}
+header div.header--container div.header--account div.header--call:hover {
+  opacity: 0.5;
 }
 header div.header--container div.header--account div.header--language {
   height: 24px;
@@ -86,6 +95,9 @@ header div.header--container div.header--account div.header--language {
   justify-content: center;
   align-items: center;
   font-weight: 1000;
+}
+header div.header--container div.header--account div.header--language:hover {
+  opacity: 0.5;
 }
 header div.header--container div.header--account div.header--prof {
   height: 48px;
@@ -204,6 +216,9 @@ section.content div.right div.shelf div.tabungan div.top div.scroll {
   width: 48px;
   background-image: url(assets/chevron-right-2.svg);
 }
+section.content div.right div.shelf div.tabungan div.top div.scroll:hover {
+  opacity: 0.5;
+}
 section.content div.right div.shelf div.tabungan div.bottom {
   height: 50%;
   border-bottom-right-radius: 12px;
@@ -222,6 +237,13 @@ section.content div.right div.shelf div.tabungan div.bottom div.drawer1 {
   font-size: 12px;
   padding-bottom: 20px;
 }
+section.content div.right div.shelf div.tabungan div.bottom div.drawer1 a {
+  color: #fff;
+  text-decoration: none;
+}
+section.content div.right div.shelf div.tabungan div.bottom div.drawer1 a:hover {
+  opacity: 0.8;
+}
 section.content div.right div.shelf div.tabungan div.bottom div.drawer2 {
   width: 33%;
   border-right: 1px solid #151d2a;
@@ -231,6 +253,13 @@ section.content div.right div.shelf div.tabungan div.bottom div.drawer2 {
   font-size: 12px;
   padding-bottom: 20px;
 }
+section.content div.right div.shelf div.tabungan div.bottom div.drawer2 a {
+  color: #fff;
+  text-decoration: none;
+}
+section.content div.right div.shelf div.tabungan div.bottom div.drawer2 a:hover {
+  opacity: 0.8;
+}
 section.content div.right div.shelf div.tabungan div.bottom div.drawer3 {
   width: 34%;
   display: flex;
@@ -238,6 +267,13 @@ section.content div.right div.shelf div.tabungan div.bottom div.drawer3 {
   justify-content: center;
   font-size: 12px;
   padding-bottom: 20px;
+}
+section.content div.right div.shelf div.tabungan div.bottom div.drawer3 a {
+  color: #fff;
+  text-decoration: none;
+}
+section.content div.right div.shelf div.tabungan div.bottom div.drawer3 a:hover {
+  opacity: 0.8;
 }
 section.content div.right div.shelf div.box:nth-child(2) {
   background-color: #545d6b;
@@ -263,10 +299,20 @@ section.content div.right div.shelf div.box:nth-child(2) div.left div.prof {
   border-radius: 50%;
   background-color: #fff;
 }
+section.content div.right div.shelf div.box:nth-child(2) div.left div.text a {
+  color: #fff;
+  text-decoration: none;
+}
+section.content div.right div.shelf div.box:nth-child(2) div.left div.text a:hover {
+  opacity: 0.8;
+}
 section.content div.right div.shelf div.box:nth-child(2) div.right {
   height: 48px;
   width: 48px;
   background-image: url(assets/chevron-right-2.svg);
+}
+section.content div.right div.shelf div.box:nth-child(2) div.right:hover {
+  opacity: 0.5;
 }
 section.content div.right div.shelf div.box:nth-child(3) {
   /* background-color: #007780; */
@@ -290,7 +336,7 @@ section.content div.right div.shelf div.box {
   margin-top: 8px;
 }
 footer {
-  background-color: var(--secondary-color-1);
+  background-color: rgb(55, 54, 61);
   margin-top: auto;
   display: flex;
   justify-content: center;
