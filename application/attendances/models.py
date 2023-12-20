@@ -2,7 +2,7 @@ from datetime import datetime
 
 from application import db
 from application.project.models import BaseModel
-from application.users.models import User
+# from application.users.models import User
 
 # Location, Shift, ShiftMember, Status, AttendanceType, Attendance
 

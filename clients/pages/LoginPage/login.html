@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div class="blank"></div>
+   <div class="blank"></div><!-- cm buat tambahan di bagian belakang biar ga bergerak -->
     <header>
         <div class="container" id="nav">
             <div class="logo">
@@ -38,24 +38,28 @@
         </div>
       </div>
     </header>
-    <nav class="mobile-nav">
+    <nav class="mobile-nav" id="HideNav">
       <div class="header">
-        <div class="language" id="langBtn">
-          ID <div class="arrow"></div>
+        <div class="language" id="langBtn2">
+          ID <div class="arrow" id="arrow"></div>
         </div>
-        <div class="languageHide" id="langNav">
+        <div class="languageHide" id="langNav2">
           <li id="id">ID <span class="check" id="check1"></span></li>
           <span class="line">
 
           </span>
           <li id="en">EN <span class="check" id="check2"></span></li>
         </div>
-        <button class="hamburger">
+        <button class="hamburger_Second">
           <div class="bar"></div>
         </button>
       </div>
-      <a href="#">MY IGS</a>
-      <a href="#">HUBUNGI KAMI</a>
+        <section class="container">
+          <a href="#">MY IGS</a>
+          <span class="one"></span>
+          <a href="#">HUBUNGI KAMI</a>
+          <span class="two"></span>
+        </section>
     </nav>
     <section class="content">
         <form method="POST" action="">
