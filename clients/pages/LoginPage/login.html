@@ -8,10 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
     <title>MyIGS LoginPage</title>
     <link rel="stylesheet" href="login.css" />
-    <link rel="stylesheet" href="login-responsive.css">
+    <link rel="stylesheet" href="login-responsive.css" />
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div class="blank"></div>
+   <div class="blank"></div><!-- cm buat tambahan di bagian belakang biar ga bergerak -->
     <header>
         <div class="container" id="nav">
             <div class="logo">
@@ -20,56 +21,76 @@
             <div class="left">
                 <div class="call">
                 </div>
-                <div class="language" >
+                <div class="language" id="langBtn">
                     ID <div class="arrow"></div>
                 </div>
-            </div>
-            <div class="hide-nav">
+                <div class="languageHide" id="langNav">
+                  <li id="id">ID <span class="check" id="check1"></span></li>
+                  <span class="line">
 
+                  </span>
+                  <li id="en">EN <span class="check" id="check2"></span></li>
+                </div>
             </div>
+            <button class="hamburger">
+              <div class="bar"></div>
+            </button>
         </div>
+      </div>
     </header>
-    <section class="content">
-        <div class="container">
-            <div class="left">
-                <div class="top">
-                    <h1>Selamat Datang di My<span style="font-weight: bold;">IGS</span></h1>
-                    <h2>Layanan persekolahan yang mengerti kebutuhanmu.</h2>
-                </div>
-                <div class="bottom">
-                    <div class="image">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="right">
-                <div class="inputbox">
-                    <input id="User" type="username" placeholder="Ketik User ID">
-                    <label for="User">User ID</label>
-                </div>
-                <div class="inputbox">
-                    <input id="Password" type="password" placeholder="Ketik Password">
-                    <label for="Password">Password</label>
-                </div>
-                <div class="inputbox">
-                    <div class="input">
-                        <input id="CaptchaCode" type="text" placeholder="Masukkan Kode">
-                        <label for="CaptchaCode">Masukkan kode di samping</label>
-                    </div>
-                    <div class="captcha">
-
-                    </div>
-                    <div class="change">
-                        <a href="#">Ganti Kode</a>
-                    </div>
-                </div>
-                <button id="login">
-                    Login
-                </button>
-                <a href="#" id="Register">Belum punya User ID</a>
-                <a href="#" id="Forgot">Saya lupa User ID atau Password</a>
-            </div>
+    <nav class="mobile-nav" id="HideNav">
+      <div class="header">
+        <div class="language" id="langBtn2">
+          ID <div class="arrow" id="arrow"></div>
         </div>
+        <div class="languageHide" id="langNav2">
+          <li id="id">ID <span class="check" id="check1"></span></li>
+          <span class="line">
+
+          </span>
+          <li id="en">EN <span class="check" id="check2"></span></li>
+        </div>
+        <button class="hamburger_Second">
+          <div class="bar"></div>
+        </button>
+      </div>
+        <section class="container">
+          <a href="#">MY IGS</a>
+          <span class="one"></span>
+          <a href="#">HUBUNGI KAMI</a>
+          <span class="two"></span>
+        </section>
+    </nav>
+    <section class="content">
+        <form method="POST" action="">
+          <div class="left">
+              <div class="top">
+                  <h1>Selamat Datang di My<span style="font-weight: bold;">IGS</span></h1>
+                  <h2>Layanan persekolahan yang mengerti kebutuhanmu.</h2>
+              </div>
+              <div class="bottom">
+                  <div class="image">
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="right">
+              <div class="inputbox">
+                  <input id="User" type="username" placeholder="Ketik User ID">
+                  <label for="User">User ID</label>
+              </div>
+              <div class="inputbox">
+                  <input id="Password" type="password" placeholder="Ketik Password">
+                  <label for="Password">Password</label>
+              </div>
+              <button id="login">
+                  Login
+              </button>
+              <a href="#" id="Register">Belum punya User ID</a>
+              <a href="#" id="Forgot">Saya lupa User ID atau Password</a>
+          </div>
+        </form>
+
     </section>
     <footer>
       <div class="container">
