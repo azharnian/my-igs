@@ -7,9 +7,9 @@ class CertificateType(db.Model, BaseModel):
     __tablename__ = "certificate_types"
     id            = db.Column(db.Integer, primary_key=True)
     name          = db.Column(db.String(32), nullable = False)
-    online        = db.Column(db.Bool, default = False)
+    online        = db.Column(db.Boolean, default = False)
     level         = db.Column(db.String(32), nullable = False)
-    status        = db.Column(db.bool, default = True)
+    status        = db.Column(db.Boolean, default = True)
     created_date  = db.Column(db.DateTime, nullable = False, default=datetime.utcnow)
 
     certi_type    = db.relationship("Certificate", backref="type", lazy=True)

@@ -4,6 +4,9 @@ from flask_login import UserMixin
 
 from application import db
 from application.project.models import BaseModel
+from application.attendances.models import *
+from application.achievements.models import *
+
 
 class User(db.Model, UserMixin, BaseModel):
 
@@ -13,7 +16,7 @@ class User(db.Model, UserMixin, BaseModel):
     password = db.Column(db.String(128), nullable = False)
     first_name = db.Column(db.String(64), nullable = False)
     last_name = db.Column(db.String(64), nullable = False)
-    fullname = first_name + last_name
+    fullname = db.Column(db.String(64))
     email = db.Column(db.String(128), unique=True, nullable = False)
     phone = db.Column(db.String(16), unique=True, nullable = False)
     date_joined = db.Column(db.DateTime, nullable = False, default = datetime.utcnow())
@@ -26,8 +29,8 @@ class User(db.Model, UserMixin, BaseModel):
     is_student = db.Column(db.Boolean, nullable = False, default = False)
 
     #Relation with Attendance
-    user_attendance = db.relationship('Attendance', backref='user_attendance', lazy=True)
-    attendance_input = db.relationship('Attendance', backref='attendance_input', lazy=True)
+    user_attendance = db.relationship('Attendance', foreign_keys = "Attendance.user_id", backref='user_attendance', lazy=True)
+    attendance_input = db.relationship('Attendance', foreign_keys = "Attendance.created_by", backref='attendance_input', lazy=True)
 
     #Relation with AttendanceType
     attendancetype_input = db.relationship('AttendanceType', backref='attendancetype_input', lazy=True)
@@ -42,12 +45,15 @@ class User(db.Model, UserMixin, BaseModel):
     shift_input = db.relationship('Shift', backref='shift_input', lazy=True)
 
     #Relation with ShiftMember
-    user_shift = db.relationship('ShiftMember', backref='user_shift', lazy=True)
-    shift_input = db.relationship('ShiftMember', backref='shift_input', lazy=True)
+    user_shift = db.relationship('ShiftMember', foreign_keys = "ShiftMember.user_id", backref='user_shift', lazy=True)
+    shift_input = db.relationship('ShiftMember', foreign_keys = "ShiftMember.created_by", backref='shift_member_input', lazy=True)
 
+    #Relation with AchievementType
+    achievement_type_input = db.relationship('AchievementType', backref='achievement_type_input', lazy=True)
+    
     #Relation with Achievement
-    user_achievement = db.relationship('Achievement', backref='user_achievement', lazy=True)
-    achievement_input = db.relationship('Achievement', backref='achievement_input', lazy=True)
+    user_achievement = db.relationship('Achievement', foreign_keys = "Achievement.user_id", backref='user_achievement', lazy=True)
+    achievement_input = db.relationship('Achievement', foreign_keys = "Achievement.created_by", backref='achievement_input', lazy=True)
 
     #Relation with Certificate
     user_certificate = db.relationship('Certificate', backref='user_certificate', lazy=True)
