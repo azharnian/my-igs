@@ -1,14 +1,14 @@
 :root {
-    --primary-color: #005B66;
+    --primary-color: #fff;
   
     /* Secondary Colors */
-    --secondary-color-1: #003940;
+    --secondary-color-1: #303030;
     --secondary-color-2: #003940; 
     
     /* Tertiary Colors */
-    --tertiary-color-1: #872341; 
+    --tertiary-color-1: #5E5E5E; 
     --tertiary-color-2: #BE3144; 
-    --tertiary-color-3: #B23A4B;
+    --tertiary-color-3: #000;
     /* Logo Image */
     --logo-primary: igs-logos.png;
     --logo-dark: igs-gray.png;
