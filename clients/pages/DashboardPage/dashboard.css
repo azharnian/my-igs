@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet');
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 * {
   margin: 0;
@@ -57,7 +58,7 @@ header div.header--container ul.header--bar a:hover {
 }
 header div.header--container div.header--account {
   height: fit-content;
-  width: 204px;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,15 +69,6 @@ header div.header--container div.header--account div.header--mail {
   background-image: url(assets/mail-2.svg);
 }
 header div.header--container div.header--account div.header--mail:hover {
-  opacity: 0.5;
-}
-header div.header--container div.header--account div.header--icon {
-  height: 22px;
-  width: 22px;
-  background-image: url(assets/basket-2.svg);
-  background-size: contain;
-}
-header div.header--container div.header--account div.header--icon:hover {
   opacity: 0.5;
 }
 header div.header--container div.header--account div.header--call {
@@ -105,6 +97,11 @@ header div.header--container div.header--account div.header--prof {
   border-radius: 50%;
   background-color: pink;
 }
+header div.header--container div.header--account div.profile--chevron {
+  height: 24px;
+  width: 24px;
+  background-image: url(assets/chevron-down.svg);
+}
 header div.header--container button.hamburger {
   display: none;
 }
@@ -121,6 +118,7 @@ section.content {
   justify-content: space-between;
 }
 section.content div.left h1 {
+  font-family: "Quicksand", sans-serif;
   font-size: 70px;
   /* font-weight: 100; */
   margin-bottom: 10px;
@@ -129,6 +127,7 @@ section.content div.left h2 {
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 24px;
+  font-family: "Poppins", sans-serif;
 }
 section.content div.left div.box {
   width: fit-content;
@@ -161,6 +160,7 @@ section.content div.right {
   /* background-color: #1d324f; */
 }
 section.content div.right div.info h3 {
+  font-family: "Quicksand", sans-serif;
   font-size: 20px;
   font-weight: 400;
   margin-top: 21px;
@@ -336,7 +336,7 @@ section.content div.right div.shelf div.box {
   margin-top: 8px;
 }
 footer {
-  background-color: rgb(55, 54, 61);
+  background-color: #303030;
   margin-top: auto;
   display: flex;
   justify-content: center;
