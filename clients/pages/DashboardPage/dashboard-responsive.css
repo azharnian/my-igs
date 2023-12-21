@@ -1,0 +1,294 @@
+@media screen and (max-width: 1000px) {
+  header div.header--container {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+  section.content {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+  section.content div.left h2 {
+    font-size: 20px;
+  }
+  footer div.container {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+  footer div.container div.top {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+  }
+  header {
+    width: 100%;
+    height: 90px;
+    font-weight: 400;
+    /* z-index: 100; */
+    /* background-color: lightsalmon; */
+  }
+  header div.header--container {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header div.header--container div.header--logo {
+    height: 65px;
+    width: 65px;
+    display: block;
+  }
+  header div.header--container ul.header--bar a {
+    display: none;
+  }
+  header div.header--container div.header--account {
+    display: none;
+  }
+  header div.header--container button.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  header div.header--container button.hamburger div.bar,
+  button.hamburger:after,
+  button.hamburger:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: black;
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+  header div.header--container button.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+  header div.header--container button.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+  }
+  header div.header--container button.hamburger.is-active div.bar {
+    opacity: 0;
+  }
+  nav.mobile-nav.is-active {
+    left: 0;
+  }
+  nav.mobile-nav {
+    display: block;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    z-index: 98;
+    background-color: #fff;
+    transition: 0.4s;
+  }
+  nav.mobile-nav div.top {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav.mobile-nav div.top div.language {
+    font-size: 25px;
+    font-weight: 1000;
+  }
+  nav.mobile-nav a {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+  nav.mobile-nav div.x {
+    /* background-color: lightcoral; */
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  nav.mobile-nav div.x div.cross {
+    height: 5px;
+    border-radius: 5px;
+    width: 35px;
+    background-color: black;
+  }
+  nav.mobile-nav div.x div.cross:nth-child(1) {
+    border-radius: 5px;
+    transform: rotate(45deg) translate(8px, -2px);
+    transform-origin: 0 0;
+  }
+  nav.mobile-nav div.x div.cross:nth-child(2) {
+    transform-origin: 0 100%;
+    transform: rotate(-45deg) translate(6px, 3px);
+  }
+  nav.mobile-nav div.line {
+    height: 2px;
+    width: 100vw;
+    background-color: rgba(156, 156, 156, 0.596);
+    margin-bottom: 8px;
+  }
+  section.content {
+    padding-top: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  section.content div.left {
+    height: 100vh;
+  }
+  section.content div.left h1 {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+  section.content div.left h2 {
+    font-size: 16px;
+  }
+  section.content div.right {
+    width: 100%;
+  }
+  section.content div.right div.info h3 {
+    font-size: 16px;
+  }
+  section.content div.right div.shelf {
+    width: 100%;
+  }
+  section.content div.right div.shelf div.tabungan div.top {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity h3 {
+    font-size: 15px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity h2 {
+    font-size: 20px;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  footer {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    bottom: 0px;
+  }
+  footer div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+
+  footer div.container div.top {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+  }
+  footer div.container div.top a {
+    font-weight: 550;
+  }
+  footer div.container div.bottom {
+    display: flex;
+  }
+  footer div.container div.bottom div.left {
+    font-size: 10px;
+    opacity: 0.9;
+  }
+  footer div.container span {
+    width: inherit;
+    height: 0.1px;
+  }
+  footer div.container div.top a:nth-child(4) {
+    display: block;
+  }
+  footer div.container div.top a:nth-child(5) {
+    display: block;
+  }
+  footer div.container div.bottom div.right {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  section.content div.right div.shelf div.tabungan div.top div.left div.profile {
+    height: 40px;
+    width: 40px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity {
+    height: 40px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity h3 {
+    font-size: 10px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity h2 {
+    font-size: 15px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.scroll {
+    height: 24px;
+    width: 24px;
+    background-size: contain;
+  }
+  section.content div.right div.shelf div.tabungan div.bottom div.drawer1 {
+    font-size: 10px;
+  }
+  section.content div.right div.shelf div.tabungan div.bottom div.drawer2 {
+    font-size: 8px;
+  }
+  section.content div.right div.shelf div.tabungan div.bottom div.drawer3 {
+    font-size: 10px;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) div.left {
+    width: 165px;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) div.left div.prof {
+    height: 40px;
+    width: 40px;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) div.left div.text {
+    font-size: 12px;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) div.right {
+    height: 24px;
+    width: 24px;
+    background-size: contain;
+  }
+  footer div.container div.top a {
+    font-size: 12px;
+  }
+}
