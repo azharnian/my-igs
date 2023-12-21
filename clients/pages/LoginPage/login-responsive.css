@@ -221,6 +221,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     transition: 0.35s ease;
+    z-index: 10001;
   }
 
   header div.container button.hamburger div.bar,
@@ -236,25 +237,14 @@
     transition: all 0.4s ease 0s;
   }
 
-  
+  header div.container button.hamburger.HideNavMode{
+    display: block;
+  }
 
   body.HideNavMode{
     overflow-y: hidden;
   }
-  body.HideNavMode header{
-    display: none;
-  }
 
-  
-  body.HideNavMode div.blank{
-    display: none;
-  }
-  body.HideNavMode section.content{
-    display: none;
-  }
-  body.hideNavMode footer{
-    display: none;
-  }
 
   body.HideNavMode nav#HideNav.HideNavMode{
     display: flex;
@@ -350,7 +340,7 @@ nav.mobile-nav div.header div.languageHide.show::before{
   animation: opactiy 0.2s linear;
 }
 
-nav.mobile-nav div.header div.languageHide li{
+nav.mobile-nav div.header div.languageHide div.wrapper{
   padding-left: 20px;
   color: black;
   display: flex;
@@ -360,25 +350,30 @@ nav.mobile-nav div.header div.languageHide li{
   gap: 10px;
   width: 100%;
   height: 40%;
-  list-style-type: none;
+  z-index: inherit;
 }
 
-nav.mobile-nav div.header div.languageHide li:hover{
-padding-left: 20px;
-color: black;
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-align-items: center;
-gap: 10px;
-width: 100%;
-height: 40%;
-list-style-type: none;
-background-color: black;
+nav.mobile-nav div.header div.languageHide div.wrapper:hover{
+  padding-left: 20px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 40%;
+  opacity: 0.8;
 }
 
-nav.mobile-nav div.header div.languageHide li#en{
-  gap: 7px;
+nav.mobile-nav div.header div.languageHide div.wrapper input[type = "checkbox"]{
+  margin-left: 7px;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  outline: none;
 }
 
 nav.mobile-nav div.header div.languageHide span.line{
@@ -388,14 +383,29 @@ nav.mobile-nav div.header div.languageHide span.line{
   opacity: 0.7;
 }
 
-nav.mobile-nav div.header div.languageHide li span.check{
-  width: 30px;
-  height: 30px;
-  background-repeat: no-repeat;
-  background-image: url(assets/check.svg);
-  background-size: 100% 100%;
-  background-position: center;
-  transform: translateY(-2px);
+nav.mobile-nav div.header div.languageHide div.wrapper input[type = "checkbox"]::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f00c";
+  font-size: 20px;
+  color: black;
+  display: none;
+}
+
+nav.mobile-nav div.header div.languageHide div.wrapper input[type = "checkbox"]:checked::after{
+  display: block;
+}
+
+
+nav.mobile-nav div.header div.languageHide div#ID{
+    gap: 15px;
+}
+
+nav.mobile-nav div.header div.languageHide span.line{
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    opacity: 0.7;
 }
 
 nav.mobile-nav div.header button.hamburger_Second{
@@ -410,6 +420,7 @@ nav.mobile-nav div.header button.hamburger_Second{
   border: none;
   transform: translate(0px, 0px);
   height: 50px;
+  background-image: url(assets/cross.svg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }

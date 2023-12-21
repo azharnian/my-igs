@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             languagenavS.classList.toggle("show")
         })
 
-  //checkbox
+  //checkbox base view
       const checkboxF = document.getElementById('checkboxF');
       const checkboxS = document.getElementById('checkboxS');
 
@@ -87,31 +87,100 @@ document.addEventListener("DOMContentLoaded", () => {
       checkboxF.addEventListener('change', function () {
         if (checkboxF.checked) {
           checkboxS.checked = false;
+          checkboxFH.checked = true;
+          checkboxSH.checked = false;
           previousStateF = true;
           previousStateS = false;
+          previousStateFH = true;
+          previousStateSH = false;
         }
         else if (!checkboxF.checked && !checkboxS.checked){
+          checkboxFH.checked = previousStateFH;
+          checkboxSH.checked = previousStateSH;
           checkboxF.checked = previousStateF;
           checkboxS.checked = previousStateS;
+          previousStateFH = previousStateFH;
+          previousStateSH = previousStateSH;
           previousStateF = previousStateF;
           previousStateS = previousStateS;
         }
-        languagenav.classList.toggle("show")
       });
 
       checkboxS.addEventListener('change', function () {
         if (checkboxS.checked) {
           checkboxF.checked = false;  
+          checkboxSH.checked =true;
+          checkboxFH.checked = false;
           previousStateS = true;
           previousStateF = false;
+          previousStateSH = true;
+          previousStateFH = false;
         }
         else if (!checkboxF.checked && !checkboxS.checked){
+          checkboxFH.checked = previousStateFH;
+          checkboxSH.checked = previousStateSH;
           checkboxF.checked = previousStateF;
           checkboxS.checked = previousStateS;
+          previousStateFH = previousStateFH;
+          previousStateSH = previousStateSH;
           previousStateF = previousStateF;
           previousStateS = previousStateS;
         }
-        languagenav.classList.toggle("show")
       });
-      
+  //checkbox mobile
+  const checkboxFH = document.getElementById('checkboxFH');
+      const checkboxSH = document.getElementById('checkboxSH');
+
+      checkboxFH.checked = true;
+      let previousStateFH = true;
+      let previousStateSH = false;
+      checkboxFH.addEventListener('change', function () {
+        if (checkboxFH.checked) {
+          checkboxSH.checked = false;
+          checkboxF.checked = true;
+          checkboxS.checked = false;
+          previousStateFH = true;
+          previousStateSH = false;
+          previousStateF = true;
+          previousStateS = false;
+          
+        }
+        else if (!checkboxFH.checked && !checkboxSH.checked){
+          checkboxFH.checked = previousStateFH;
+          checkboxSH.checked = previousStateSH;
+          checkboxF.checked = previousStateF;
+          checkboxS.checked = previousStateS;
+          previousStateFH = previousStateFH;
+          previousStateSH = previousStateSH;
+          previousStateF = previousStateF;
+          previousStateS = previousStateS;
+        }
+        languagenavS.classList.remove("show");
+        arrow.classList.remove("show");
+      });
+
+      checkboxSH.addEventListener('change', function () {
+        if (checkboxSH.checked) {
+          checkboxFH.checked = false;  
+          checkboxS.checked = true;
+          checkboxF.checked = false
+          previousStateSH = true;
+          previousStateFH = false;
+          previousStateS = true;
+          previousStateF = false;
+        }
+        else if (!checkboxFH.checked && !checkboxSH.checked){
+          checkboxFH.checked = previousStateFH;
+          checkboxSH.checked = previousStateSH;
+          checkboxF.checked = previousStateF;
+          checkboxS.checked = previousStateS;
+          previousStateFH = previousStateFH;
+          previousStateSH = previousStateSH;
+          previousStateF = previousStateF;
+          previousStateS = previousStateS;
+        }
+        languagenavS.classList.remove("show");
+        arrow.classList.remove("show");
+      });
+
 });
