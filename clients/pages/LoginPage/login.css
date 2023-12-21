@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 
 * {
   margin: 0px;
@@ -314,6 +316,7 @@ section.content form div.right div.inputbox input {
   width: 89%;
   border-bottom: 1px solid #000;
   outline: none;
+  font-family: Arial, Helvetica, sans-serif;
   color: #303030;
   font-weight: 300;
   padding-bottom: 6px;
@@ -323,7 +326,7 @@ section.content form div.right div.inputbox input {
 section.content form div.right div.inputbox input::placeholder {
   color: #303030;
   font-size: 28px;
-  font-family: "Lato", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
   word-wrap: break-word;
 }
@@ -355,6 +358,7 @@ section.content form a#Register,
 section.content form a#Forgot {
   color: #000;
   text-decoration: none;
+  font-family: 'Quicksand', sans-serif;;
   font-weight: 400;
   font-size: 20px;
 }
@@ -377,6 +381,7 @@ footer {
     background-color: var(--secondary-color-1);
     display: flex;
     justify-content: center;
+    font-family:  'Quicksand', sans-serif;
 }
 footer .container {
   display: flex;

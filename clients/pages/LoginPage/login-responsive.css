@@ -210,34 +210,33 @@
   header div.container button.hamburger {
     position: relative;
     display: block;
-    width: 50px;
+    width:35px;
     cursor: pointer;
     appearance: none;
     background: none;
     outline: none;
     border: none;
-    transform: translate(16px, -5px);
-    height: 50px;
-    background-image: url(assets/menu.svg);
+    transform: translate(8px, -5px);
+    height: 35px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     transition: 0.35s ease;
   }
 
-  header div.container button.hamburger.HideNavMode{
-    transform: translate(-50%, -50%);
-    animation: shrinking 0.35s linear;
-    scale: 0%;
+  header div.container button.hamburger div.bar,
+  header div.container button.hamburger::after,
+  header div.container button.hamburger::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+    margin: 6px 0px;
+    transition: all 0.4s ease 0s;
   }
 
-  @keyframes shrinking{
-    0%{
-      transform: scale(1) rotate(180deg);
-    }
-    100%{
-      transform: scale(0) rotate(360deg);
-    }
-  }
+  
 
   body.HideNavMode{
     overflow-y: hidden;
@@ -411,7 +410,6 @@ nav.mobile-nav div.header button.hamburger_Second{
   border: none;
   transform: translate(0px, 0px);
   height: 50px;
-  background-image: url(assets/cross.svg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
