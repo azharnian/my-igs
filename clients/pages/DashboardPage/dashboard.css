@@ -41,6 +41,7 @@ header div.header--container div.header--logo {
   height: 65px;
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 header div.header--container ul.header--bar {
   width: fit-content;
@@ -54,7 +55,8 @@ header div.header--container ul.header--bar a {
   padding-right: 55px;
 }
 header div.header--container ul.header--bar a:hover {
-  color: gray;
+  opacity: 0.5;
+  transition: 0.2s ease;
 }
 header div.header--container div.header--account {
   height: fit-content;
@@ -70,6 +72,7 @@ header div.header--container div.header--account div.header--mail {
 }
 header div.header--container div.header--account div.header--mail:hover {
   opacity: 0.5;
+  transition: 0.2s ease;
 }
 header div.header--container div.header--account div.header--call {
   height: 24px;
@@ -78,29 +81,34 @@ header div.header--container div.header--account div.header--call {
 }
 header div.header--container div.header--account div.header--call:hover {
   opacity: 0.5;
+  transition: 0.2s ease;
 }
 header div.header--container div.header--account div.header--language {
   height: 24px;
-  width: 24px;
+  width: 50px;
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 1000;
+  cursor: pointer;
 }
 header div.header--container div.header--account div.header--language:hover {
-  opacity: 0.5;
+  opacity: 0.7;
+  transition: 0.2s ease;
 }
+
+header div.header--container div.header--account div.header--language div.arrow{
+  height: 24px;
+  width: 24px;
+  background-image: url(assets/chevron-down.svg);
+}
+
 header div.header--container div.header--account div.header--prof {
   height: 48px;
   width: 48px;
   border-radius: 50%;
   background-color: pink;
-}
-header div.header--container div.header--account div.profile--chevron {
-  height: 24px;
-  width: 24px;
-  background-image: url(assets/chevron-down.svg);
 }
 header div.header--container button.hamburger {
   display: none;
@@ -134,8 +142,9 @@ section.content div.left div.box {
   height: fit-content;
 }
 section.content div.left div.box div.bar {
+  position: relative;
   border-radius: 54px;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   /* background-color: lightblue; */
   margin-bottom: 8px;
   display: flex;
@@ -146,14 +155,61 @@ section.content div.left div.box div.bar {
   width: fit-content;
   padding-left: 30px;
   padding-right: 30px;
+  box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  overflow: hidden;
 }
+
+section.content div.left div.box div.bar:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 40px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #b1bdc576;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+
+}
+
 section.content div.left div.box div.bar a {
   text-decoration: none;
   color: #000000;
 }
-section.content div.left div.box div.bar:hover {
-  background-color: gray;
+section.content div.left div.box div.bar:hover,
+section.content div.left div.box div.bar:focus,
+section.content div.left div.box div.bar:active {
+  color: white;
 }
+
+section.content div.left div.box div.bar:hover:before,
+section.content div.left div.box div.bar:focus:before,
+section.content div.left div.box div.bar:active:before{
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+
 section.content div.right {
   width: 400px;
   height: fit-content;
@@ -170,11 +226,11 @@ section.content div.right div.shelf {
   height: fit-content;
   margin-top: 20px;
 }
-section.content div.right div.shelf div.tabungan {
+section.content div.right div.shelf div.absensi {
   height: 240px;
   border-radius: 12px;
 }
-section.content div.right div.shelf div.tabungan div.top {
+section.content div.right div.shelf div.absensi div.top {
   height: 50%;
   border-bottom: 1px solid #4b4a54;
   background-color: #4b4a54;
@@ -186,40 +242,35 @@ section.content div.right div.shelf div.tabungan div.top {
   padding-left: 32px;
   padding-right: 32px;
 }
-section.content div.right div.shelf div.tabungan div.top div.left {
+section.content div.right div.shelf div.absensi div.top div.left {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-section.content div.right div.shelf div.tabungan div.top div.left div.profile {
-  height: 56px;
-  width: 56px;
-  border-radius: 50%;
-  background-color: #fff;
-  margin-right: 14px;
-}
-section.content div.right div.shelf div.tabungan div.top div.left div.quantity {
+
+section.content div.right div.shelf div.absensi div.top div.left div.quantity {
   height: 50px;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-content: flex-end;
   color: #fff;
+  transform: translateY(-7px);
 }
-section.content div.right div.shelf div.tabungan div.top div.left div.quantity h3 {
-  font-size: 14px;
+section.content div.right div.shelf div.absensi div.top div.left div.quantity h3 {
+  font-size: 16px;
 }
-section.content div.right div.shelf div.tabungan div.top div.left div.quantity h2 {
-  font-size: 26px;
+section.content div.right div.shelf div.absensi div.top div.left div.quantity h2 {
+  font-size: 30px;
 }
-section.content div.right div.shelf div.tabungan div.top div.scroll {
+section.content div.right div.shelf div.absensi div.top div.scroll {
   height: 48px;
   width: 48px;
   background-image: url(assets/chevron-right-2.svg);
 }
-section.content div.right div.shelf div.tabungan div.top div.scroll:hover {
+section.content div.right div.shelf div.absensi div.top div.scroll:hover {
   opacity: 0.5;
 }
-section.content div.right div.shelf div.tabungan div.bottom {
+section.content div.right div.shelf div.absensi div.bottom {
   height: 50%;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
@@ -228,51 +279,64 @@ section.content div.right div.shelf div.tabungan div.bottom {
   flex-direction: row;
   color: #fff;
 }
-section.content div.right div.shelf div.tabungan div.bottom div.drawer1 {
+section.content div.right div.shelf div.absensi div.bottom div.drawer1 {
+  width: 33.5%;
+  border-right: 1px solid #151d2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
+section.content div.right div.shelf div.absensi div.bottom div.drawer1 h3,
+section.content div.right div.shelf div.absensi div.bottom div.drawer2 h3,
+section.content div.right div.shelf div.absensi div.bottom div.drawer3 h3
+{
+  font-size: 35px;
+  font-weight: 400;
+}
+
+
+section.content div.right div.shelf div.absensi div.bottom div.drawer1 a {
+  color: #fff;
+  text-decoration: none;
+}
+section.content div.right div.shelf div.absensi div.bottom div.drawer1 a:hover {
+  opacity: 0.8;
+}
+section.content div.right div.shelf div.absensi div.bottom div.drawer2 {
   width: 33%;
   border-right: 1px solid #151d2a;
   display: flex;
-  align-items: last baseline;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   font-size: 12px;
   padding-bottom: 20px;
 }
-section.content div.right div.shelf div.tabungan div.bottom div.drawer1 a {
+section.content div.right div.shelf div.absensi div.bottom div.drawer2 a {
   color: #fff;
   text-decoration: none;
 }
-section.content div.right div.shelf div.tabungan div.bottom div.drawer1 a:hover {
+section.content div.right div.shelf div.absensi div.bottom div.drawer2 a:hover {
   opacity: 0.8;
 }
-section.content div.right div.shelf div.tabungan div.bottom div.drawer2 {
-  width: 33%;
-  border-right: 1px solid #151d2a;
+section.content div.right div.shelf div.absensi div.bottom div.drawer3 {
+  width: 33.5%;
   display: flex;
-  align-items: last baseline;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   font-size: 12px;
   padding-bottom: 20px;
 }
-section.content div.right div.shelf div.tabungan div.bottom div.drawer2 a {
+section.content div.right div.shelf div.absensi div.bottom div.drawer3 a {
   color: #fff;
   text-decoration: none;
 }
-section.content div.right div.shelf div.tabungan div.bottom div.drawer2 a:hover {
-  opacity: 0.8;
-}
-section.content div.right div.shelf div.tabungan div.bottom div.drawer3 {
-  width: 34%;
-  display: flex;
-  align-items: last baseline;
-  justify-content: center;
-  font-size: 12px;
-  padding-bottom: 20px;
-}
-section.content div.right div.shelf div.tabungan div.bottom div.drawer3 a {
-  color: #fff;
-  text-decoration: none;
-}
-section.content div.right div.shelf div.tabungan div.bottom div.drawer3 a:hover {
+section.content div.right div.shelf div.absensi div.bottom div.drawer3 a:hover {
   opacity: 0.8;
 }
 section.content div.right div.shelf div.box:nth-child(2) {
@@ -285,35 +349,24 @@ section.content div.right div.shelf div.box:nth-child(2) {
   justify-content: space-between;
   align-items: center;
 }
-section.content div.right div.shelf div.box:nth-child(2) div.left {
-  width: 230px;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+
+section.content div.right div.shelf div.box:nth-child(2) div.achievement{
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  clip-path: polygon(
+    29% 0%,
+    71% 0%,
+    100% 29%,
+    100% 71%,
+    71% 100%,
+    29% 100%,
+    0% 71%,
+    0% 29%
+  );
+  transform: rotate(23deg);
 }
-section.content div.right div.shelf div.box:nth-child(2) div.left div.prof {
-  height: 56px;
-  width: 56px;
-  border-radius: 50%;
-  background-color: #fff;
-}
-section.content div.right div.shelf div.box:nth-child(2) div.left div.text a {
-  color: #fff;
-  text-decoration: none;
-}
-section.content div.right div.shelf div.box:nth-child(2) div.left div.text a:hover {
-  opacity: 0.8;
-}
-section.content div.right div.shelf div.box:nth-child(2) div.right {
-  height: 48px;
-  width: 48px;
-  background-image: url(assets/chevron-right-2.svg);
-}
-section.content div.right div.shelf div.box:nth-child(2) div.right:hover {
-  opacity: 0.5;
-}
+
 section.content div.right div.shelf div.box:nth-child(3) {
   /* background-color: #007780; */
   background-color: #597180;
@@ -330,7 +383,7 @@ section.content div.right div.shelf div.box:nth-child(6) {
   background-color: #7db19f;
 }
 section.content div.right div.shelf div.box {
-  height: 120px;
+  height: 140px;
   width: 100%;
   border-radius: 12px;
   margin-top: 8px;
