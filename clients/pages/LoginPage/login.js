@@ -76,4 +76,42 @@ document.addEventListener("DOMContentLoaded", () => {
             arrow.classList.toggle("show")
             languagenavS.classList.toggle("show")
         })
+
+  //checkbox
+      const checkboxF = document.getElementById('checkboxF');
+      const checkboxS = document.getElementById('checkboxS');
+
+      checkboxF.checked = true;
+      let previousStateF = true;
+      let previousStateS = false;
+      checkboxF.addEventListener('change', function () {
+        if (checkboxF.checked) {
+          checkboxS.checked = false;
+          previousStateF = true;
+          previousStateS = false;
+        }
+        else if (!checkboxF.checked && !checkboxS.checked){
+          checkboxF.checked = previousStateF;
+          checkboxS.checked = previousStateS;
+          previousStateF = previousStateF;
+          previousStateS = previousStateS;
+        }
+        languagenav.classList.toggle("show")
+      });
+
+      checkboxS.addEventListener('change', function () {
+        if (checkboxS.checked) {
+          checkboxF.checked = false;  
+          previousStateS = true;
+          previousStateF = false;
+        }
+        else if (!checkboxF.checked && !checkboxS.checked){
+          checkboxF.checked = previousStateF;
+          checkboxS.checked = previousStateS;
+          previousStateF = previousStateF;
+          previousStateS = previousStateS;
+        }
+        languagenav.classList.toggle("show")
+      });
+      
 });

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 * {
   margin: 0px;
@@ -6,12 +6,12 @@
   box-sizing: border-box;
 }
 body{
-    height: fit-content;
+    height: 100vh;
     width: 100vw;
     color: white;
     background-color: var(--primary-color);
     overflow-x: hidden;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
 }
 
@@ -42,25 +42,26 @@ header div.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: black;
   /* z-index: 100; */
 }
 
 header.fixed {
   z-index: 100;
-  background-color: var(--secondary-color-2);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #faf7ff50 ;
 }
 
 header div.container div.logo{
     width: 160px;
     height: 65px;
-    background-image: url(assets/igs-invert.png);
+    background-image: url(assets/igs-logos.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-repeat: no-repeat;
     cursor: pointer;
     z-index: 101;
-    transform: translate(-5px, -14px);
+    transform: translate(-8px, -14px);
 }
 header div.container div.left {
   display: flex;
@@ -77,7 +78,7 @@ header div.container div.left div.call{
     background-size: 100% 100%;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-    transform: translateY(-13px);
+    transform: translateY(-15px);
 }
 
 header div.container div.left div.call:hover {
@@ -100,7 +101,7 @@ header div.container div.left div.language div.arrow{
     background-image: url(assets/arrow.svg);
     width: 25px;
     height: 25px;
-    transform: translate(25px, -23px);
+    transform: translate(20px, -23px);
     background-size: 100% 100%;
     transition: 0.2s ease;
     background-position: center;
@@ -118,10 +119,10 @@ header div.container div.left div.languageHide{
     justify-content: space-evenly;
     width: 95px;
     height: 110px;
-    background-color: white;
+    background-color: #5E5E5E;
     position: absolute;
     border-radius: 5px;
-    transform: translate(-12px, 90px);
+    transform: translate(-12px, 65px);
     z-index: 101;
 }
 header div.container div.left div.languageHide.show{
@@ -142,15 +143,15 @@ header div.container div.left div.show::before{
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 9px solid #fff;
+    border-bottom: 9px solid #5E5E5E;
     position: absolute;
-    transform: translate(60px , -59px);
+    transform: translate(60px , -57px);
     animation: opactiy 0.2s linear;
 }
 
-header div.container div.left div.languageHide li{
+header div.container div.left div.languageHide div.wrapper{
     padding-left: 20px;
-    color: black;
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -158,12 +159,11 @@ header div.container div.left div.languageHide li{
     gap: 10px;
     width: 100%;
     height: 40%;
-    list-style-type: none;
 }
 
-header div.container div.left div.languageHide li:hover{
+header div.container div.left div.languageHide div.wrapper:hover{
   padding-left: 20px;
-  color: black;
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -171,12 +171,35 @@ header div.container div.left div.languageHide li:hover{
   gap: 10px;
   width: 100%;
   height: 40%;
-  list-style-type: none;
-  background-color: black;
+  opacity: 0.8;
 }
 
-header div.container div.left div.languageHide li#en{
-    gap: 7px;
+header div.container div.left div.languageHide div.wrapper input[type = "checkbox"]{
+  margin-left: 7px;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  outline: none;
+}
+
+header div.container div.left div.languageHide div.wrapper input[type = "checkbox"]::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f00c";
+  font-size: 20px;
+  color: white;
+  display: none;
+}
+
+header div.container div.left div.languageHide div.wrapper input[type = "checkbox"]:checked::after{
+  display: block;
+}
+
+
+header div.container div.left div.languageHide div#ID{
+    gap: 15px;
 }
 
 header div.container div.left div.languageHide span.line{
@@ -184,16 +207,6 @@ header div.container div.left div.languageHide span.line{
     height: 1px;
     background-color: gray;
     opacity: 0.7;
-}
-
-header div.container div.left div.languageHide li span.check{
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-image: url(assets/check.svg);
-    background-size: 100% 100%;
-    background-position: center;
-    transform: translateY(-2px);
 }
 header div.container button.hamburger {
   display: none;
@@ -204,7 +217,7 @@ nav.mobile-nav {
 }
 section.content {
   position: absolute;
-  height: 80vh;
+  height: 85vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -212,9 +225,9 @@ section.content {
 }
 
 section.content form {
-  margin-bottom: 8vh;
+  margin-bottom: 5vh;
   width: 1440px;
-  margin-top: 20px;
+  margin-top: 0px;
   height: fit-content;
   margin-left: 90px;
   margin-right: 90px;
@@ -237,11 +250,12 @@ section.content form div.left {
 section.content form div.left div.top {
   display: flex;
   flex-direction: column;
-  gap: 16.2px;
+  gap: 10px;
+  color: black;
 }
 
 section.content form div.left div.top h1 {
-  font-size: 32px;
+  font-size: 50px;
   margin-top: 10px;
   word-wrap: break-word;
   font-weight: 300;
@@ -249,7 +263,7 @@ section.content form div.left div.top h1 {
 }
 
 section.content form div.left div.top h2 {
-  font-size: 24px;
+  font-size: 25px;
   word-wrap: break-word;
   font-weight: 300;
 }
@@ -266,14 +280,14 @@ section.content form div.left div.bottom div.image{
 section.content form div.right{
     width: 47%;
     height: 100%;
-    padding-top: 6px;
+    padding-top: 15px;
     display: flex;  
     justify-content: flex-start;
     flex-direction: column;
-    gap: 32px;
+    gap: 35px;
     user-select: none;
-    color: white;
-    transform: translateY(15px);
+    color: #000;
+    transform: translateY(55px) scale(1.2);
 }
 
 section.content form div.right div.inputbox{
@@ -286,9 +300,9 @@ section.content form div.right div.inputbox{
 }
 
 section.content form div.right div.inputbox label {
-  color: white;
-  font-size: 12px;
-  font-family: Lato;
+  color: #000;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 500;
   line-height: 22px;
 }
@@ -297,30 +311,31 @@ section.content form div.right div.inputbox input {
   background-color: transparent;
   border: none;
   height: fit-content;
-  width: 100%;
-  border-bottom: 1px solid white;
+  width: 89%;
+  border-bottom: 1px solid #000;
   outline: none;
-  color: #c5d1d8;
+  color: #303030;
   font-weight: 300;
   padding-bottom: 6px;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 section.content form div.right div.inputbox input::placeholder {
-  color: #c5d1d8;
-  font-size: 24px;
+  color: #303030;
+  font-size: 28px;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
 }
-section.content form button{
+section.content form div.right button{
+    margin-top: 5px;
     height: 40px;
-    width: 103px;
+    width: 113px;
     border-radius: 200px;
     border: none;
     background: var(--tertiary-color-3);
-    color: white;
-    font-size: 16px;
+    color: #fff;
+    font-size: 20px;
     font-family: Lato;
     font-weight: 700;
     line-height: 24px;
@@ -338,10 +353,14 @@ section.content form button:focus{
 
 section.content form a#Register,
 section.content form a#Forgot {
-  color: white;
+  color: #000;
   text-decoration: none;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+section.content form a#Forgot{
+  transform: translateY(-5px);
 }
 
 section.content form a#Register:hover,
