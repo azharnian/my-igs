@@ -1,8 +1,27 @@
+@media screen and (max-width: 1200px) {
+  header div.header--container ul.header--bar {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    transform: translateX(70px);
+  }
+
+  header div.header--container div.header--account div.header--prof div.box div.Secondname{
+    display: none;
+  }
+
+
+}
+
+
+
 @media screen and (max-width: 1000px) {
   header div.header--container {
     margin-left: 45px;
     margin-right: 45px;
   }
+
   section.content {
     margin-left: 45px;
     margin-right: 45px;

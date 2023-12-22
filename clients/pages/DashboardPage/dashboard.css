@@ -48,6 +48,7 @@ header div.header--container ul.header--bar {
   display: flex;
   align-items: center;
   list-style: none;
+  transform: translateX(100px);
 }
 header div.header--container ul.header--bar a {
   color: #000000;
@@ -55,15 +56,17 @@ header div.header--container ul.header--bar a {
   padding-right: 55px;
 }
 header div.header--container ul.header--bar a:hover {
-  opacity: 0.5;
+  opacity: 0.7;
   transition: 0.2s ease;
 }
 header div.header--container div.header--account {
   height: fit-content;
-  width: 200px;
+  width: fit-content;
   display: flex;
   align-items: center;
+  gap: 20px;
   justify-content: space-between;
+  transform: translateX(13px);
 }
 header div.header--container div.header--account div.header--mail {
   height: 24px;
@@ -83,33 +86,55 @@ header div.header--container div.header--account div.header--call:hover {
   opacity: 0.5;
   transition: 0.2s ease;
 }
-header div.header--container div.header--account div.header--language {
+header div.header--container div.header--account div.header--notif{
   height: 24px;
-  width: 50px;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 1000;
-  cursor: pointer;
+  width: 24px;
+  background-image: url(assets/bell.svg);
 }
-header div.header--container div.header--account div.header--language:hover {
-  opacity: 0.7;
+header div.header--container div.header--account div.header--notif:hover{
+  opacity: 0.5;
   transition: 0.2s ease;
 }
 
-header div.header--container div.header--account div.header--language div.arrow{
-  height: 24px;
-  width: 24px;
-  background-image: url(assets/chevron-down.svg);
+header div.header--container div.header--account div.header--prof{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: 51px;
+  border: 2px solid #303030;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
-header div.header--container div.header--account div.header--prof {
+header div.header--container div.header--account div.header--prof div.imageProf {
   height: 48px;
   width: 48px;
   border-radius: 50%;
-  background-color: pink;
+  background-image: url(assets/user.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position-y: 7px;
+  overflow: hidden;
+  background-color: lightgray;
 }
+
+header div.header--container div.header--account div.header--prof div.box{
+  width: fit-content;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-direction: row;
+}
+
+header div.header--container div.header--account div.header--prof div.box div.arrow{
+  width: 24px;
+  height: 24px;
+  background-image: url(assets/chevron-down.svg);
+}
+
 header div.header--container button.hamburger {
   display: none;
 }
@@ -145,7 +170,10 @@ section.content div.left div.box div.bar {
   position: relative;
   border-radius: 54px;
   border: 2px solid #000000;
-  /* background-color: lightblue; */
+  background-color: #c6c6c681;
+  box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
   margin-bottom: 8px;
   display: flex;
   justify-content: center;
@@ -155,16 +183,14 @@ section.content div.left div.box div.bar {
   width: fit-content;
   padding-left: 30px;
   padding-right: 30px;
-  box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-transition-property: color;
   transition-property: color;
-  -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
   overflow: hidden;
 }
 
@@ -172,14 +198,13 @@ section.content div.left div.box div.bar:before{
   content: "";
   position: absolute;
   z-index: -1;
-  border-radius: 40px;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: #b1bdc576;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+  background: #fff;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
   -webkit-transform-origin: 50%;
   transform-origin: 50%;
   -webkit-transition-property: transform;
@@ -188,7 +213,7 @@ section.content div.left div.box div.bar:before{
   transition-duration: 0.25s;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
-
+  overflow: hidden;
 }
 
 section.content div.left div.box div.bar a {
@@ -204,8 +229,8 @@ section.content div.left div.box div.bar:active {
 section.content div.left div.box div.bar:hover:before,
 section.content div.left div.box div.bar:focus:before,
 section.content div.left div.box div.bar:active:before{
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
 }
 
 
@@ -350,22 +375,7 @@ section.content div.right div.shelf div.box:nth-child(2) {
   align-items: center;
 }
 
-section.content div.right div.shelf div.box:nth-child(2) div.achievement{
-  width: 70px;
-  height: 70px;
-  background-color: black;
-  clip-path: polygon(
-    29% 0%,
-    71% 0%,
-    100% 29%,
-    100% 71%,
-    71% 100%,
-    29% 100%,
-    0% 71%,
-    0% 29%
-  );
-  transform: rotate(23deg);
-}
+
 
 section.content div.right div.shelf div.box:nth-child(3) {
   /* background-color: #007780; */
@@ -375,13 +385,7 @@ section.content div.right div.shelf div.box:nth-child(4) {
   /* background-color: #12a889; */
   background-color: #5d8791;
 }
-section.content div.right div.shelf div.box:nth-child(5) {
-  /* background-color: #87d47c; */
-  background-color: #679c9b;
-}
-section.content div.right div.shelf div.box:nth-child(6) {
-  background-color: #7db19f;
-}
+
 section.content div.right div.shelf div.box {
   height: 140px;
   width: 100%;
