@@ -20,7 +20,20 @@
   header div.header--container div.header--account div.header--prof div.box div.Secondname{
     display: none;
   }
-
+  header div.header--container div.header--account div.profnav{
+    position: absolute;
+    width: 250px;
+    height: fit-content;
+    background-color: white;
+    top: 65px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.3s ease-in-out;
+  }
 
 }
 
