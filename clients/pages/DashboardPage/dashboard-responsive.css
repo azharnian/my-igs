@@ -1,10 +1,20 @@
+@media screen and (min-width: 2300px){
+  header div.header--container div.header--account div.header--prof{
+    transform: translateX(0px);
+  }
+  header div.header--container div.header--account{
+    transform: translateX(0px);
+  }
+}
+
+
 @media screen and (max-width: 1200px) {
   header div.header--container ul.header--bar {
     width: fit-content;
     display: flex;
     align-items: center;
     list-style: none;
-    transform: translateX(70px);
+    transform: translateX(40px);
   }
 
   header div.header--container div.header--account div.header--prof div.box div.Secondname{
@@ -21,7 +31,9 @@
     margin-left: 45px;
     margin-right: 45px;
   }
-
+  header div.header--container div.header--account div.header--prof{
+    transform: translateX(0px);
+  }
   section.content {
     margin-left: 45px;
     margin-right: 45px;
@@ -44,6 +56,9 @@
     min-height: 100vh;
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
+  }
+  body.is-active{
+    overflow-y: hidden;
   }
   header {
     width: 100%;
@@ -114,7 +129,7 @@
     top: 0;
     left: 100%;
     width: 100%;
-    z-index: 98;
+    z-index: 110;
     background-color: #fff;
     transition: 0.4s;
   }

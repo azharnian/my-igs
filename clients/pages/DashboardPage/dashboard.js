@@ -3,13 +3,15 @@ const mobile_menu = document.querySelector(".mobile-nav");
 const cross_menu = document.querySelector(".x");
 const logo = document.getElementById("header--logo");
 const languange = document.getElementById("header--language");
-
+const body = document.querySelector("body")
 menu_btn.addEventListener("click", function () {
+  body.classList.toggle("is-active")
   menu_btn.classList.toggle("is-active");
   mobile_menu.classList.toggle("is-active");
 });
 
 cross_menu.addEventListener("click", function () {
+  body.classList.toggle("is-active")
   menu_btn.classList.remove("is-active");
   mobile_menu.classList.remove("is-active");
 });
@@ -33,3 +35,15 @@ cross_menu.addEventListener("click", function () {
 //   mobile_menu.classList.remove("is-active");
 //   logo.style.display = "block";
 // }
+
+
+
+//profile
+
+var ProfileBtn = document.getElementById("langBtn2")
+var arrow = document.querySelector("#arrow")
+var Profilenav = document.getElementById("langNav2")
+languagebtnS.addEventListener("click", ()=>{
+    arrow.classList.toggle("show")
+    languagenavS.classList.toggle("show")
+})
