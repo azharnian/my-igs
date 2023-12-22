@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="dashboard.css" />
     <link rel="stylesheet" href="dashboard-responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
     <header>
@@ -21,13 +23,51 @@
           <div class="header--mail"></div>
           <div class="header--call"></div>
           <div class="header--notif"></div>
-          <div class="header--prof">
+          <div class="header--prof" id="headerProf">
             <div class="imageProf"></div>
             <div class="box">
               <div class="Firstname">User</div>
-              <div class="Secondname">Longgg</div>
+              <div class="Secondname">Name</div>
               
-              <div class="arrow"></div>
+              <div class="arrow" id="arrow"></div>
+            </div>
+          </div>
+          <div class="profnav" id="profNav">
+            <div class="wrapper">
+              <a href="#">
+                <i class="fa-solid fa-user"></i>
+                Profile
+              </a>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Settings & Privacy
+              </a>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <i class="fa-solid fa-circle-question"></i>
+                Help & Support
+              </a>
+            </div>
+            <div class="wrapper">
+              <a href="#">
+                <i class='bx bx-globe'></i>
+                Language
+              </a>
+            </div>
+            <hr>
+            <div class="wrapper">
+              <a href="#" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+              </a>
+            </div>
+            <div class="wrapper darkmode">
+              <i class='bx bx-moon' style='color:#535252' ></i>
+              <label for="Darkmode">Darkmode</label>
+              <input type="checkbox" id="Darkmode">
             </div>
           </div>
         </div>

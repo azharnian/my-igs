@@ -40,10 +40,10 @@ cross_menu.addEventListener("click", function () {
 
 //profile
 
-var ProfileBtn = document.getElementById("langBtn2")
-var arrow = document.querySelector("#arrow")
-var Profilenav = document.getElementById("langNav2")
-languagebtnS.addEventListener("click", ()=>{
+var ProfileBtn = document.getElementById("headerProf")
+var arrow = document.getElementById("arrow")
+var Profilenav = document.getElementById("profNav")
+ProfileBtn.addEventListener("click", ()=>{
     arrow.classList.toggle("show")
-    languagenavS.classList.toggle("show")
+    Profilenav.classList.toggle("show")
 })
