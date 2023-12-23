@@ -6,6 +6,38 @@
     --header--prof--border : #000;
     --header--prof--hover : #c6c6c681;
     --header--profnav : #fff;
+    --header--profnav--boxshadow : 1px 0px 2px 1px rgba(0, 0, 0, 0.474);
+    --header--profnav--wrapper--hover: rgba(128, 128, 128, 0.4);
+    --header--profnav--boxicon--color : #525252;
+    --header--profnav--DarkmodeWrapper: rgba(0, 0, 0, 0.1);
+    --header--profnav--Darkmodeswitch : #b4b4b4;
+    --header--profnav--Darkmodebtn: #fff;
+    --content--left--bar--background : #fff;
+    --content--left--bar--background--hover : #c6c6c681;
+    --content--left--bar--border : #000000;
+    --content--left--bar--color : #000;
+    --content--left--bar--boxshadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.474);
+    --content--right--absensi--top--background: #01475D;
+    --content--right--absensi--bottom--background: #01475De0;
+    --content--right--absensi--color : #fff;  
+    --content--right--achievement--background : #007780;
+    --content--right--achievement--color : #fff;
+    --content--right--serti--background: #12A889;
+    --content--right--grade--background: #47BA86;
+    --footer--background: #303030;
+    --footer--color : #fff;
+    --footer--line : gray;
+}
+
+
+body.dark{
+  --body--color : #151d2a;
+    --header--color : rgba(255, 255, 255, 0.1);
+    --header--border : rgba(255, 255, 255, 0.2);
+    --header--text : #000;
+    --header--prof--border : #000;
+    --header--prof--hover : #c6c6c681;
+    --header--profnav : #fff;
     --header--profnav--boxshadow : 1px 0px 2px 1.7px rgba(0, 0, 0, 0.75);
     --header--profnav--wrapper--hover: rgba(128, 128, 128, 0.4);
     --header--profnav--boxicon--color : #525252;
@@ -17,13 +49,13 @@
     --content--left--bar--border : #000000;
     --content--left--bar--color : #000;
     --content--left--bar--boxshadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
-    --content--right--absensi--top--background: #4b4a54;
-    --content--right--absensi--bottom--background: #4b4a54e0;
+    --content--right--absensi--top--background: #E1BDCD;
+    --content--right--absensi--bottom--background: #E1BDCDe0;
     --content--right--absensi--color : #fff;  
-    --content--right--achievement--background : #545d6b;
+    --content--right--achievement--background : #AF99AB;
     --content--right--achievement--color : #fff;
-    --content--right--serti--background: #597180;
-    --content--right--grade--background: #5d8791;
+    --content--right--serti--background: #807787;
+    --content--right--grade--background: #575762;
     --footer--background: #303030;
     --footer--color : #fff;
     --footer--line : gray;

@@ -16,11 +16,9 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--body--color);
+  transition: 0.4s ease;
 }
 
-body.dark{
-  background-color: var(--body--color);
-}
 
 header {
   position: fixed;
