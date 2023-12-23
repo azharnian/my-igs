@@ -70,6 +70,7 @@ header div.container div.left {
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  position: relative;
 }
 header div.container div.left div.call{
     width: 25px;
@@ -103,7 +104,8 @@ header div.container div.left div.language div.arrow{
     background-image: url(assets/arrow.svg);
     width: 25px;
     height: 25px;
-    transform: translate(20px, -23px);
+    top: 0px;
+    left: 20px;
     background-size: 100% 100%;
     transition: 0.2s ease;
     background-position: center;
@@ -115,8 +117,12 @@ header div.container div.left div.language:hover div.arrow {
   display: flex;
 }
 
+header div.container div.left div.language div.arrow.show{
+  transform: rotate(180deg);
+}
+
 header div.container div.left div.languageHide{
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 95px;
@@ -124,12 +130,14 @@ header div.container div.left div.languageHide{
     background-color: #5E5E5E;
     position: absolute;
     border-radius: 5px;
-    transform: translate(-12px, 65px);
+    top: 20px;
+    left: -13px;
     z-index: 101;
+    max-height: 0px;
+    transition: 0.3s ease;
 }
 header div.container div.left div.languageHide.show{
-    display: flex;
-    animation: opacity 0.2s linear;
+    max-height: 200px;
 }
 @keyframes opacity{
     0%{
@@ -139,7 +147,7 @@ header div.container div.left div.languageHide.show{
         opacity: 1;
     }
 }
-header div.container div.left div.show::before{
+header div.container div.left div.languageHide::before{
     content: '';
     width: 0;
     height: 0;
@@ -147,8 +155,14 @@ header div.container div.left div.show::before{
     border-right: 8px solid transparent;
     border-bottom: 9px solid #5E5E5E;
     position: absolute;
-    transform: translate(60px , -57px);
-    animation: opactiy 0.2s linear;
+    top: -7px;
+    left: 60px;
+    opacity: 0;
+    transition: 0.1s ease;
+}
+
+header div.container div.left div.languageHide.show::before{
+  opacity: 1;
 }
 
 header div.container div.left div.languageHide div.wrapper{

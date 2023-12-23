@@ -144,6 +144,8 @@
 
 }
 
+
+
 @media screen and (max-width: 1100px) {
   section.content form {
     margin-left: 40px;
@@ -183,6 +185,16 @@
     width: calc(1440px - 510px);
   }
 }
+
+@media screen and (max-width: 1100px) and (max-height: 800px) and (min-height: 700px){
+
+  footer{
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
+
 @media screen and (max-width: 1000px) {
   div.blank {
     width: 100vw;
