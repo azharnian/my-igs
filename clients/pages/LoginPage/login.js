@@ -43,38 +43,30 @@ document.addEventListener("DOMContentLoaded", () => {
         var languagebtn = document.getElementById("langBtn")
         var languagenav = document.getElementById("langNav")
         var firstInput = document.querySelector(".firstinput")
-        languagebtn.addEventListener("click", ()=>{
-            languagenav.classList.toggle("show")
-            firstInput.classList.toggle("disabledcursor")
+        var arrowbase = document.getElementById("arrowbase");
+        languagebtn.addEventListener("click", (e)=>{
+          e.stopPropagation()
+          arrowbase.classList.toggle("show")
+          languagenav.classList.toggle("show")
+          firstInput.classList.toggle("disabledcursor")
         })
-        //selecting all exc LanguageNav (kelemahan (select satu satu)))
-        var content = document.querySelector("section")
-        var footer = document.querySelector("footer")
-        var headerLogo = document.querySelector(".logo")
-        var callLogo = document.querySelector(".call")
-        content.addEventListener("click", ()=>{
-            languagenav.classList.remove("show")
-            firstInput.classList.remove("disabledcursor")
-        })
-        footer.addEventListener("click", ()=>{
-            languagenav.classList.remove("show")
-            firstInput.classList.remove("disabledcursor")
-        })
-        headerLogo.addEventListener("click", ()=>{
-            languagenav.classList.remove("show")
-            firstInput.classList.remove("disabledcursor")
-        })
-        callLogo.addEventListener("click", ()=>{
-            languagenav.classList.remove("show")
-            firstInput.classList.remove("disabledcursor")
+        body.addEventListener('click', function(){
+          arrowbase.classList.toggle("show")
+          languagenav.classList.toggle("show")
+          firstInput.classList.toggle("disabledcursor")
         })
   //languageNav Mobile
         var languagebtnS = document.getElementById("langBtn2")
         var arrow = document.querySelector("#arrow")
         var languagenavS = document.getElementById("langNav2")
-        languagebtnS.addEventListener("click", ()=>{
+        languagebtnS.addEventListener("click", (e)=>{
+          e.stopPropagation()
             arrow.classList.toggle("show")
             languagenavS.classList.toggle("show")
+        })
+        body.addEventListener('click', function(){
+          arrow.classList.remove("show")
+          languagenavS.classList.remove("show")
         })
 
   //checkbox

@@ -144,6 +144,13 @@
 
 }
 
+@media screen and (max-width: 1100px) and (max-height : 800px) and (min-height : 600px){
+  footer{
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   section.content form {
     margin-left: 40px;
@@ -242,18 +249,18 @@
     overflow-y: hidden;
   }
   body.HideNavMode header{
-    display: none;
+    opacity: 0;
   }
 
   
   body.HideNavMode div.blank{
-    display: none;
+    opacity: 0;
   }
   body.HideNavMode section.content{
-    display: none;
+    opacity: 0;
   }
   body.hideNavMode footer{
-    display: none;
+    opacity: 0;
   }
 
   body.HideNavMode nav#HideNav.HideNavMode{

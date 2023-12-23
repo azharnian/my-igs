@@ -44,9 +44,15 @@ document.addEventListener("DOMContentLoaded", function(){
   const ProfileBtn = document.getElementById("headerProf")
   const arrow = document.getElementById("arrow")
   const Profilenav = document.getElementById("profNav")
-  ProfileBtn.addEventListener("click", ()=>{
-      arrow.classList.toggle("show")
-      Profilenav.classList.toggle("show")
+  ProfileBtn.addEventListener("click", (e)=>{
+    e.stopPropagation()
+    arrow.classList.toggle("show")
+    Profilenav.classList.toggle("show")
+  })
+
+  body.addEventListener('click', function(){
+    arrow.classList.remove("show")
+    Profilenav.classList.remove("show")
   })
 
   //darkmode
