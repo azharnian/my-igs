@@ -7,8 +7,12 @@
     --header--prof--hover : #c6c6c681;
     --header--profnav : #fff;
     --header--profnav--boxshadow : 1px 0px 2px 1px rgba(0, 0, 0, 0.474);
-    --header--profnav--wrapper--hover: rgba(128, 128, 128, 0.4);
+    --header--profnav--wrapper--background: #fff;
+    --header--profnav--wrapper--hover: rgba(128, 128, 128, 0.25);
     --header--profnav--boxicon--color : #525252;
+    --header--profnav--languagenav-wrapper: #efefef;
+    --header--profnav--languagenav-span : #d3d3d3b3;
+    --header--profnav--languagenav-hover : rgba(128, 128, 128, 0.17);
     --header--profnav--DarkmodeWrapper: rgba(0, 0, 0, 0.1);
     --header--profnav--Darkmodeswitch : #b4b4b4;
     --header--profnav--Darkmodebtn: #fff;

@@ -49,7 +49,9 @@ document.addEventListener("DOMContentLoaded", function(){
     arrow.classList.toggle("show")
     Profilenav.classList.toggle("show")
   })
-
+  Profilenav.addEventListener('click', function(e){
+    e.stopPropagation()
+  })
   body.addEventListener('click', function(){
     arrow.classList.remove("show")
     Profilenav.classList.remove("show")
@@ -61,6 +63,50 @@ document.addEventListener("DOMContentLoaded", function(){
   buttonDark.addEventListener('click', ()=>{
     body.classList.toggle("dark")
   })
+  //language
+  const languageNav = document.getElementById("languageNavWrapper");
+  const languageNavBtn = document.getElementById("languageNavBtn");
+  const chevronLanguage = document.getElementById("arrowlang")
 
-})
+  languageNavBtn.addEventListener('click',()=>{
+    languageNav.classList.toggle("show");
+    chevronLanguage.classList.toggle("show");
+    languageNavBtn.classList.toggle("show");
+  } )
+
+ //checkbox base view
+ const checkboxF = document.getElementById('Indonesia');
+ const checkboxS = document.getElementById('English');
+
+ checkboxF.checked = true;
+ let previousStateF = true;
+ let previousStateS = false;
+ checkboxF.addEventListener('change', function () {
+   if (checkboxF.checked) {
+      checkboxS.checked = false;  
+     previousStateF = true;
+     previousStateS = false;
+   }
+   else if (!checkboxF.checked && !checkboxS.checked){
+     checkboxF.checked = previousStateF;
+     checkboxS.checked = previousStateS;
+     previousStateF = previousStateF;
+     previousStateS = previousStateS;
+   }
+ });
+
+ checkboxS.addEventListener('change', function () {
+   if (checkboxS.checked) {
+     checkboxF.checked = false;  
+     previousStateS = true;
+     previousStateF = false;
+   }
+   else if (!checkboxF.checked && !checkboxS.checked){
+     checkboxF.checked = previousStateF;
+     checkboxS.checked = previousStateS;
+     previousStateF = previousStateF;
+     previousStateS = previousStateS;
+   }
+ });
+});
 
