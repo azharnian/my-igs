@@ -1,16 +1,30 @@
 :root {
-  --primary-color: #005b66;
-
-  /* Secondary Colors */
-  --secondary-color-1: #003940;
-  --secondary-color-2: #003940;
-
-  /* Tertiary Colors */
-  --tertiary-color-1: #872341;
-  --tertiary-color-2: #be3144;
-  --tertiary-color-3: #b23a4b;
-  /* Logo Image */
-  --logo-primary: igs-logos.png;
-  --logo-dark: igs-gray.png;
-  --logo-invert: igs-invert.png;
+    --body--color : #FFF;
+    --header--color : rgba(255, 255, 255, 0.1);
+    --header--border : rgba(255, 255, 255, 0.2);
+    --header--text : #000;
+    --header--prof--border : #000;
+    --header--prof--hover : #c6c6c681;
+    --header--profnav : #fff;
+    --header--profnav--boxshadow : 1px 0px 2px 1.7px rgba(0, 0, 0, 0.75);
+    --header--profnav--wrapper--hover: rgba(128, 128, 128, 0.4);
+    --header--profnav--boxicon--color : #525252;
+    --header--profnav--DarkmodeWrapper: rgba(0, 0, 0, 0.1);
+    --header--profnav--Darkmodeswitch : #b4b4b4;
+    --header--profnav--Darkmodebtn: #fff;
+    --content--left--bar--background : #fff;
+    --content--left--bar--background--hover : #c6c6c681;
+    --content--left--bar--border : #000000;
+    --content--left--bar--color : #000;
+    --content--left--bar--boxshadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+    --content--right--absensi--top--background: #4b4a54;
+    --content--right--absensi--bottom--background: #4b4a54e0;
+    --content--right--absensi--color : #fff;  
+    --content--right--achievement--background : #545d6b;
+    --content--right--achievement--color : #fff;
+    --content--right--serti--background: #597180;
+    --content--right--grade--background: #5d8791;
+    --footer--background: #303030;
+    --footer--color : #fff;
+    --footer--line : gray;
 }
