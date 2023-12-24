@@ -16,13 +16,25 @@
         <div class="header--logo" id="header--logo"></div>
         <ul class="header--bar">
           <li><a href="#">HOME</a></li>
-          <li><a href="#">ACCOUNTS</a></li>
-          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">ACCOUNT</a></li>
+          <li><a href="#">SERVICE</a></li>
         </ul>
         <div class="header--account">
           <div class="header--mail"></div>
           <div class="header--call"></div>
-          <div class="header--notif"></div>
+          <div class="header--notif">
+            <div class="box">
+              <div class="icon"></div>
+              <div class="notify"></div>
+            </div>
+            <div class="hidden-box">
+              <div class="headerNotif">
+                <div class="left">
+                  Notifications
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="header--prof" id="headerProf">
             <div class="imageProf"></div>
             <div class="box">
@@ -98,19 +110,78 @@
     </header>
     <nav class="mobile-nav">
       <div class="top">
-        <div class="language"><p>ID</p></div>
+        <div class="profile">
+          <div class="imageProf">
+
+          </div>
+          <div class="box">
+            <div class="Firstname">User</div>
+            <div class="Secondname">Name</div>
+          </div>
+        </div>
         <div class="x">
           <div class="cross"></div>
           <div class="cross"></div>
         </div>
       </div>
-      <div class="mobile-menu">
-        <a href="#">HOME</a>
-        <div class="line"></div>
-        <a href="#">ACCOUNTS</a>
-        <div class="line"></div>
-        <a href="#">SERVICES</a>
-        <div class="line"></div>
+      <div class="content">
+        <div class="wrapper">
+          <a href="#">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+          </a>
+        </div>
+        <div class="wrapper">
+          <a href="#">
+            <i class="fa-solid fa-list"></i>
+            Account
+          </a>
+        </div>
+        <div class="wrapper">
+          <a href="#">
+            <i class='bx bx-phone'></i>
+            Service
+          </a>
+        </div>
+        <div class="wrapper">
+          <a href="#">
+            <i class="fa-solid fa-user"></i>
+            Profile
+          </a>
+        </div>
+        <div class="wrapper">
+          <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            Settings & Privacy
+          </a>
+        </div>
+        <div class="wrapper">
+          <a href="#">
+            <i class="fa-solid fa-circle-question"></i>
+            Help & Support
+          </a>
+        </div>
+        <div class="wrapper">
+          <a href="#">
+            <i class='bx bx-globe'></i>
+            Language
+          </a>
+        </div>
+        <hr>
+        <div class="wrapper">
+          <a href="#" class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Log out
+          </a>
+        </div>
+        <div class="wrapper darkmode">
+          <i class='bx bx-moon' ></i>
+          <p>Darkmode</p>
+          <div class="darkmodeWrapper">
+            <div class="switch" id="switch"></div>
+          </div>
+        </div>
+
       </div>
     </nav>
     <section class="content">

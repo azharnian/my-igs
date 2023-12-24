@@ -16,6 +16,7 @@
     --header--profnav--DarkmodeWrapper: rgba(0, 0, 0, 0.1);
     --header--profnav--Darkmodeswitch : #b4b4b4;
     --header--profnav--Darkmodebtn: #fff;
+    --header--notif--hidebox-boxshadow : 0px 1px 2px 1px rgba(0, 0, 0, 0.474);
     --content--left--bar--background : #fff;
     --content--left--bar--background--hover : #c6c6c681;
     --content--left--bar--border : #000000;

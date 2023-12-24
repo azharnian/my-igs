@@ -92,12 +92,48 @@ header div.header--container div.header--account div.header--call:hover {
   opacity: 0.5;
   transition: 0.2s ease;
 }
+
 header div.header--container div.header--account div.header--notif{
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+}
+
+header div.header--container div.header--account div.header--notif div.box{
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+}
+
+header div.header--container div.header--account div.header--notif div.box div.icon{
   height: 24px;
   width: 24px;
   background-image: url(assets/bell.svg);
 }
-header div.header--container div.header--account div.header--notif:hover{
+
+header div.header--container div.header--account div.header--notif div.box div.notify{
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  top: 2px;
+  right: 4px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box{
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background-color: white;
+  box-shadow: var(--header--notif--hidebox-boxshadow);
+  top: 30px;
+  right: 0px;
+  z-index: 50;
+}
+
+header div.header--container div.header--account div.header--notif div.box:hover div.icon,
+header div.header--container div.header--account div.header--notif div.box:hover div.notify{
   opacity: 0.5;
   transition: 0.2s ease;
 }
