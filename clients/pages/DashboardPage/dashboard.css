@@ -117,25 +117,173 @@ header div.header--container div.header--account div.header--notif div.box div.n
   border-radius: 50%;
   width: 7px;
   height: 7px;
-  top: 2px;
+  top: 1px;
   right: 4px;
 }
 
 header div.header--container div.header--account div.header--notif div.hidden-box{
   position: absolute;
-  width: 200px;
-  height: 250px;
+  width: 320px;
+  height: 350px;
   background-color: white;
   box-shadow: var(--header--notif--hidebox-boxshadow);
-  top: 30px;
-  right: 0px;
-  z-index: 50;
+  top: 40px;
+  right: -10px;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
 }
 
-header div.header--container div.header--account div.header--notif div.box:hover div.icon,
-header div.header--container div.header--account div.header--notif div.box:hover div.notify{
+header div.header--container div.header--account div.header--notif div.box:hover div.icon{
   opacity: 0.5;
   transition: 0.2s ease;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box hr{
+  opacity: 0.5;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.7rem 0.6rem 0.7rem;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.left{
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.right{
+  border: 1.5px solid rgba(0, 0, 0, 0.449);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.722);
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.unread{
+  font-size: 13px;
+  background-color: #f2f4f7;
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  border-radius: 20px;
+  color: #3d495c;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.read{
+  color: #0081c6;
+  font-size: 13px;
+  font-weight: bolder;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.7rem;
+  overflow-y: scroll;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar{
+  width: 10px;
+
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar-thumb{
+  background-color: #dbdee3;
+  border-radius: 15px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar-thumb:hover{
+  background-color: #d0d1d4;
+  border-radius: 15px;
+  
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line div.name{
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  font-size: 12px;
+  border-radius: 20px;
+  background-color: #f2f4f7;
+  color: #404564;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line span.line{
+  width: 100%;
+  border-bottom: 1px solid black;
+  opacity: 0.2;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.text{
+  font-size: 13px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.place{
+  font-size: 12px;
+  cursor: pointer;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.place:hover{
+  color: purple;
+  text-decoration: underline purple;
+  width: fit-content;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.time{
+  font-size: 11px;
+  opacity: 0.8;
 }
 
 header div.header--container div.header--account div.header--prof{
