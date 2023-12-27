@@ -5,10 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const logo = document.getElementById("header--logo");
   const languange = document.getElementById("header--language");
   const body = document.querySelector("body");
-  const languageMobileNavBtn = document.getElementById("languageMobileNavBtn");
-  const languageMobileNav = document.getElementById("languageMobileNavWrapper");
-  const languageMobileWrap = document.getElementById("languageMobileWrap");
-  const arrow2 = document.getElementById("arrow2");
   menu_btn.addEventListener("click", function () {
     body.classList.toggle("is-active");
     menu_btn.classList.toggle("is-active");
@@ -22,10 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     mobile_menu.classList.remove("is-active");
   });
 
-  languageMobileNavBtn.addEventListener("click", function () {
-    languageMobileNav.classList.toggle("show");
-    arrow2.classList.toggle("show");
-  });
 
   //profile
 
@@ -94,6 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
       previousStateS = previousStateS;
     }
   });
+
+  //checkbox responsive
+  
+
   //notification base view
   const notifBtn = document.getElementById("notifBtn");
   const notifBox = document.getElementById("notifBox");
@@ -114,4 +110,17 @@ document.addEventListener("DOMContentLoaded", function () {
   body.addEventListener("click", function () {
     notifBox.classList.remove("show");
   });
+
+  //languageNav mobile
+
+  const languageMobileNavBtn = document.getElementById("languageMobileNavBtn");
+  const languageMobileNav = document.getElementById("languageMobileNavWrapper");
+  const languageMobileWrap = document.getElementById("languageMobileWrap");
+  const arrow2 = document.getElementById("arrow2");
+
+  languageMobileNavBtn.addEventListener("click", function () {
+    languageMobileNav.classList.toggle("show");
+    arrow2.classList.toggle("show");
+  });
+
 });
