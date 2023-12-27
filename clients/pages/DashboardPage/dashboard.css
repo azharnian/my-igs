@@ -126,13 +126,25 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   width: 320px;
   height: 350px;
   background-color: white;
-  box-shadow: var(--header--notif--hidebox-boxshadow);
   top: 40px;
   right: -10px;
-  z-index: 0;
+  z-index: 30;
   display: flex;
   flex-direction: column;
   border-radius: 7px;
+  max-height: 0px;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box::after{
+  content: '';
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box.show{
+  max-height: 400px;
+  box-shadow: var(--header--notif--hidebox-boxshadow);
+  
 }
 
 header div.header--container div.header--account div.header--notif div.box:hover div.icon{
@@ -197,13 +209,14 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
 
 header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   padding: 0.7rem;
   overflow-y: scroll;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
+  gap: 40px;
 }
 
 header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar{

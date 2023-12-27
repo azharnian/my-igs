@@ -94,4 +94,11 @@ document.addEventListener("DOMContentLoaded", function () {
       previousStateS = previousStateS;
     }
   });
+  //notification base view
+  const notifBtn = document.getElementById("notifBtn");
+  const notifBox = document.getElementById("notifBox");
+
+  notifBtn.addEventListener("click", ()=>{
+    notifBox.classList.toggle("show")
+  })
 });
