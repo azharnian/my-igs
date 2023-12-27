@@ -7,9 +7,9 @@ class CertificateType(db.Model, BaseModel):
     __tablename__ = "certificate_types"
     id            = db.Column(db.Integer, primary_key=True)
     name          = db.Column(db.String(32), nullable = False)
-    online        = db.Column(db.Bool, default = False)
+    is_online     = db.Column(db.Boolean, default = False)
     level         = db.Column(db.String(32), nullable = False)
-    status        = db.Column(db.bool, default = True)
+    status        = db.Column(db.Boolean, default = True)
     created_date  = db.Column(db.DateTime, nullable = False, default=datetime.utcnow)
 
     certi_type    = db.relationship("Certificate", backref="type", lazy=True)
@@ -22,7 +22,7 @@ class Certificate(db.Model, BaseModel):
     certi_type_id = db.Column(db.Integer, db.ForeignKey("certificate_types.id"), nullable = False)
     score         = db.Column(db.Integer, nullable = False)
     description   = db.Column(db.String(256), nullable = False)
-    started_date  = db.Column(db.DateTime, nullable = False)
+    start_date    = db.Column(db.DateTime, nullable = False)
     expired_date  = db.Column(db.DateTime, nullable = False)
 
     def __repr__(self):
