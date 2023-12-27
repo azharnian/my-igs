@@ -97,6 +97,7 @@ header div.header--container div.header--account div.header--notif{
   position: relative;
   height: fit-content;
   width: fit-content;
+  position: relative;
 }
 
 header div.header--container div.header--account div.header--notif div.box{
@@ -139,12 +140,22 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
 
 header div.header--container div.header--account div.header--notif div.hidden-box::after{
   content: '';
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 9px solid rgb(238, 238, 238);
+  position: absolute;
+  top: -9px;
+  right: 13px;
+  opacity: 1;
+  transition: 0.1s ease;
 }
 
 header div.header--container div.header--account div.header--notif div.hidden-box.show{
   max-height: 400px;
   box-shadow: var(--header--notif--hidebox-boxshadow);
-  
+  overflow: visible;
 }
 
 header div.header--container div.header--account div.header--notif div.box:hover div.icon{
@@ -170,6 +181,7 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.6px;
+  cursor: pointer;
 }
 
 
@@ -183,6 +195,13 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   border-radius: 5px;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.722);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.right:hover{
+  opacity: 0.7;
+  transition: 0.2s ease;
 }
 
 header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif{
@@ -205,6 +224,12 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   color: #0081c6;
   font-size: 13px;
   font-weight: bolder;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.read:hover{
+  opacity: 0.7;
 }
 
 header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif{

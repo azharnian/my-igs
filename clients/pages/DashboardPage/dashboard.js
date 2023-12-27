@@ -97,8 +97,21 @@ document.addEventListener("DOMContentLoaded", function () {
   //notification base view
   const notifBtn = document.getElementById("notifBtn");
   const notifBox = document.getElementById("notifBox");
+  const notifClose = document.getElementById("notifCloseBtn");
 
-  notifBtn.addEventListener("click", ()=>{
-    notifBox.classList.toggle("show")
+  notifBtn.addEventListener("click", (e)=>{
+    e.stopPropagation();
+    notifBox.classList.toggle("show");
   })
+  notifClose.addEventListener("click", (e)=>{
+    e.stopPropagation();
+    notifBox.classList.remove("show");
+  })
+  notifBox.addEventListener("click", (e)=>{
+    e.stopPropagation();
+  })
+
+  body.addEventListener("click", function () {
+    notifBox.classList.remove("show");
+  });
 });
