@@ -19,7 +19,6 @@ body {
   transition: 0.4s ease;
 }
 
-
 header {
   position: fixed;
   top: 0;
@@ -42,7 +41,7 @@ header div.header--container {
   align-items: center;
 }
 header div.header--container div.header--logo {
-  background-image: url(assets/igs-logos.png);
+  background-image: var(--header--logo);
   width: 65px;
   height: 65px;
   background-repeat: no-repeat;
@@ -77,7 +76,7 @@ header div.header--container div.header--account {
 header div.header--container div.header--account div.header--mail {
   height: 24px;
   width: 24px;
-  background-image: url(assets/mail-2.svg);
+  background-image: var(--header--mail);
 }
 header div.header--container div.header--account div.header--mail:hover {
   opacity: 0.5;
@@ -86,33 +85,33 @@ header div.header--container div.header--account div.header--mail:hover {
 header div.header--container div.header--account div.header--call {
   height: 24px;
   width: 24px;
-  background-image: url(assets/phone-2.svg);
+  background-image: var(--header--phone);
 }
 header div.header--container div.header--account div.header--call:hover {
   opacity: 0.5;
   transition: 0.2s ease;
 }
 
-header div.header--container div.header--account div.header--notif{
+header div.header--container div.header--account div.header--notif {
   position: relative;
   height: fit-content;
   width: fit-content;
   position: relative;
 }
 
-header div.header--container div.header--account div.header--notif div.box{
+header div.header--container div.header--account div.header--notif div.box {
   position: relative;
   height: fit-content;
   width: fit-content;
 }
 
-header div.header--container div.header--account div.header--notif div.box div.icon{
+header div.header--container div.header--account div.header--notif div.box div.icon {
   height: 24px;
   width: 24px;
-  background-image: url(assets/bell.svg);
+  background-image: var(--header--bell);
 }
 
-header div.header--container div.header--account div.header--notif div.box div.notify{
+header div.header--container div.header--account div.header--notif div.box div.notify {
   position: absolute;
   background-color: red;
   border-radius: 50%;
@@ -122,11 +121,11 @@ header div.header--container div.header--account div.header--notif div.box div.n
   right: 4px;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box{
+header div.header--container div.header--account div.header--notif div.hidden-box {
   position: absolute;
   width: 320px;
   height: 350px;
-  background-color: white;
+  background-color: var(--header--notif--hidebox--background);
   top: 40px;
   right: -10px;
   z-index: 30;
@@ -138,8 +137,8 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   overflow: hidden;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box::after{
-  content: '';
+header div.header--container div.header--account div.header--notif div.hidden-box::after {
+  content: "";
   width: 0;
   height: 0;
   border-left: 8px solid transparent;
@@ -152,22 +151,22 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   transition: 0.1s ease;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box.show{
+header div.header--container div.header--account div.header--notif div.hidden-box.show {
   max-height: 400px;
   box-shadow: var(--header--notif--hidebox-boxshadow);
   overflow: visible;
 }
 
-header div.header--container div.header--account div.header--notif div.box:hover div.icon{
+header div.header--container div.header--account div.header--notif div.box:hover div.icon {
   opacity: 0.5;
   transition: 0.2s ease;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box hr{
+header div.header--container div.header--account div.header--notif div.hidden-box hr {
   opacity: 0.5;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif{
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -175,7 +174,7 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   padding: 0.6rem 0.7rem 0.6rem 0.7rem;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.left{
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.left {
   display: flex;
   align-items: center;
   font-size: 13px;
@@ -184,9 +183,8 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   cursor: pointer;
 }
 
-
-header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.right{
-  border: 1.5px solid rgba(0, 0, 0, 0.449);
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.right {
+  border: 1.5px solid var(--header--notif--hidebox--right--border);
   width: 30px;
   height: 30px;
   display: flex;
@@ -194,17 +192,17 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   align-items: center;
   border-radius: 5px;
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.722);
+  color: var(--header--notif--hidebox--right--color);
   cursor: pointer;
   transition: 0.2s ease;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.right:hover{
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.right:hover {
   opacity: 0.7;
   transition: 0.2s ease;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif{
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -212,15 +210,15 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   padding: 0.7rem;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.unread{
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.unread {
   font-size: 13px;
-  background-color: #f2f4f7;
+  background-color: var(--header--notif--hidebox--unread--background);
   padding: 0.1rem 0.5rem 0.1rem 0.5rem;
   border-radius: 20px;
-  color: #3d495c;
+  color: var(--header--notif--hidebox--unread--color);
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.read{
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.read {
   color: #0081c6;
   font-size: 13px;
   font-weight: bolder;
@@ -228,11 +226,11 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   cursor: pointer;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.read:hover{
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.read:hover {
   opacity: 0.7;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -244,23 +242,21 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   gap: 40px;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar {
   width: 10px;
-
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar-thumb{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar-thumb {
   background-color: #dbdee3;
   border-radius: 15px;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar-thumb:hover{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar-thumb:hover {
   background-color: #d0d1d4;
   border-radius: 15px;
-  
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -268,7 +264,7 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   gap: 15px;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -276,21 +272,21 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   width: 100%;
   gap: 5px;
 }
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line div.name{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line div.name {
   padding: 0.1rem 0.5rem 0.1rem 0.5rem;
   font-size: 12px;
   border-radius: 20px;
-  background-color: #f2f4f7;
-  color: #404564;
+  background-color: var(--header--notif--hidebox--line--name--background);
+  color: var(--header--notif--hidebox--line--name-color);
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line span.line{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line span.line {
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--header--notif--hidebox--line--color);
   opacity: 0.2;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -298,33 +294,33 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   gap: 20px;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.text{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.text {
   font-size: 13px;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.place{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.place {
   font-size: 12px;
   cursor: pointer;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.place:hover{
-  color: purple;
-  text-decoration: underline purple;
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.place:hover {
+  color: var(--header--notif--hidebox--notifications-color);
+  text-decoration: underline var(--header--notif--hidebox--notifications-color);
   width: fit-content;
 }
 
-header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.time{
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.time {
   font-size: 11px;
   opacity: 0.8;
 }
 
-header div.header--container div.header--account div.header--prof{
+header div.header--container div.header--account div.header--prof {
   display: flex;
   flex-direction: row;
   width: fit-content;
@@ -346,7 +342,7 @@ header div.header--container div.header--account div.header--prof{
   transition-duration: 0.25s;
 }
 
-header div.header--container div.header--account div.header--prof:before{
+header div.header--container div.header--account div.header--prof:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -368,13 +364,13 @@ header div.header--container div.header--account div.header--prof:before{
   transition-timing-function: ease-out;
 }
 
-header div.header--container div.header--account div.header--prof:active{
-  color: black
+header div.header--container div.header--account div.header--prof:active {
+  color: black;
 }
 
 header div.header--container div.header--account div.header--prof:hover:before,
 header div.header--container div.header--account div.header--prof:focus:before,
-header div.header--container div.header--account div.header--prof:active:before{
+header div.header--container div.header--account div.header--prof:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
   -moz-transform: scaleX(1);
@@ -384,13 +380,13 @@ header div.header--container div.header--account div.header--prof div.imageProf 
   height: 48px;
   width: 48px;
   border-radius: 50%;
-  background-image: url(assets/user.svg);
+  background-image: var(--header--prof);
   background-repeat: no-repeat;
   background-size: 80% 80%;
   background-position: center;
 }
 
-header div.header--container div.header--account div.header--prof div.box{
+header div.header--container div.header--account div.header--prof div.box {
   width: fit-content;
   display: flex;
   gap: 5px;
@@ -398,19 +394,19 @@ header div.header--container div.header--account div.header--prof div.box{
   flex-direction: row;
 }
 
-header div.header--container div.header--account div.header--prof div.box div.arrow{
+header div.header--container div.header--account div.header--prof div.box div.arrow {
   width: 24px;
   height: 24px;
-  background-image: url(assets/chevron-down.svg);
+  background-image: var(--header--prof--arrow);
   transition: 0.2s ease-in-out;
 }
 
-header div.header--container div.header--account div.header--prof div.box div.arrow.show{
+header div.header--container div.header--account div.header--prof div.box div.arrow.show {
   transform: rotate(180deg);
   transition: 0.2s ease-in-out;
 }
 
-header div.header--container div.header--account div.profnav{
+header div.header--container div.header--account div.profnav {
   position: absolute;
   width: 250px;
   height: fit-content;
@@ -425,17 +421,17 @@ header div.header--container div.header--account div.profnav{
   transition: max-height 0.3s ease-in-out;
 }
 
-header div.header--container div.header--account div.profnav.show{
+header div.header--container div.header--account div.profnav.show {
   box-shadow: var(--header--profnav--boxshadow);
   -webkit-box-shadow: var(--header--profnav--boxshadow);
   -moz-box-shadow: var(--header--profnav--boxshadow);
   max-height: 500px;
   display: flex;
   transition: max-height 0.3s ease-in-out;
+  background-color: var(--header--profnav--show);
 }
 
-
-header div.header--container div.header--account div.profnav div.wrapper{
+header div.header--container div.header--account div.profnav div.wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -447,20 +443,19 @@ header div.header--container div.header--account div.profnav div.wrapper{
   transition: background-color 0.2s, padding-left 0.2s;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper:hover{
+header div.header--container div.header--account div.profnav div.wrapper:hover {
   padding-left: 1.5rem;
   background-color: var(--header--profnav--wrapper--hover);
 }
 
-
-header div.header--container div.header--account div.profnav div.wrapper a{
+header div.header--container div.header--account div.profnav div.wrapper a {
   text-decoration: none;
   color: var(--header--text);
   display: flex;
   align-items: center;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper a i{
+header div.header--container div.header--account div.profnav div.wrapper a i {
   margin-right: 1rem;
   font-size: 1.4rem;
   width: 2.3rem;
@@ -471,37 +466,37 @@ header div.header--container div.header--account div.profnav div.wrapper a i{
   line-height: 2.3rem;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper#languageNavBtn.show{
+header div.header--container div.header--account div.profnav div.wrapper#languageNavBtn.show {
   background-color: var(--header--profnav--wrapper--hover);
 }
 
-header div.header--container div.header--account div.profnav div.wrapper a i#arrowlang{
+header div.header--container div.header--account div.profnav div.wrapper a i#arrowlang {
   margin-right: 0rem;
   font-size: 1.5rem;
   margin-left: 3rem;
   transition: 0.25s ease;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper a i#arrowlang.show{
+header div.header--container div.header--account div.profnav div.wrapper a i#arrowlang.show {
   transform: rotate(90deg);
 }
 
-header div.header--container div.header--account div.profnav div.languageNav{
+header div.header--container div.header--account div.profnav div.languageNav {
   max-height: 0px;
   transition: 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
 }
-header div.header--container div.header--account div.profnav div.languageNav.show{
-  max-height:400px;
+header div.header--container div.header--account div.profnav div.languageNav.show {
+  max-height: 400px;
 }
 
-header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav{
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav {
   opacity: 0;
   background-color: var(--header--profnav--languagenav-wrapper);
   transition: 0.2s ease;
 }
-header div.header--container div.header--account div.profnav div.languageNav span{
+header div.header--container div.header--account div.profnav div.languageNav span {
   opacity: 0;
   background: var(--header--profnav--languagenav-span);
   width: 100%;
@@ -509,11 +504,11 @@ header div.header--container div.header--account div.profnav div.languageNav spa
   transition: 0.2s ease;
 }
 header div.header--container div.header--account div.profnav div.languageNav.show div.wrapper#languageNav,
-header div.header--container div.header--account div.profnav div.languageNav.show span{
+header div.header--container div.header--account div.profnav div.languageNav.show span {
   opacity: 1;
 }
 
-header div.header--container div.header--account div.profnav div.languageNav div.wrapper label i{
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper label i {
   margin-right: 1rem;
   font-size: 1.4rem;
   width: 2.3rem;
@@ -523,18 +518,18 @@ header div.header--container div.header--account div.profnav div.languageNav div
   color: var(--header--profnav--boxicon--color);
   line-height: 2.3rem;
 }
-header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav:hover{
-  background-color: var(--header--profnav--languagenav-hover)
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav:hover {
+  background-color: var(--header--profnav--languagenav-hover);
 }
 
-header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav label{
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav label {
   margin-left: 0rem;
   display: flex;
   align-items: center;
   color: var(--header--text);
 }
 
-header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input{
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input {
   padding-left: 3rem;
   background: transparent;
   -webkit-appearance: none;
@@ -544,30 +539,29 @@ header div.header--container div.header--account div.profnav div.languageNav div
   outline: none;
 }
 
-
-header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input[type = "checkbox"]::after{
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input[type="checkbox"]::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 600;
   content: "\f00c";
   font-size: 20px;
   color: var(--header--text);
-  display: none  ;
+  display: none;
 }
 
-header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input[type = "checkbox"]:checked::after{
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input[type="checkbox"]:checked::after {
   display: block;
 }
 
-header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input#English{
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input#English {
   padding-left: 5rem;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper a.logout i{
+header div.header--container div.header--account div.profnav div.wrapper a.logout i {
   font-size: 1.2rem;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper.darkmode{
-  background-color: rgba(0, 0, 0, 0.1);
+header div.header--container div.header--account div.profnav div.wrapper.darkmode {
+  background-color: var(--header--profnav--DarkmodeWrapper);
   border-radius: 10px;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -579,27 +573,28 @@ header div.header--container div.header--account div.profnav div.wrapper.darkmod
   margin-bottom: 0.5rem;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper.darkmode:hover{
+header div.header--container div.header--account div.profnav div.wrapper.darkmode:hover {
   padding-left: none;
-  background-color: none
+  background-color: none;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper.darkmode i{
+header div.header--container div.header--account div.profnav div.wrapper.darkmode i {
   margin-right: 1rem;
   font-size: 1.4rem;
   width: 2.3rem;
   height: 2.3rem;
   border-radius: 50%;
   text-align: center;
-  color:var(--header--profnav--boxicon--color);
+  color: var(--header--profnav--boxicon--color);
+
   line-height: 2.3rem;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper.darkmode p{
+header div.header--container div.header--account div.profnav div.wrapper.darkmode p {
   margin-right: 20px;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper{
+header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper {
   width: 50px;
   height: 36.8px;
   display: flex;
@@ -607,7 +602,7 @@ header div.header--container div.header--account div.profnav div.wrapper.darkmod
   align-items: center;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper div.switch{
+header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper div.switch {
   width: 44px;
   height: 22px;
   background-color: var(--header--profnav--Darkmodeswitch);
@@ -615,8 +610,8 @@ header div.header--container div.header--account div.profnav div.wrapper.darkmod
   border-radius: 25px;
 }
 
-header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper div.switch::before{
-  content: '';
+header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper div.switch::before {
+  content: "";
   position: absolute;
   height: 15px;
   width: 15px;
@@ -628,7 +623,7 @@ header div.header--container div.header--account div.profnav div.wrapper.darkmod
   transition: all 0.15s ease-in-out;
 }
 
-body.dark header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper div.switch::before{
+body.dark header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper div.switch::before {
   left: 24px;
 }
 header div.header--container button.hamburger {
@@ -649,14 +644,15 @@ section.content {
 section.content div.left h1 {
   font-family: "Quicksand", sans-serif;
   font-size: 70px;
-  /* font-weight: 100; */
   margin-bottom: 10px;
+  color: var(--sectioncontent--h1);
 }
 section.content div.left h2 {
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 24px;
   font-family: "Poppins", sans-serif;
+  color: var(--sectioncontent--h2);
 }
 section.content div.left div.box {
   width: fit-content;
@@ -690,7 +686,7 @@ section.content div.left div.box div.bar {
   overflow: hidden;
 }
 
-section.content div.left div.box div.bar:before{
+section.content div.left div.box div.bar:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -729,13 +725,11 @@ section.content div.left div.box div.bar:active {
 
 section.content div.left div.box div.bar:hover:before,
 section.content div.left div.box div.bar:focus:before,
-section.content div.left div.box div.bar:active:before{
+section.content div.left div.box div.bar:active:before {
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -moz-transform: scaleX(0);
 }
-
-
 
 section.content div.right {
   width: 400px;
@@ -747,6 +741,7 @@ section.content div.right div.info h3 {
   font-size: 20px;
   font-weight: 400;
   margin-top: 21px;
+  color: var(--content--info);
 }
 section.content div.right div.shelf {
   width: 100%;
@@ -773,6 +768,7 @@ section.content div.right div.shelf div.absensi div.top div.left {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 100%;
 }
 
 section.content div.right div.shelf div.absensi div.top div.left div.quantity {
@@ -788,6 +784,7 @@ section.content div.right div.shelf div.absensi div.top div.left div.quantity h3
 }
 section.content div.right div.shelf div.absensi div.top div.left div.quantity h2 {
   font-size: 30px;
+  color: #fff;
 }
 section.content div.right div.shelf div.absensi div.top div.scroll {
   height: 48px;
@@ -819,12 +816,10 @@ section.content div.right div.shelf div.absensi div.bottom div.drawer1 {
 
 section.content div.right div.shelf div.absensi div.bottom div.drawer1 h3,
 section.content div.right div.shelf div.absensi div.bottom div.drawer2 h3,
-section.content div.right div.shelf div.absensi div.bottom div.drawer3 h3
-{
+section.content div.right div.shelf div.absensi div.bottom div.drawer3 h3 {
   font-size: 35px;
   font-weight: 400;
 }
-
 
 section.content div.right div.shelf div.absensi div.bottom div.drawer1 a {
   color: var(--content--right--absensi--color);
@@ -867,7 +862,7 @@ section.content div.right div.shelf div.absensi div.bottom div.drawer3 a:hover {
   opacity: 0.8;
 }
 section.content div.right div.shelf div.box:nth-child(2) {
-  background-color: var(--content--right--achievement--background );
+  background-color: var(--content--right--achievement--background);
   padding-left: 32px;
   padding-right: 32px;
   color: var(--content--right--achievement--color);
@@ -876,8 +871,6 @@ section.content div.right div.shelf div.box:nth-child(2) {
   justify-content: space-between;
   align-items: center;
 }
-
-
 
 section.content div.right div.shelf div.box:nth-child(3) {
   /* background-color: #007780; */
