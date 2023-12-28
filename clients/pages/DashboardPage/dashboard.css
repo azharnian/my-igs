@@ -143,7 +143,7 @@ header div.header--container div.header--account div.header--notif div.hidden-bo
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 9px solid rgb(238, 238, 238);
+  border-bottom: 9px solid var(--header--notif--hidebox--after);
   position: absolute;
   top: -9px;
   right: 13px;
