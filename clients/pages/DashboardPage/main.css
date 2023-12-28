@@ -42,6 +42,7 @@
   --mobile-nav--profile--box--color: black;
   --mobile-nav--wrapper--language--background: rgba(124, 124, 124, 0.686);
   --mobile-nav--wrapper--language--hover: rgba(128, 128, 128, 0.103);
+  --mobile-nav--wrapper--hover: rgba(128, 128, 128, 0.25);
   --mobile-nav--boxicon--color: black;
   --mobile-nav--Darkmodeswitch: #b4b4b4;
   --mobile-nav--Darkmodebtn: #fff;
@@ -108,6 +109,7 @@ body.dark {
   --mobile-nav--imageProf: url(assets/user-2.svg);
   --mobile-nav--cross--background: #fff;
   --mobile-nav--wrapper--a--color: #fff;
+  --mobile-nav--wrapper--hover: rgba(128, 128, 128, 0.25);
   --mobile-nav--profile--box--color: #fff;
   --mobile-nav--wrapper--language--background: rgba(124, 124, 124, 0.686);
   --mobile-nav--wrapper--language--hover: rgba(128, 128, 128, 0.103);
