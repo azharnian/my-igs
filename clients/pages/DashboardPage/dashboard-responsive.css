@@ -1,7 +1,47 @@
+@media screen and (min-width: 2300px) {
+  header div.header--container div.header--account div.header--prof {
+    transform: translateX(0px);
+  }
+  header div.header--container div.header--account {
+    transform: translateX(0px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header div.header--container ul.header--bar {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    transform: translateX(40px);
+  }
+
+  header div.header--container div.header--account div.header--prof div.box div.Secondname {
+    display: none;
+  }
+  header div.header--container div.header--account div.profnav {
+    position: absolute;
+    width: 250px;
+    height: fit-content;
+    background-color: white;
+    top: 65px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.3s ease-in-out;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   header div.header--container {
     margin-left: 45px;
     margin-right: 45px;
+  }
+  header div.header--container div.header--account div.header--prof {
+    transform: translateX(0px);
   }
   section.content {
     margin-left: 45px;
@@ -25,6 +65,9 @@
     min-height: 100vh;
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
+  }
+  body.is-active {
+    overflow-y: hidden;
   }
   header {
     width: 100%;
@@ -72,31 +115,23 @@
     width: 100%;
     height: 5px;
     border-radius: 5px;
-    background-color: black;
+    background-color: var(--hamburgermenu--background);
     margin: 6px 0px;
     transition: 0.4s;
   }
-  header div.header--container button.hamburger.is-active:before {
-    transform: rotate(-45deg) translate(-8px, 6px);
-  }
-  header div.header--container button.hamburger.is-active:after {
-    transform: rotate(45deg) translate(-9px, -8px);
-  }
-  header div.header--container button.hamburger.is-active div.bar {
-    opacity: 0;
-  }
   nav.mobile-nav.is-active {
-    left: 0;
+    display: flex;
+    flex-direction: column;
   }
   nav.mobile-nav {
-    display: block;
+    display: none;
     min-height: 100%;
     position: fixed;
     top: 0;
-    left: 100%;
+    left: 0;
     width: 100%;
-    z-index: 98;
-    background-color: #fff;
+    z-index: 110;
+    background-color: var(--mobile-nav--background);
     transition: 0.4s;
   }
   nav.mobile-nav div.top {
@@ -108,20 +143,32 @@
     justify-content: space-between;
     align-items: center;
   }
-  nav.mobile-nav div.top div.language {
-    font-size: 25px;
-    font-weight: 1000;
-  }
-  nav.mobile-nav a {
-    margin-left: 30px;
-    margin-right: 30px;
-    padding-bottom: 8px;
+
+  nav.mobile-nav div.top div.profile {
     display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
+    flex-direction: row;
+    gap: 10px;
   }
+
+  nav.mobile-nav div.top div.profile div.imageProf {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-image: var(--mobile-nav--imageProf);
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+  }
+
+  nav.mobile-nav div.top div.profile div.box {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    gap: 5px;
+    color: var(--mobile-nav--profile--box--color);
+  }
+
   nav.mobile-nav div.x {
     /* background-color: lightcoral; */
     cursor: pointer;
@@ -135,7 +182,7 @@
     height: 5px;
     border-radius: 5px;
     width: 35px;
-    background-color: black;
+    background-color: var(--mobile-nav--cross--background);
   }
   nav.mobile-nav div.x div.cross:nth-child(1) {
     border-radius: 5px;
@@ -146,11 +193,192 @@
     transform-origin: 0 100%;
     transform: rotate(-45deg) translate(6px, 3px);
   }
-  nav.mobile-nav div.line {
-    height: 2px;
-    width: 100vw;
-    background-color: rgba(156, 156, 156, 0.596);
-    margin-bottom: 8px;
+
+  nav.mobile-nav.is-active div.content {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper {
+    height: 50px;
+    /* background-color: lightseagreen; */
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper a {
+    /* background-color: lightblue; */
+    text-decoration: none;
+    color: var(--mobile-nav--wrapper--a--color);
+    display: flex;
+    align-items: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper a i {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    /* text-align: center; */
+    color: var(--header--profnav--boxicon--color);
+    line-height: 2.3rem;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper:hover {
+    background-color: var(--mobile-nav--wrapper--hover);
+    padding-left: 1.5rem;
+    transition: background-color 0.2s, padding-left 0.2s;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper:nth-child(7) div.right {
+    display: flex;
+    align-items: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper:nth-child(7) a {
+    /* background-color: lightpink; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper#languageMobileNavBtn.show {
+    background-color: var(--mobile-nav--wrapper--hover);
+  }
+  nav.mobile-nav.is-active div.content div.wrapper a i#arrow2 {
+    transition: 0.25s ease;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper a i#arrow2.show {
+    transform: rotate(90deg);
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav {
+    max-height: 0px;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show {
+    max-height: 400px;
+    display: block;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav div.wrapper#languageMobileWrap {
+    opacity: 0;
+    background-color: var(--header--profnav--languagenav-wrapper);
+    transition: 0.2s ease;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav span {
+    opacity: 0;
+    background: var(--header--profnav--languagenav-span);
+    width: 100%;
+    height: 1px;
+    transition: 0.2s ease;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap,
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show span {
+    opacity: 1;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav div.wrapper label i {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--header--profnav--boxicon--color);
+    line-height: 2.3rem;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap:hover {
+    background-color: var(--header--profnav--languagenav-hover);
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap label {
+    margin-left: 0rem;
+    display: flex;
+    align-items: center;
+    color: var(--header--text);
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap input {
+    padding-left: 3rem;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 20px;
+    outline: none;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap input[type="checkbox"]::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f00c";
+    font-size: 20px;
+    color: var(--header--text);
+    display: none;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap input[type="checkbox"]:checked::after {
+    display: block;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap input#English {
+    padding-left: 5rem;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode {
+    height: 90%;
+    background-color: var(--mobile-nav--DarkmodeWrapper);
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode p {
+    /* background-color: lightblue; */
+    text-decoration: none;
+    color: var(--mobile-nav--wrapper--a--color);
+    display: flex;
+    align-items: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode i {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    /* text-align: center; */
+    color: var(--mobile-nav--boxicon--color);
+    line-height: 2.3rem;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode div.darkmodeWrapper {
+    margin-left: 1rem;
+    width: 50px;
+    height: 36.8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode:hover {
+    padding-left: 10px;
+    background-color: none;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode div.darkmodeWrapper div.switch {
+    width: 44px;
+    height: 22px;
+    background-color: var(--mobile-nav--Darkmodeswitch);
+    position: relative;
+    border-radius: 25px;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode div.darkmodeWrapper div.switch::before {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    left: 5px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: var(--mobile-nav--Darkmodebtn);
+    transition: all 0.15s ease-in-out;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.logout:hover {
+    padding-left: 1.5rem;
+    transition: 0.2s;
+    z-index: 100;
+  }
+  body.dark nav.mobile-nav.is-active div.content div.wrapper.darkmode div.darkmodeWrapper div.switch::before {
+    left: 24px;
   }
   section.content {
     padding-top: 120px;
@@ -246,6 +474,18 @@
 }
 
 @media screen and (max-width: 350px) {
+  section.content div.right div.shelf div.absensi div.top {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  section.content div.right div.shelf div.absensi div.top div.left div.quantity h3 {
+    font-size: 14px;
+  }
+  section.content div.right div.shelf div.absensi div.top div.scroll {
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+  }
   section.content div.right div.shelf div.tabungan div.top div.left div.profile {
     height: 40px;
     width: 40px;
