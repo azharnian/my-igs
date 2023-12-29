@@ -11,7 +11,7 @@ class CertificateType(db.Model, BaseModel):
     level         = db.Column(db.String(32), nullable = False)
     status        = db.Column(db.Boolean, default = True)
     created_date  = db.Column(db.DateTime, nullable = False, default=datetime.utcnow)
-
+    
     certi_type    = db.relationship("Certificate", backref="type", lazy=True)
 
 class Certificate(db.Model, BaseModel):

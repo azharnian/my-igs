@@ -1,22 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-:root {
-    --primary-color: #22092C;
-    
-    /* Secondary Colors */
-    --secondary-color-1: #3C4D64;
-    --secondary-color-2: #6A7D95; 
-    
-    /* Tertiary Colors */
-    --tertiary-color-1: #872341; 
-    --tertiary-color-2: #BE3144; 
-    --tertiary-color-3: #F05941;
-}
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 body{
     height: 100vh;
@@ -24,79 +11,88 @@ body{
     color: white;
     background-color: var(--primary-color);
     overflow-x: hidden;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
 }
-div.blank{
-    width: 100vw;
-    height: 80px;
-    background: transparent;
+
+div.blank {
+  width: 100vw;
+  height: 80px;
+  background: transparent;
 }
 header {
-    height: 75px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    transition: 0.2s ease;
-    position: fixed;
-    top: 0px;
-    padding-bottom: 30px;
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.2s ease;
+  position: fixed;
+  top: 0px;
+  padding-bottom: 30px;
+  z-index: 100;
 }
 
-
-header div.container{
-    margin-top: 20px;
-    margin-left: 90px;
-    margin-right: 90px;
-    width: 1375px;
-    height: fit-content;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    z-index: 100;
+header div.container {
+  margin-top: 20px;
+  margin-left: 90px;
+  margin-right: 90px;
+  width: 1375px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  /* z-index: 100; */
 }
 
-header.fixed{
-    z-index: 100;
-    background-color: #23343F;
+header.fixed {
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #faf7ff50 ;
 }
 
 header div.container div.logo{
     width: 160px;
-    height: 50px;
-    background-image: url(assets/igs-invert.png);
+    height: 65px;
+    background-image: url(assets/igs-logos.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-repeat: no-repeat;
     cursor: pointer;
+    z-index: 101;
+    transform: translate(-8px, -14px);
 }
-header div.container div.left{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
+header div.container div.left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 header div.container div.left div.call{
     width: 25px;
     height: 25px;
     background-image: url(assets/bx-phone.svg);
-    
+    z-index: 101;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
-    transition: 0.2s ease-in-out
+    transition: 0.2s ease-in-out;
+    transform: translateY(-15px);
 }
 
-header div.container div.left div.call:hover{
-    opacity: 0.7;
-    transition: 0.2s ease-in-out;
+header div.container div.left div.call:hover {
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
 }
 
 header div.container div.left div.language{
     font-size: 1.1em;
     font-weight: 500;
     cursor: pointer;
+    z-index: 101;
+    user-select: none;
+    transform: translateY(-14px);
 }
 
 header div.container div.left div.language div.arrow{
@@ -105,76 +101,174 @@ header div.container div.left div.language div.arrow{
     background-image: url(assets/arrow.svg);
     width: 25px;
     height: 25px;
-    transform: translate(25px, -23px);
+    transform: translate(20px, -23px);
     background-size: 100% 100%;
     transition: 0.2s ease;
     background-position: center;
     filter: brightness(2);
+    z-index: 101;
 }
 
-header div.container div.left div.language:hover div.arrow{
-    display: flex;
+header div.container div.left div.language:hover div.arrow {
+  display: flex;
 }
 
-header div.container div.hide-nav{
+header div.container div.left div.languageHide{
     display: none;
-}
-
-section.content{
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 95px;
+    height: 110px;
+    background-color: #5E5E5E;
     position: absolute;
-    height: 80vh;
-    width: 100%;
+    border-radius: 5px;
+    transform: translate(-12px, 65px);
+    z-index: 101;
+}
+header div.container div.left div.languageHide.show{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    animation: opacity 0.2s linear;
+}
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+header div.container div.left div.show::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 9px solid #5E5E5E;
+    position: absolute;
+    transform: translate(60px , -57px);
+    animation: opactiy 0.2s linear;
 }
 
-section.content div.container{
-    margin-bottom: 8vh;
-    width: 1440px;
-    margin-top: 20px;
-    height: fit-content;
-    margin-left: 90px;
-    margin-right: 90px;
+header div.container div.left div.languageHide div.wrapper{
+    padding-left: 20px;
+    color: white;
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
-    gap: 100px;
-    
-}
-
-section.content div.container div.left{
-    width: 50%;
-    height: 100%;
-    padding-top: 6px;
-    
-    display: flex;  
     justify-content: flex-start;
-    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 40%;
 }
 
-section.content div.container div.left div.top{
-    display: flex;
-    flex-direction: column;
-    gap: 16.2px;
-    
+header div.container div.left div.languageHide div.wrapper:hover{
+  padding-left: 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 40%;
+  opacity: 0.8;
 }
 
-section.content div.container div.left div.top h1{
-    font-size: 32px;
-    margin-top: 10px;
-    word-wrap: break-word;
-    font-weight: 300;
-    padding-bottom: 6.7;
+header div.container div.left div.languageHide div.wrapper input[type = "checkbox"]{
+  margin-left: 7px;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  outline: none;
 }
 
-section.content div.container div.left div.top h2{
-    font-size: 24px;
-    word-wrap: break-word;
-    font-weight: 300;
+header div.container div.left div.languageHide div.wrapper input[type = "checkbox"]::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f00c";
+  font-size: 20px;
+  color: white;
+  display: none;
 }
 
-section.content div.container div.left div.bottom div.image{
+header div.container div.left div.languageHide div.wrapper input[type = "checkbox"]:checked::after{
+  display: block;
+}
+
+
+header div.container div.left div.languageHide div#ID{
+    gap: 15px;
+}
+
+header div.container div.left div.languageHide span.line{
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    opacity: 0.7;
+}
+header div.container button.hamburger {
+  display: none;
+}
+nav.mobile-nav {
+  display: none;
+  transition: 2s ease;
+}
+section.content {
+  position: absolute;
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.content form {
+  margin-bottom: 5vh;
+  width: 1440px;
+  margin-top: 0px;
+  height: fit-content;
+  margin-left: 90px;
+  margin-right: 90px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 100px;
+}
+
+section.content form div.left {
+  width: 50%;
+  height: 100%;
+  padding-top: 6px;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+section.content form div.left div.top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: black;
+}
+
+section.content form div.left div.top h1 {
+  font-size: 50px;
+  margin-top: 10px;
+  word-wrap: break-word;
+  font-weight: 300;
+  padding-bottom: 6.7;
+}
+
+section.content form div.left div.top h2 {
+  font-size: 25px;
+  word-wrap: break-word;
+  font-weight: 300;
+}
+
+section.content form div.left div.bottom div.image{
     margin-top: 50px;
     width: 465px;
     height: 343px;
@@ -183,113 +277,65 @@ section.content div.container div.left div.bottom div.image{
     background-size: 100% 100%;
 }
 
-section.content div.container div.right{
+section.content form div.right{
     width: 47%;
     height: 100%;
-    padding-top: 6px;
+    padding-top: 15px;
     display: flex;  
     justify-content: flex-start;
     flex-direction: column;
-    gap: 32px;
-    color: white;
+    gap: 35px;
+    user-select: none;
+    color: #000;
+    transform: translateY(55px) scale(1.2);
 }
 
-section.content div.container div.right div.inputbox{
+section.content form div.right div.inputbox{
     display: flex;
     flex-direction: column-reverse;
     gap: 10px;
     width: 100%;
     height: 64px;
+    user-select: none;
 }
 
-section.content div.container div.right div.inputbox label{
-    color: white;
-    font-size: 12px;
-    font-family: Lato;
-    font-weight: 500;
-    line-height: 22px;
+section.content form div.right div.inputbox label {
+  color: #000;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  line-height: 22px;
 }
 
-section.content div.container div.right div.inputbox input{
-    background-color: transparent;
-    border: none;
-    height: fit-content;
-    width: 100%;
-    border-bottom: 1px solid white;
-    outline: none;
-    color: #C5D1D8;
-    font-weight: 300;
-    padding-bottom: 6px;
-    font-size: 24px;
+section.content form div.right div.inputbox input {
+  background-color: transparent;
+  border: none;
+  height: fit-content;
+  width: 89%;
+  border-bottom: 1px solid #000;
+  outline: none;
+  color: #303030;
+  font-weight: 300;
+  padding-bottom: 6px;
+  font-size: 28px;
 }
 
-section.content div.container div.right div.inputbox input::placeholder{
-    color: #C5D1D8;
-    font-size: 24px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    word-wrap: break-word;
+section.content form div.right div.inputbox input::placeholder {
+  color: #303030;
+  font-size: 28px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  word-wrap: break-word;
 }
-
-section.content div.container div.right div.inputbox:nth-child(3){
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 16px;
-}
-
-section.content div.container div.right div.inputbox:nth-child(3) div.input{
-    display: flex;
-    flex-direction: column-reverse;
-
-    gap: 10px;
-    width: 432px;
-    height: 64px;
-}
-
-section.content div.container div.right div.inputbox:nth-child(3) div.input input{
-    width: 432px;
-}
-
-section.content div.container div.right div.inputbox:nth-child(3) div.captcha{
-    width: 86px;
-    height: 56px;
-    background: black;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-section.content div.container div.right div.inputbox:nth-child(3) div.change{
-    color: white;
-    width: 100px;
-    text-decoration: none;
-    font-weight: bold;
-    height: 70%;
-    display: flex;
-    transform: translateY(15px);
-    justify-content: center;
-    align-items: center;
-}
-
-section.content div.container div.right div.inputbox:nth-child(3) div.change a{
-    color: white;
-    font-size: 16px;
-    font-family: Lato;
-    font-weight: 500;
-    text-decoration: underline;
-    text-align: center;
-    word-wrap: break-word
-}
-
-section.content div.container button{
+section.content form div.right button{
+    margin-top: 5px;
     height: 40px;
-    width: 103px;
+    width: 113px;
     border-radius: 200px;
     border: none;
     background: var(--tertiary-color-3);
-    color: white;
-    font-size: 16px;
+    color: #fff;
+    font-size: 20px;
     font-family: Lato;
     font-weight: 700;
     line-height: 24px;
@@ -299,23 +345,27 @@ section.content div.container button{
     transition: 0.2s ease;
 }
 
-section.content div.container button:hover,
-section.content div.container button:focus{
+section.content form button:hover,
+section.content form button:focus{
     background: var(--tertiary-color-1);
     transition: 0.2s ease;
 }
 
-section.content div.container a#Register,
-section.content div.container a#Forgot{
-    color: white;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 16px;
+section.content form a#Register,
+section.content form a#Forgot {
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 20px;
 }
 
-section.content div.container a#Register:hover,
-section.content div.container a#Forgot:hover{
-    text-decoration: underline;
+section.content form a#Forgot{
+  transform: translateY(-5px);
+}
+
+section.content form a#Register:hover,
+section.content form a#Forgot:hover {
+  text-decoration: underline;
 }
 
 footer {
@@ -329,14 +379,14 @@ footer {
     justify-content: center;
 }
 footer .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: #fff;
-    margin-top: 24px;
-    margin-left: 90px;
-    margin-right: 90px;
-    margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  margin-top: 24px;
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-bottom: 24px;
 }
 footer .container .top {
   margin-bottom: 16px;
@@ -350,8 +400,8 @@ footer .container .top a {
   transition: 0.2s ease;
 }
 
-footer .container .top a:hover{
-    opacity: 0.8;
+footer .container .top a:hover {
+  opacity: 0.8;
 }
 
 footer .container span{
@@ -387,11 +437,11 @@ footer .container .bottom .right a {
   transition: 0.2s ease;
 }
 
-footer .container .bottom .right a:hover{
-    opacity: 0.8;
+footer .container .bottom .right a:hover {
+  opacity: 0.8;
 }
 
 footer div.container div.top a:nth-child(4),
-footer div.container div.top a:nth-child(5){
-    display: none;
+footer div.container div.top a:nth-child(5) {
+  display: none;
 }

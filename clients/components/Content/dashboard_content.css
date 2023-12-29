@@ -1,0 +1,287 @@
+/* base view */
+section.content {
+    padding-top: 120px;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 50px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+  }
+  section.content div.left h1 {
+    font-size: 70px;
+    /* font-weight: 100; */
+    margin-bottom: 10px;
+  }
+  section.content div.left h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  section.content div.left div.box {
+    width: fit-content;
+    height: fit-content;
+  }
+  section.content div.left div.box div.bar {
+    border-radius: 54px;
+    border: 1px solid #000000;
+    /* background-color: lightblue; */
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 64px;
+    width: fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  section.content div.left div.box div.bar a {
+    text-decoration: none;
+    color: #000000;
+  }
+  section.content div.left div.box div.bar:hover {
+    background-color: gray;
+  }
+  section.content div.right {
+    width: 400px;
+    height: fit-content;
+    /* background-color: #1d324f; */
+  }
+  section.content div.right div.info h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 21px;
+  }
+  section.content div.right div.shelf {
+    width: 100%;
+    height: fit-content;
+    margin-top: 20px;
+  }
+  section.content div.right div.shelf div.tabungan {
+    height: 240px;
+    border-radius: 12px;
+  }
+  section.content div.right div.shelf div.tabungan div.top {
+    height: 50%;
+    border-bottom: 1px solid #4b4a54;
+    background-color: #4b4a54;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.profile {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 14px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: #fff;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity h3 {
+    font-size: 14px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity h2 {
+    font-size: 26px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.scroll {
+    height: 48px;
+    width: 48px;
+    background-image: url(assets/chevron-right-2.svg);
+  }
+  section.content div.right div.shelf div.tabungan div.bottom {
+    height: 50%;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: #4b4a54e0;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+  }
+  section.content div.right div.shelf div.tabungan div.bottom div.drawer1 {
+    width: 33%;
+    border-right: 1px solid #151d2a;
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+  section.content div.right div.shelf div.tabungan div.bottom div.drawer2 {
+    width: 33%;
+    border-right: 1px solid #151d2a;
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+  section.content div.right div.shelf div.tabungan div.bottom div.drawer3 {
+    width: 34%;
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) {
+    background-color: #545d6b;
+    padding-left: 32px;
+    padding-right: 32px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) div.left {
+    width: 230px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) div.left div.prof {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) div.right {
+    height: 48px;
+    width: 48px;
+    background-image: url(assets/chevron-right-2.svg);
+  }
+  section.content div.right div.shelf div.box:nth-child(3) {
+    /* background-color: #007780; */
+    background-color: #597180;
+  }
+  section.content div.right div.shelf div.box:nth-child(4) {
+    /* background-color: #12a889; */
+    background-color: #5d8791;
+  }
+  section.content div.right div.shelf div.box:nth-child(5) {
+    /* background-color: #87d47c; */
+    background-color: #679c9b;
+  }
+  section.content div.right div.shelf div.box:nth-child(6) {
+    background-color: #7db19f;
+  }
+  section.content div.right div.shelf div.box {
+    height: 120px;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 8px;
+  }
+
+  /* max-width: 1000px */
+  section.content {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+  section.content div.left h2 {
+    font-size: 20px;
+  }
+
+  /* max-width: 900px */
+  section.content {
+    padding-top: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  section.content div.left {
+    height: 100vh;
+  }
+  section.content div.left h1 {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+  section.content div.left h2 {
+    font-size: 16px;
+  }
+  section.content div.right {
+    width: 100%;
+  }
+  section.content div.right div.info h3 {
+    font-size: 16px;
+  }
+  section.content div.right div.shelf {
+    width: 100%;
+  }
+  section.content div.right div.shelf div.tabungan div.top {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity h3 {
+    font-size: 15px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity h2 {
+    font-size: 20px;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* max-width: 350px */
+  section.content div.right div.shelf div.tabungan div.top div.left div.profile {
+    height: 40px;
+    width: 40px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity {
+    height: 40px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity h3 {
+    font-size: 10px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.left div.quantity h2 {
+    font-size: 15px;
+  }
+  section.content div.right div.shelf div.tabungan div.top div.scroll {
+    height: 24px;
+    width: 24px;
+    background-size: contain;
+  }
+  section.content div.right div.shelf div.tabungan div.bottom div.drawer1 {
+    font-size: 10px;
+  }
+  section.content div.right div.shelf div.tabungan div.bottom div.drawer2 {
+    font-size: 8px;
+  }
+  section.content div.right div.shelf div.tabungan div.bottom div.drawer3 {
+    font-size: 10px;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) div.left {
+    width: 165px;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) div.left div.prof {
+    height: 40px;
+    width: 40px;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) div.left div.text {
+    font-size: 12px;
+  }
+  section.content div.right div.shelf div.box:nth-child(2) div.right {
+    height: 24px;
+    width: 24px;
+    background-size: contain;
+  }
