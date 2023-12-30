@@ -1,0 +1,183 @@
+/* base view*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    font-weight: 400;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  header div.header--container {
+    margin-left: 90px;
+    margin-right: 90px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header div.header--container div.header--logo {
+    background-image: url(assets/igs-logos.png);
+    width: 65px;
+    height: 65px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  header div.header--container ul.header--bar {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  header div.header--container ul.header--bar a {
+    color: #000000;
+    text-decoration: none;
+    padding-right: 55px;
+  }
+  header div.header--container ul.header--bar a:hover {
+    color: gray;
+  }
+  header div.header--container div.header--account {
+    height: fit-content;
+    width: 204px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header div.header--container div.header--account div.header--mail {
+    height: 24px;
+    width: 24px;
+    background-image: url(assets/mail-2.svg);
+  }
+  header div.header--container div.header--account div.header--icon {
+    height: 22px;
+    width: 22px;
+    background-image: url(assets/basket-2.svg);
+    background-size: contain;
+  }
+  header div.header--container div.header--account div.header--call {
+    height: 24px;
+    width: 24px;
+    background-image: url(assets/phone-2.svg);
+  }
+  header div.header--container div.header--account div.header--language {
+    height: 24px;
+    width: 24px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 1000;
+  }
+  header div.header--container div.header--account div.header--prof {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: pink;
+  }
+  header div.header--container button.hamburger {
+    display: none;
+  }
+  nav.mobile-nav {
+    display: none;
+  }
+
+  /* max-width : 1000px */
+  header div.header--container {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+
+  /* max-width: 900px */
+  header {
+    width: 100%;
+    height: 90px;
+    font-weight: 400;
+    z-index: 100;
+  }
+  header div.header--container {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header div.header--container div.header--logo {
+    height: 65px;
+    width: 65px;
+    display: block;
+  }
+  header div.header--container ul.header--bar a {
+    display: none;
+  }
+  header div.header--container div.header--account {
+    display: none;
+  }
+  header div.header--container button.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  header div.header--container button.hamburger div.bar,
+  button.hamburger:after,
+  button.hamburger:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: black;
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+  header div.header--container button.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+  header div.header--container button.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+  }
+  header div.header--container button.hamburger.is-active div.bar {
+    opacity: 0;
+  }
+  nav.mobile-nav.is-active {
+    left: 0;
+  }
+  nav.mobile-nav {
+    display: block;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    z-index: 98;
+    background-color: #fff;
+    padding-top: 100px;
+    transition: 0.4s;
+  }
+  nav.mobile-nav a {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+  nav.mobile-nav div.line {
+    height: 2px;
+    width: 100vw;
+    background-color: rgba(156, 156, 156, 0.596);
+    margin-bottom: 8px;
+  }
+
