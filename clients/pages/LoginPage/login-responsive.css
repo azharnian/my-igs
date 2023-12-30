@@ -1,0 +1,724 @@
+@media screen and (max-width: 6000px) {
+  section.content form {
+    width: 1400px;
+  }
+  section.content {
+    height: calc(100vh - 75px);
+    position: relative;
+  }
+  section.content form div.right{
+    width: 45%;
+    height: 100%;
+    padding-top: 15px;
+    display: flex;  
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 35px;
+    user-select: none;
+    color: #000;
+    transform: translateY(55px) scale(1.2);
+}
+  footer {
+    margin-top: -100px;
+    transform: translateY(100px);
+    position: relative;
+  }
+  footer .container span{
+    width: 1440px;
+  }
+}
+
+@media screen and (max-width: 1540px) {
+  footer {
+    margin-top: -20px;
+    transform: translateY(30px);
+    position: relative;
+  }
+  footer .container span{
+    width: calc(1440px - 90px);
+  }
+  section.content {
+    height: calc(100vh - 75px);
+    position: relative;
+  }
+  section.content form div.right{
+    width: 47%;
+    height: 100%;
+    padding-top: 15px;
+    display: flex;  
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 35px;
+    user-select: none;
+    color: #000;
+    transform: translateY(55px) scale(1.2);
+}
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1000px) and (max-height: 1500px) and (min-height: 800px){
+  section.content {
+    height: 80vh;
+    position: absolute;
+  }
+  footer {
+    position: absolute;
+    bottom: 0px;
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  section.content {
+    height: fit-content;
+    position: relative;
+  }
+  section.content form div.left div.top h1 {
+    font-size: 50px;
+  }
+
+  section.content form div.left div.top h2 {
+    font-size: 20px;
+  }
+
+  section.content form div.right{
+    transform: translateY(40px) scale(1.15);
+  }
+
+  section.content form div.right div.inputbox input {
+    width: 91%;
+  }
+  footer{
+    margin-top: -25px;
+  }
+  footer .container {
+    margin-left: 190px;
+    margin-right: 190px;
+  }
+  footer .container span {
+    width: calc(1440px - 200px);
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  footer{
+    margin-top: -20px;
+  }
+
+  section.content form {
+    gap: 0px;
+  }
+  section.content form div.left {
+    width: 40%;
+  }
+
+
+  section.content form div.left div.top h1 {
+    font-size: 40px;
+  }
+
+  section.content form div.left div.top h2 {
+    font-size: 24px;
+  }
+
+  section.content form div.left div.bottom div.image {
+    width: 400px;
+    height: 278px;
+  }
+  section.content form div.right{
+    transform: translateY(15px) scale(1);
+  }
+  section.content form div.right div.inputbox input {
+    width: 97%;
+  }
+  footer .container {
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+  footer .container span {
+    width: calc(1440px - 400px);
+  }
+
+}
+
+@media screen and (max-width: 1100px) and (max-height: 800px) and (min-height: 700px){
+
+  footer{
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  section.content form {
+    margin-left: 40px;
+    margin-right: 50px;
+    gap: 80px;
+  }
+  section.content form div.left div.top h1 {
+    font-size: 40px;
+  }
+
+  section.content form div.left div.top h2 {
+    font-size: 20px;
+  }
+
+  section.content form div.left div.bottom div.image {
+    width: 365px;
+    margin-top: 25px;
+    height: 243px;
+  }
+  
+  section.content form div.right{
+    transform: translateY(-5px) scale(0.9);
+  }
+  section.content form div.right div.inputbox input{
+    width: 104%;
+  }
+  header div.container {
+    margin-left: 40px;
+    margin-right: 45px;
+  }
+
+  footer .container {
+    margin-left: 410px;
+    margin-right: 430px;
+  }
+  footer .container span {
+    width: calc(1440px - 510px);
+  }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  div.blank {
+    width: 100vw;
+  }
+  header {
+    height: 90px;
+    width: 100vw;
+  }
+  header div.container div.left {
+    display: none;
+  }
+  header div.container {
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 47px;
+    display: flex;
+    align-items: center;
+  }
+  header div.container div.logo {
+    width: 160px;
+    height: 60px;
+    transform: translate(-2px, -5px);
+
+  }
+  header div.container button.hamburger {
+    position: relative;
+    display: block;
+    width:35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    transform: translate(8px, -5px);
+    height: 35px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: 0.35s ease;
+    z-index: 10001;
+  }
+
+  header div.container button.hamburger div.bar,
+  header div.container button.hamburger::after,
+  header div.container button.hamburger::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+    margin: 6px 0px;
+    transition: all 0.4s ease 0s;
+  }
+
+  header div.container button.hamburger.HideNavMode{
+    display: block;
+  }
+
+  body.HideNavMode{
+    overflow-y: hidden;
+  }
+
+
+  body.HideNavMode nav#HideNav.HideNavMode{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #303030;
+    z-index: 1000;
+    transition: 0.5s ease;
+    animation: showup 0.5s linear;
+    opacity: 1;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @keyframes showup{
+
+  }
+  
+  nav.mobile-nav div.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 90px;
+    width: 100%;
+  }
+  nav.mobile-nav div.header div.language{
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: inherit;
+    user-select: none;
+    transform: translateY(10px);
+  }
+
+  nav.mobile-nav div.header div.language div.arrow{
+    display: flex;
+    position: absolute;
+    background-image: url(assets/arrow_white.svg);
+    width: 25px;
+    height: 25px;
+    transform: translate(25px, -25px);
+    background-size: 100% 100%;
+    transition: 0.2s ease;
+    background-position: center;
+    filter: brightness(2);
+    z-index: inherit;
+  }
+
+  nav.mobile-nav div.header div.language div.show {
+    transform: translate(25px, -25px) rotate(180deg);
+  }
+  nav.mobile-nav div.header div.languageHide{
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 95px;
+    height: 110px;
+    background-color: white;
+    position: absolute;
+    border-radius: 5px;
+    transform: translate(-12px, 50px);
+    z-index: 100;
+}
+
+nav.mobile-nav div.header div.languageHide.show{
+  display: flex;
+  animation: opacity 0.2s linear;
+}
+
+
+@keyframes opacity{
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+nav.mobile-nav div.header div.languageHide.show::before{
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 9px solid #fff;
+  position: absolute;
+  transform: translate(15px , -59px);
+  animation: opactiy 0.2s linear;
+}
+
+nav.mobile-nav div.header div.languageHide div.wrapper{
+  padding-left: 20px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 40%;
+  z-index: inherit;
+}
+
+nav.mobile-nav div.header div.languageHide div.wrapper:hover{
+  padding-left: 20px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 40%;
+  opacity: 0.8;
+}
+
+nav.mobile-nav div.header div.languageHide div.wrapper input[type = "checkbox"]{
+  margin-left: 7px;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  outline: none;
+}
+
+nav.mobile-nav div.header div.languageHide span.line{
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  opacity: 0.7;
+}
+
+nav.mobile-nav div.header div.languageHide div.wrapper input[type = "checkbox"]::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f00c";
+  font-size: 20px;
+  color: black;
+  display: none;
+}
+
+nav.mobile-nav div.header div.languageHide div.wrapper input[type = "checkbox"]:checked::after{
+  display: block;
+}
+
+
+nav.mobile-nav div.header div.languageHide div#ID{
+    gap: 15px;
+}
+
+nav.mobile-nav div.header div.languageHide span.line{
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    opacity: 0.7;
+}
+
+nav.mobile-nav div.header button.hamburger_Second{
+  animation: popoff 1s linear;
+  position: relative;
+  display: block;
+  width: 50px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  transform: translate(0px, 0px);
+  height: 50px;
+  background-image: url(assets/cross.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+@keyframes popoff{
+  0%{
+
+  }
+  100%{
+    
+  }
+}
+
+  nav.mobile-nav section.container{
+    height: calc(100vh - 90px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: lighter;
+  }
+  nav.mobile-nav section.container a{
+    color: white;
+    text-decoration: none;
+  }
+
+  nav.mobile-nav section.container a:hover{
+    opacity: 0.7;
+  }
+  nav.mobile-nav section.container span{
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    background-color: gray;
+    left: 0px;
+  }
+
+  nav.mobile-nav section.container span.one{
+    transform: translateY(30px);
+  }
+
+  nav.mobile-nav section.container span.two{
+    transform: translateY(80px);
+  }
+
+
+  section.content {
+    width: 100vw;
+    transform: translateY(10px);
+  }
+  section.content form {
+    width: 100vw;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 30px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  section.content form div.left div.bottom div.image {
+    display: none;
+  }
+  section.content form div.left {
+    width: 100%;
+  }
+
+  section.content form div.right div.inputbox {
+    position: relative;
+  }
+  section.content form div.right div.inputbox input {
+    font-size: 17px;
+    width: 100%;
+  }
+  section.content form div.right {
+    width: 100%;
+    transform: translateY(15px) scale(1);
+  }
+  section.content form div.right div.inputbox input::placeholder {
+    font-size: 17px;
+  }
+  section.content form div.right div.inputbox div.change {
+    position: absolute;
+    top: 45px;
+    left: -19px;
+  }
+  section.content form div.right button {
+    margin-top: 30px;
+    height: 40px;
+    width: 113px;
+    font-weight: 400;
+  }
+  footer {
+    overflow-y: hidden;
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+    bottom: 0px;
+    margin-top: 30px;
+  }
+  footer div.container {
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+  }
+
+  footer div.container div.top {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+  }
+  footer div.container div.top a {
+    font-weight: 550;
+  }
+  footer div.container div.bottom {
+    display: flex;
+  }
+  footer div.container div.bottom div.left {
+    font-size: 10px;
+    opacity: 0.9;
+  }
+  footer div.container span {
+    width: 92vw;
+    height: 0.1px;
+  }
+  footer div.container div.top a:nth-child(4){
+    display: block;
+  }
+  footer div.container div.top a:nth-child(5){
+    display: block;
+  }
+
+  footer div.container div.bottom div.right{
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  header div.container {
+    margin-top: 20px;
+    margin-left: 17px;
+    margin-right: 38px;
+  }
+  header div.container div.logo{
+    transform: translate(5px, -5px);
+  }
+
+  header div.container button.hamburger {
+    transform: translate(6px, -5px); 
+  }
+
+  footer{
+    overflow: hidden;
+    position: relative;
+    bottom: 0px;
+  }
+  footer div.container span {
+    width: 92vw;
+    height: 0.1px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  div.blank {
+    width: 100vw;
+  }
+  header {
+    width: 100vw;
+  }
+  header div.container div.left {
+    display: none;
+  }
+  header div.container {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  header div.container div.logo {
+    width: 150px;
+    height: 50px;
+    transform: translate(-5px, -5px);
+    
+  }
+  section.content {
+    width: 100vw;
+    transform: translateY(10px);
+  }
+  section.content form {
+    width: 100vw;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 50px;
+  }
+  section.content form div.left div.bottom div.image {
+    display: none;
+  }
+  section.content form div.left {
+    width: 100%;
+  }
+  section.content form div.left div.top h2 {
+    display: none;
+  }
+  section.content form div.right div.inputbox {
+    position: relative;
+  }
+  section.content form div.right div.inputbox input {
+    font-size: 17px;
+    width: 100%;
+  }
+  section.content form div.right {
+    width: 100%;
+  }
+  section.content form div.right div.inputbox input::placeholder {
+    font-size: 17px;
+  }
+  section.content form div.right div.inputbox div.change {
+    position: absolute;
+    top: 45px;
+    left: -19px;
+  }
+  section.content form div.right button {
+    margin-top: 30px;
+    height: 30px;
+    width: 93px;
+    font-weight: 400;
+  }
+  footer {
+    position: relative;
+    overflow-y: hidden;
+    width: 100vw;
+    height: fit-content;
+  }
+  footer div.container {
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  footer div.container div.top {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+  }
+  footer div.container div.top a {
+    font-weight: 550;
+  }
+  footer div.container div.bottom {
+    display: flex;
+  }
+  footer div.container div.bottom div.left {
+    font-size: 10px;
+    opacity: 0.9;
+    margin-top: 10px;
+  }
+  footer div.container span {
+    width: 85vw;
+    height: 0.1px;
+    margin-top: 10px;
+  }
+  footer div.container div.top a:nth-child(4){
+    display: block;
+  }
+  footer div.container div.top a:nth-child(5){
+    display: block;
+  }
+
+  footer div.container div.bottom div.right{
+    display: none;
+  }
+}
