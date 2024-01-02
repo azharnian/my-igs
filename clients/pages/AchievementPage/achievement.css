@@ -1,0 +1,898 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--body--color);
+  transition: 0.4s ease;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  font-weight: 400;
+  background: var(--header--color);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--header--border);
+  z-index: 100;
+  color: var(--header--text);
+}
+header div.header--container {
+  margin-left: 90px;
+  margin-right: 90px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header div.header--container div.header--logo {
+  background-image: var(--header--logo);
+  width: 65px;
+  height: 65px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+header div.header--container ul.header--bar {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  transform: translateX(100px);
+}
+header div.header--container ul.header--bar a {
+  color: var(--header--text);
+  text-decoration: none;
+  padding-right: 55px;
+}
+header div.header--container ul.header--bar a:hover {
+  opacity: 0.7;
+  transition: 0.2s ease;
+}
+header div.header--container div.header--account {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  transform: translateX(13px);
+}
+header div.header--container div.header--account div.header--mail {
+  height: 24px;
+  width: 24px;
+  background-image: var(--header--mail);
+}
+header div.header--container div.header--account div.header--mail:hover {
+  opacity: 0.5;
+  transition: 0.2s ease;
+}
+header div.header--container div.header--account div.header--call {
+  height: 24px;
+  width: 24px;
+  background-image: var(--header--phone);
+}
+header div.header--container div.header--account div.header--call:hover {
+  opacity: 0.5;
+  transition: 0.2s ease;
+}
+
+header div.header--container div.header--account div.header--notif {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+}
+
+header div.header--container div.header--account div.header--notif div.box {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+}
+
+header div.header--container div.header--account div.header--notif div.box div.icon {
+  height: 24px;
+  width: 24px;
+  background-image: var(--header--bell);
+}
+
+header div.header--container div.header--account div.header--notif div.box div.notify {
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  top: 1px;
+  right: 4px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box {
+  position: absolute;
+  width: 320px;
+  height: 350px;
+  background-color: var(--header--notif--hidebox--background);
+  top: 40px;
+  right: -10px;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  max-height: 0px;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 9px solid var(--header--notif--hidebox--after);
+  position: absolute;
+  top: -9px;
+  right: 13px;
+  opacity: 1;
+  transition: 0.1s ease;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box.show {
+  max-height: 400px;
+  box-shadow: var(--header--notif--hidebox-boxshadow);
+  overflow: visible;
+}
+
+header div.header--container div.header--account div.header--notif div.box:hover div.icon {
+  opacity: 0.5;
+  transition: 0.2s ease;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box hr {
+  opacity: 0.5;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.7rem 0.6rem 0.7rem;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.left {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.right {
+  border: 1.5px solid var(--header--notif--hidebox--right--border);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 20px;
+  color: var(--header--notif--hidebox--right--color);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.headerNotif div.right:hover {
+  opacity: 0.7;
+  transition: 0.2s ease;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.unread {
+  font-size: 13px;
+  background-color: var(--header--notif--hidebox--unread--background);
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  border-radius: 20px;
+  color: var(--header--notif--hidebox--unread--color);
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.read {
+  color: #0081c6;
+  font-size: 13px;
+  font-weight: bolder;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.heroNotif div.read:hover {
+  opacity: 0.7;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.7rem;
+  overflow-y: scroll;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  gap: 40px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar {
+  width: 10px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar-thumb {
+  background-color: #dbdee3;
+  border-radius: 15px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif::-webkit-scrollbar-thumb:hover {
+  background-color: #d0d1d4;
+  border-radius: 15px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line div.name {
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  font-size: 12px;
+  border-radius: 20px;
+  background-color: var(--header--notif--hidebox--line--name--background);
+  color: var(--header--notif--hidebox--line--name-color);
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.line span.line {
+  width: 100%;
+  border-bottom: 1px solid var(--header--notif--hidebox--line--color);
+  opacity: 0.2;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.text {
+  font-size: 13px;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.place {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.place:hover {
+  color: var(--header--notif--hidebox--notifications-color);
+  text-decoration: underline var(--header--notif--hidebox--notifications-color);
+  width: fit-content;
+}
+
+header div.header--container div.header--account div.header--notif div.hidden-box div.contentNotif div.box div.notificationbox div.notification div.time {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+header div.header--container div.header--account div.header--prof {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: 51px;
+  border: 2px solid var(--header--prof--border);
+  border-radius: 25px;
+  overflow: hidden;
+  transform: translateX(4px);
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+header div.header--container div.header--account div.header--prof:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--header--prof--hover);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+header div.header--container div.header--account div.header--prof:active {
+  color: black;
+}
+
+header div.header--container div.header--account div.header--prof:hover:before,
+header div.header--container div.header--account div.header--prof:focus:before,
+header div.header--container div.header--account div.header--prof:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -moz-transform: scaleX(1);
+}
+
+header div.header--container div.header--account div.header--prof div.imageProf {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-image: var(--header--prof);
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center;
+}
+
+header div.header--container div.header--account div.header--prof div.box {
+  width: fit-content;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-direction: row;
+}
+
+header div.header--container div.header--account div.header--prof div.box div.arrow {
+  width: 24px;
+  height: 24px;
+  background-image: var(--header--prof--arrow);
+  transition: 0.2s ease-in-out;
+}
+
+header div.header--container div.header--account div.header--prof div.box div.arrow.show {
+  transform: rotate(180deg);
+  transition: 0.2s ease-in-out;
+}
+
+header div.header--container div.header--account div.profnav {
+  position: absolute;
+  width: 250px;
+  height: fit-content;
+  background-color: var(--header--profnav);
+  top: 65px;
+  left: 70px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.3s ease-in-out;
+}
+
+header div.header--container div.header--account div.profnav.show {
+  box-shadow: var(--header--profnav--boxshadow);
+  -webkit-box-shadow: var(--header--profnav--boxshadow);
+  -moz-box-shadow: var(--header--profnav--boxshadow);
+  max-height: 500px;
+  display: flex;
+  transition: max-height 0.3s ease-in-out;
+  background-color: var(--header--profnav--show);
+}
+
+header div.header--container div.header--account div.profnav div.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--header--profnav--wrapper--background);
+  transition: background-color 0.2s, padding-left 0.2s;
+  z-index: 25;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper:hover {
+  padding-left: 1.5rem;
+  background-color: var(--header--profnav--wrapper--hover);
+}
+
+header div.header--container div.header--account div.profnav div.wrapper a {
+  text-decoration: none;
+  color: var(--header--text);
+  display: flex;
+  align-items: center;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper a i {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  text-align: center;
+  color: var(--header--profnav--boxicon--color);
+  line-height: 2.3rem;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper#languageNavBtn.show {
+  background-color: var(--header--profnav--wrapper--hover);
+}
+
+header div.header--container div.header--account div.profnav div.wrapper a i#arrowlang {
+  margin-right: 0rem;
+  font-size: 1.5rem;
+  margin-left: 3rem;
+  transition: 0.25s ease;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper a i#arrowlang.show {
+  transform: rotate(90deg);
+}
+
+header div.header--container div.header--account div.profnav div.languageNav {
+  max-height: 0px;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+header div.header--container div.header--account div.profnav div.languageNav.show {
+  max-height: 400px;
+}
+
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav {
+  opacity: 0;
+  background-color: var(--header--profnav--languagenav-wrapper);
+  transition: 0.2s ease;
+}
+header div.header--container div.header--account div.profnav div.languageNav span {
+  opacity: 0;
+  background: var(--header--profnav--languagenav-span);
+  width: 100%;
+  height: 1px;
+  transition: 0.2s ease;
+}
+header div.header--container div.header--account div.profnav div.languageNav.show div.wrapper#languageNav,
+header div.header--container div.header--account div.profnav div.languageNav.show span {
+  opacity: 1;
+}
+
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper label i {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  text-align: center;
+  color: var(--header--profnav--boxicon--color);
+  line-height: 2.3rem;
+}
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav:hover {
+  background-color: var(--header--profnav--languagenav-hover);
+}
+
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav label {
+  margin-left: 0rem;
+  display: flex;
+  align-items: center;
+  color: var(--header--text);
+}
+
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input {
+  padding-left: 3rem;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  width: calc(3rem + 20px);
+  height: 20px;
+  outline: none;
+}
+
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input[type="checkbox"]::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f00c";
+  font-size: 20px;
+  color: var(--header--text);
+  display: none;
+}
+
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+header div.header--container div.header--account div.profnav div.languageNav div.wrapper#languageNav input#English {
+  padding-left: 5rem;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper a.logout i {
+  font-size: 1.2rem;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper.darkmode {
+  background-color: var(--header--profnav--DarkmodeWrapper);
+  border-radius: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper.darkmode:hover {
+  padding-left: none;
+  background-color: none;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper.darkmode i {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  text-align: center;
+  color: var(--header--profnav--boxicon--color);
+
+  line-height: 2.3rem;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper.darkmode p {
+  margin-right: 20px;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper {
+  width: 50px;
+  height: 36.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper div.switch {
+  width: 44px;
+  height: 22px;
+  background-color: var(--header--profnav--Darkmodeswitch);
+  position: relative;
+  border-radius: 25px;
+}
+
+header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper div.switch::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 50%;
+  left: 5px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: var(--header--profnav--Darkmodebtn);
+  transition: all 0.15s ease-in-out;
+}
+
+body.dark header div.header--container div.header--account div.profnav div.wrapper.darkmode div.darkmodeWrapper div.switch::before {
+  left: 24px;
+}
+header div.header--container button.hamburger {
+  display: none;
+}
+nav.mobile-nav {
+  display: none;
+}
+section.content {
+  /* background-color: lightcoral; */
+  height: fit-content;
+  margin-top: 110px;
+  margin-right: 90px;
+  margin-left: 90px;
+}
+section.content div.account {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section.content div.account div.profile {
+  height: 100px;
+  width: 100px;
+  background-image: url(assets/user.svg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+section.content div.account div.name {
+  width: fit-content;
+  height: 100%;
+  font-size: 24px;
+}
+section.content div.achievement-name {
+  margin-top: 60px;
+  background-color: #0081c6;
+}
+section.content div.achievement-name {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  --s: 50px; /* the ribbon size */
+  --d: 20px; /* the depth */
+  --c: 20px; /* the cutout part */
+  padding: 0 calc(var(--s) + var(--d)) var(--d); /* we need some padding so the text doesn't overlap the ribbon part */
+  background: conic-gradient(at left var(--s) bottom var(--d), #0000 25%, #0008 0 37.5%, #0004 0) 0 /50% no-repeat, conic-gradient(at right var(--s) bottom var(--d), #0004 62.5%, #0008 0 75%, #0000 0) 100%/50% no-repeat;
+  clip-path: polygon(
+    0 var(--d),
+    var(--s) var(--d),
+    var(--s) 0,
+    calc(100% - var(--s)) 0,
+    calc(100% - var(--s)) var(--d),
+    100% var(--d),
+    calc(100% - var(--c)) calc(50% + var(--d) / 2),
+    100% 100%,
+    calc(100% - var(--s) - var(--d)) 100%,
+    calc(100% - var(--s) - var(--d)) calc(100% - var(--d)),
+    calc(var(--s) + var(--d)) calc(100% - var(--d)),
+    calc(var(--s) + var(--d)) 100%,
+    0 100%,
+    var(--c) calc(50% + var(--d) / 2)
+  );
+  background-color: #cc333f; /* the main color */
+  /* width: fit-content; */
+  /* background-color: #0081c6; */
+}
+section.content div.achievement {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 80px 50px;
+  /* background-color: #009688; */
+}
+section.content div.achievement div.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  height: 380px;
+  background: #314361;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+section.content div.achievement div.card div.imageBox {
+  position: absolute;
+  top: 20px;
+  width: 250px;
+  height: 250px;
+  background: #fff;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+section.content div.achievement div.card:nth-child(1) div.imageBox {
+  background-image: url(https://yatimmandiri.org/news/wp-content/uploads/2022/03/Defran-Samantha.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.content div.achievement div.card:nth-child(2) div.imageBox {
+  background-image: url(https://yatimmandiri.org/news/wp-content/uploads/2022/03/Defran-Samantha.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.content div.achievement div.card:nth-child(3) div.imageBox {
+  background-image: url(https://yatimmandiri.org/news/wp-content/uploads/2022/03/Defran-Samantha.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.content div.achievement div.card:nth-child(4) div.imageBox {
+  background-image: url(https://yatimmandiri.org/news/wp-content/uploads/2022/03/Defran-Samantha.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.content div.achievement div.card:nth-child(5) div.imageBox {
+  background-image: url(https://yatimmandiri.org/news/wp-content/uploads/2022/03/Defran-Samantha.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.content div.achievement div.card div.content {
+  position: absolute;
+  top: 300px;
+  width: 100%;
+  padding: 0 30px;
+  height: 50px;
+  overflow: hidden;
+  transition: 0.5s;
+  /* background-color: #d0d1d4; */
+}
+section.content div.achievement div.card div.content h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+section.content div.achievement div.card div.content p {
+  color: #fff;
+}
+section.content div.achievement div.card div.content div.more {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  height: fit-content;
+  overflow: auto;
+  font-size: 16px;
+}
+section.content div.achievement div.card div.content div.more ul li {
+  opacity: 0;
+}
+section.content div.achievement div.card div.content div.more ul {
+  list-style: none;
+}
+section.content div.achievement div.card div.content a {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: var(--clr);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+section.content div.achievement div.card:hover {
+  height: 450px;
+}
+section.content div.achievement div.card:hover div.imageBox {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+section.content div.achievement div.card:hover div.content {
+  height: fit-content;
+  top: 150px;
+}
+section.content div.achievement div.card:hover div.content div.more ul li {
+  opacity: 1;
+}
+section.content div.achievement div.card:nth-child(1) {
+  --clr: #008496;
+}
+section.content div.achievement div.card:nth-child(2) {
+  --clr: #009688;
+}
+section.content div.achievement div.card:nth-child(3) {
+  --clr: #009688;
+}
+footer {
+  background-color: var(--footer--background);
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+footer div.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--footer--color);
+  margin-top: 24px;
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-bottom: 24px;
+}
+footer div.container div.top {
+  margin-bottom: 16px;
+}
+footer div.container div.top a {
+  padding-right: 70px;
+  text-decoration: none;
+  color: var(--footer--color);
+  word-wrap: break-word;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+footer div.container div.top a:hover {
+  opacity: 0.8;
+}
+footer div.container span {
+  height: 0.1px;
+  width: calc(1440 - 90px);
+  opacity: 0.5;
+  background-color: var(--footer--line);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+footer div.container div.bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+footer div.container div.bottom div.left {
+  word-wrap: break-word;
+  opacity: 0.5;
+  font-size: 14px;
+}
+footer div.container div.bottom div.right {
+  float: right;
+}
+footer div.container div.bottom div.right a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--footer--color);
+  padding-left: 20px;
+  transition: 0.2s ease;
+}
+footer div.container div.bottom div.right a:hover {
+  opacity: 0.8;
+}
+footer div.container div.top a:nth-child(4),
+footer div.container div.top a:nth-child(5) {
+  display: none;
+}
