@@ -634,7 +634,6 @@ nav.mobile-nav {
   display: none;
 }
 section.content {
-  /* background-color: lightcoral; */
   height: fit-content;
   margin-top: 110px;
   margin-right: 90px;
@@ -650,7 +649,7 @@ section.content div.account {
 section.content div.account div.profile {
   height: 100px;
   width: 100px;
-  background-image: url(assets/user.svg);
+  background-image: var(--content--account--profile);
   background-position: center;
   background-size: cover;
   border-radius: 50%;
@@ -660,10 +659,18 @@ section.content div.account div.name {
   width: fit-content;
   height: 100%;
   font-size: 24px;
+  color: var(--content--account--name--color);
 }
 section.content div.achievement-name {
   margin-top: 60px;
-  background-color: #0081c6;
+}
+section.content div.achievement-name i:nth-child(1) {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+section.content div.achievement-name i:nth-child(3) {
+  font-size: 1.5em;
+  margin-left: 10px;
 }
 section.content div.achievement-name {
   color: #fff;
@@ -704,7 +711,6 @@ section.content div.achievement {
   flex-wrap: wrap;
   gap: 100px 50px;
   padding: 80px 50px;
-  /* background-color: #009688; */
 }
 section.content div.achievement div.card {
   position: relative;
@@ -715,7 +721,7 @@ section.content div.achievement div.card {
   height: 380px;
   background: #314361;
   border-radius: 20px;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--content--achievement--card--boxshadow);
   transition: 0.5s;
 }
 section.content div.achievement div.card div.imageBox {
@@ -756,6 +762,9 @@ section.content div.achievement div.card:nth-child(5) div.imageBox {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+section.content div.achievement div.card hr {
+  opacity: 0;
 }
 section.content div.achievement div.card div.content {
   position: absolute;
@@ -803,12 +812,16 @@ section.content div.achievement div.card div.content a {
   text-decoration: none;
 }
 section.content div.achievement div.card:hover {
-  height: 450px;
+  height: 480px;
+}
+section.content div.achievement div.card:hover hr {
+  margin-top: 10px;
+  opacity: 0.5;
 }
 section.content div.achievement div.card:hover div.imageBox {
   top: -100px;
   scale: 0.75;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--content--achievement--imagebox-hover-boxshadow);
 }
 section.content div.achievement div.card:hover div.content {
   height: fit-content;

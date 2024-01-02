@@ -47,6 +47,10 @@
   --mobile-nav--Darkmodeswitch: #b4b4b4;
   --mobile-nav--Darkmodebtn: #fff;
   --mobile-nav--DarkmodeWrapper: rgba(0, 0, 0, 0.1);
+  --content--account--profile: url(assets/user.svg);
+  --content--account--name--color: black;
+  --content--achievement--card--boxshadow: 0 35px 80px rgba(0, 0, 0, 0.25);
+  --content--achievement--imagebox-hover-boxshadow: 0 15px 45px rgba(0, 0, 0, 0.5);
   --footer--background: #303030;
   --footer--color: #fff;
   --footer--line: gray;
@@ -77,7 +81,6 @@ body.dark {
   --header--profnav--DarkmodeWrapper: rgba(29, 41, 59, 0.576);
   --header--profnav--Darkmodeswitch: #0081c6;
   --header--profnav--Darkmodebtn: #fff;
-
   --header--notif--hidebox--background: #151d2a;
   --header--notif--hidebox--right--border: #fff;
   --header--notif--hidebox--right--color: #fff;
@@ -102,6 +105,10 @@ body.dark {
   --mobile-nav--Darkmodeswitch: #0081c6;
   --mobile-nav--Darkmodebtn: #fff;
   --mobile-nav--DarkmodeWrapper: rgba(29, 41, 59, 0.576);
+  --content--account--profile: url(assets/user-2.svg);
+  --content--account--name--color: #fff;
+  --content--achievement--card--boxshadow: 0 35px 80px rgba(255, 255, 255, 0.15);
+  --content--achievement--imagebox-hover-boxshadow: 0 15px 45px rgba(255, 255, 255, 0.15);
   --footer--background: #002935;
   --footer--color: #fff;
   --footer--line: gray;
