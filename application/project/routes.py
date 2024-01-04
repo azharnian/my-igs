@@ -21,7 +21,7 @@ def index():
 def dashboard():
 
     title = "Dashboard"
-    return render_template('dashboard.html', title=title)
+    return render_template('pages/users/dashboard.html', title=title)
 
 @projects.route('/about')
 @log_activity
