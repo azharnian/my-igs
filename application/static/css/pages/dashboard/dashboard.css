@@ -790,7 +790,7 @@ section.content div.right div.shelf div.absensi div.top div.left div.quantity h2
 section.content div.right div.shelf div.absensi div.top div.scroll {
   height: 48px;
   width: 48px;
-  background-image: url(assets/chevron-right-2.svg);
+  background-image: var(--header--prof--arrow);
 }
 section.content div.right div.shelf div.absensi div.top div.scroll:hover {
   opacity: 0.5;

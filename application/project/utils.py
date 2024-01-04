@@ -1,8 +1,8 @@
 from functools import wraps
 import logging
 
-from flask import redirect, url_for, abort
-from flask_login import current_user
+from flask import redirect, url_for, abort, flash
+from flask_login import current_user, logout_user
 
 from application import login_manager
 from application.users.models import User
@@ -16,7 +16,7 @@ def log_activity(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
         try:
-            user = current_user.username
+            user = f"{current_user.username} : {current_user.fullname}"
         except:
             user = 'Guest'
         try:
@@ -44,6 +44,15 @@ def admin_required(func):
     def wrapper(*args, **kwargs):
         if not current_user.is_admin:
             return abort(403)
+        return func(*args, **kwargs)
+
+    return wrapper
+
+def student_required(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        if not current_user.is_student:
+            return redirect(url_for('admins.index'))
         return func(*args, **kwargs)
 
     return wrapper

@@ -1,18 +1,28 @@
-:root {
+:root { 
+  --primary-color: #fff;
+  
+  /* Secondary Colors */
+  --secondary-color-1: #303030;
+  --secondary-color-2: #003940; 
+  
+  /* Tertiary Colors */
+  --tertiary-color-1: #5E5E5E; 
+  --tertiary-color-2: #BE3144; 
+  --tertiary-color-3: #000;
   --body--color: #fff;
   --header--color: rgba(255, 255, 255, 0.1);
   --header--border: rgba(255, 255, 255, 0.2);
-  --header--logo: url(assets/igs-logos.png);
-  --header--mail: url(assets/mail-2.svg);
-  --header--phone: url(assets/phone.svg);
-  --header--bell: url(assets/bell.svg);
-  --header--prof: url(assets/user.svg);
+  --header--logo: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704184277/igs-logos_rddh7e.png');
+  --header--mail: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363573/mail-2_jbdnp0.svg');
+  --header--phone: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363573/phone_pkzy3j.svg');
+  --header--bell: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363570/bell_f1xod1.svg');
+  --header--prof: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363575/user_qacfnv.svg');
   --header--text: #000;
   --header--prof--border: #000;
   --header--prof--hover: #c6c6c681;
   --header--profnav: #fff;
   --header--profnav--show: #fff;
-  --header--prof--arrow: url(assets/chevron-down.svg);
+  --header--prof--arrow: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363570/chevron-down_m5rwwc.svg');
   --header--profnav--boxshadow: 1px 0px 2px 1px rgba(0, 0, 0, 0.474);
   --header--profnav--wrapper--background: #fff;
   --header--profnav--wrapper--hover: rgba(128, 128, 128, 0.25);
@@ -36,7 +46,7 @@
   --header--notif--hidebox--after: rgb(238, 238, 238);
   --hamburgermenu--background: black;
   --mobile-nav--background: #fff;
-  --mobile-nav--imageProf: url(assets/user.svg);
+  --mobile-nav--imageProf: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363575/user_qacfnv.svg');
   --mobile-nav--cross--background: black;
   --mobile-nav--wrapper--a--color: black;
   --mobile-nav--profile--box--color: black;
@@ -71,15 +81,15 @@ body.dark {
   --body--color: #151d2a;
   --header--color: rgba(255, 255, 255, 0.1);
   --header--border: rgba(255, 255, 255, 0.2);
-  --header--logo: url(assets/igs-invert.png);
-  --header--mail: url(assets/mail.svg);
-  --header--phone: url(assets/phone-2.svg);
-  --header--bell: url(assets/bell-2.svg);
-  --header--prof: url(assets/user-2.svg);
+  --header--logo: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704184277/igs-invert_s9kznv.png');
+  --header--mail: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363575/mail_j9s4te.svg');
+  --header--phone: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363573/phone-2_tcmppa.svg');
+  --header--bell: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363570/bell-2_chwcts.svg');
+  --header--prof: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363573/user-2_szvp7r.svg');
   --header--text: #fff;
   --header--prof--border: #fff;
   --header--prof--hover: #c6c6c681;
-  --header--prof--arrow: url(assets/chevron-down-2.svg);
+  --header--prof--arrow: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363570/chevron-down-2_abush1.svg');
   --header--profnav: #151d2a;
   --header--profnav--show: #151d2a;
   --header--profnav--boxshadow: 1px 0px 2px 1.7px rgba(255, 255, 255, 0.2);
@@ -106,7 +116,7 @@ body.dark {
   --header--notif--hidebox--after: rgb(0, 0, 48);
   --hamburgermenu--background: #fff;
   --mobile-nav--background: #151d2a;
-  --mobile-nav--imageProf: url(assets/user-2.svg);
+  --mobile-nav--imageProf: url('https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704363573/user-2_szvp7r.svg');
   --mobile-nav--cross--background: #fff;
   --mobile-nav--wrapper--a--color: #fff;
   --mobile-nav--wrapper--hover: rgba(128, 128, 128, 0.25);
