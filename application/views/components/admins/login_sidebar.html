@@ -5,12 +5,13 @@
         </div>
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
         <ul class="nav flex-column">
-            <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{{ url_for('admins.index') }}">
+            <li class="nav-item mb-3">
+            <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{{ url_for('admins.dashboard') }}">
                 <svg class="bi"><use xlink:href="#house-fill"/></svg>
                 Dashboard
             </a>
             </li>
+            <hr>
             <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#file-earmark"/></svg>
@@ -56,22 +57,17 @@
                     </ul>
                 </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <a class="nav-link d-flex align-items-center gap-2" href="{{ url_for('admins.search_user') }}">
                     <svg class="bi"><use xlink:href="#people"/></svg>
                     Users
                 </a>
                 <ul class="nav flex-column ms-4 mb-3">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link d-flex align-items-center gap-2 text-secondary" href="">Add user</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-2 text-secondary" href="">Add new students</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-2 text-secondary" href="">Get all students</a>
-                    </li>
+                    </li> -->
                 </ul>
             </li>
+            <hr>
             <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-2" href="#">
                     <svg class="bi"><use xlink:href="#graph-up"/></svg>

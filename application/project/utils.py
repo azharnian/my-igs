@@ -1,6 +1,7 @@
 from functools import wraps
 import logging
 
+from flask import redirect, url_for, abort
 from flask_login import current_user
 
 from application import login_manager
@@ -35,5 +36,14 @@ def log_activity(func):
             create_log(data)
             logging.error(f"An error occurred in {func.__name__}: {str(e)}")
             raise e
+
+    return wrapper
+
+def admin_required(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        if not current_user.is_admin:
+            return abort(403)
+        return func(*args, **kwargs)
 
     return wrapper

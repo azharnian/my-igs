@@ -18,7 +18,11 @@ class AddUserForm(FlaskForm):
     confirm_password = PasswordField("Confirm Password", validators=[DataRequired(), EqualTo("password", message = "Password must match!")])
     submit = SubmitField("Add User")
 
-class UpdateUserForm(FlaskForm):
+class UpdateUserForm(AddUserForm):
     username = StringField("Username", validators=[DataRequired(), Length(min = 4)])
     phone = StringField("Phone Number", validators=[DataRequired(), Length(min = 4)])
     submit = SubmitField("Update User")
+
+class SearchUserForm(FlaskForm):
+    username = StringField("Username", validators=[DataRequired(), Length(min = 4)])
+    submit = SubmitField('Search')
