@@ -19,6 +19,8 @@ def create_app(config_class=Settings):
     db.init_app(app)
     migrate.init_app(app, db)
     login_manager.init_app(app)
+    login_manager.login_view = 'projects.index'
+    login_manager.login_message_category = 'info'
     redis.init_app(app)
     cors.init_app(app)
 

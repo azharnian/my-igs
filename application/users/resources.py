@@ -1,5 +1,7 @@
 import logging
 
+from werkzeug.security import generate_password_hash
+
 from application import db
 from application.project.utils import log_activity
 from application.users.models import *
@@ -11,8 +13,9 @@ def create_user(user_data):
             phone = user_data['phone'],
             first_name = user_data['first_name'],
             last_name = user_data['last_name'],
+            fullname = user_data['first_name']+ ' ' + user_data['last_name'],
             username = user_data['username'],
-            password = user_data['password']
+            password = generate_password_hash(user_data['password'], method='pbkdf2:sha256')
         )
     except Exception as e:
         logging.error(f"{str(e)}")

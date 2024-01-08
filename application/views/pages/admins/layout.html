@@ -6,7 +6,7 @@
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
   <link rel="stylesheet" href="{{ url_for('static', filename='/bootstrap-5.3.2-dist/css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
   <style>
 
         .dashboard {
@@ -255,7 +255,6 @@
     </svg>
 
     {% include "components/admins/header.html" %}
-    {% include "components/admins/navigation.html" %}
     <div class="container-fluid">
         <div class="row">
             {% include "components/admins/login_sidebar.html" %}
@@ -280,7 +279,7 @@
             window.history.replaceState( null, null, window.location.href );
         }
     </script>
-    <script src="{{ url_for('static', filename='/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
     <script src="{{ url_for('static', filename='/bootstrap-5.3.2-dist/js/bootstrap.min.js') }}"></script>
 </body>
 </html>

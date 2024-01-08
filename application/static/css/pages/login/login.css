@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-
 * {
   margin: 0px;
   padding: 0px;
@@ -344,7 +343,8 @@ section.content form div.right div.inputbox input::placeholder {
   font-weight: 300;
   word-wrap: break-word;
 }
-section.content form div.right button{
+/* section.content form button{ */
+button#login {
     margin-top: 5px;
     height: 40px;
     width: 113px;
@@ -362,8 +362,9 @@ section.content form div.right button{
     transition: 0.2s ease;
 }
 
-section.content form button:hover,
-section.content form button:focus{
+/* section.content form button:hover,
+section.content form button:focus{ */
+button#login:hover, button#login:focus{
     background: var(--tertiary-color-1);
     transition: 0.2s ease;
 }

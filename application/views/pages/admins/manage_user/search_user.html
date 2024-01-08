@@ -1,0 +1,109 @@
+{% extends "pages/admins/layout.html" %}
+
+{% block content %}
+
+<div class="container mt-1">
+    <div class="row">
+        <h1>User Management</h1>
+    </div>
+    <hr>
+    <div class="row mb-5">
+    <form class="row" method="POST">
+        {{ form.hidden_tag() }}
+        <fieldset class="col-md-6">
+            <div class="form-group">
+                {{ form.username.label(class="form-label") }}
+                {{ form.username(class="form-control") }}
+                {% if form.username.errors %}
+                    <ul class="errors">
+                        {% for error in form.username.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="filterDropdown">Filter:</label>
+                    <select class="form-control" id="filterDropdown">
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
+                      <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="filterDropdown">Filter:</label>
+                    <select class="form-control" id="filterDropdown">
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
+                      <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="filterDropdown">Filter:</label>
+                    <select class="form-control" id="filterDropdown">
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
+                      <!-- Add more options as needed -->
+                    </select>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary my-2">Search</button>
+        </fieldset>
+
+        <div>
+            <small>
+                
+            </small>
+        </div>
+    </form>
+
+    </div>
+
+    <div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Add User</h5>
+            <p class="card-text"></p>
+            <a href="{{ url_for('admins.add_user') }}" class="btn btn-primary">Add</a>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Assign Admin</h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary">Assign</a>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">All Users</h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary">View</a>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Add or Update Many Users</h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary">Upload</a>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock content %}
