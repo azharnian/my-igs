@@ -714,7 +714,7 @@ section.content div.achievement {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-section.content div.achievement div.card {
+/* section.content div.achievement div.card {
   position: relative;
   display: flex;
   justify-content: center;
@@ -776,8 +776,9 @@ section.content div.achievement div.card div.content {
   height: 50px;
   overflow: hidden;
   transition: 0.5s;
-  /* background-color: #d0d1d4; */
+  background-color: #d0d1d4;
 }
+
 section.content div.achievement div.card div.content h2 {
   font-size: 17px;
   font-weight: 700;
@@ -841,6 +842,56 @@ section.content div.achievement div.card:nth-child(2) {
 }
 section.content div.achievement div.card:nth-child(3) {
   --clr: #009688;
+}  */
+#twelve-star {
+  height: 140px;
+  width: 140px;
+  background: gold;
+  position: relative;
+  right: 100px;
+  z-index: 2;
+}
+
+#twelve-star:before {
+  height: 140px;
+  width: 140px;
+  background: gold;
+  content: "";
+  position: absolute;
+  /* Rotate transform*/
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+#twelve-star:after {
+  height: 140px;
+  width: 140px;
+  background: gold;
+  content: "";
+  position: absolute;
+  /* Rotate transform*/
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+section.content div.achievement div.bar {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 150px;
+  width: 700px;
+  border-radius: 10px;
+  background-color: #0081c6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.content div.achievement div.bar div.dokumentasi div.piagam {
+  text-align: center;
 }
 footer {
   background-color: var(--footer--background);
