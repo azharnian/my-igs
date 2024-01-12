@@ -844,17 +844,17 @@ section.content div.achievement div.card:nth-child(3) {
   --clr: #009688;
 }  */
 #twelve-star {
-  height: 140px;
-  width: 140px;
+  height: 160px;
+  width: 160px;
   background: gold;
   position: relative;
-  right: 100px;
+  right: 50px;
   z-index: 2;
 }
 
 #twelve-star:before {
-  height: 140px;
-  width: 140px;
+  height: 160px;
+  width: 160px;
   background: gold;
   content: "";
   position: absolute;
@@ -867,8 +867,8 @@ section.content div.achievement div.card:nth-child(3) {
 }
 
 #twelve-star:after {
-  height: 140px;
-  width: 140px;
+  height: 160px;
+  width: 160px;
   background: gold;
   content: "";
   position: absolute;
@@ -889,6 +889,23 @@ section.content div.achievement div.bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+section.content div.achievement div.bar div.award {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.content div.achievement div.bar div.award i {
+  font-size: 48px;
+  z-index: 3;
+  color: #0081c6;
+}
+section.content div.achievement div.bar div.dokumentasi a {
+  text-decoration: none;
+  color: black;
+}
+section.content div.achievement div.bar div.dokumentasi a:hover {
+  text-decoration: underline;
 }
 section.content div.achievement div.bar div.dokumentasi div.piagam {
   text-align: center;
