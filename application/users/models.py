@@ -55,8 +55,14 @@ class User(db.Model, UserMixin, BaseModel):
     user_achievement = db.relationship('Achievement', foreign_keys = "Achievement.user_id", backref='user_achievement', lazy=True)
     achievement_input = db.relationship('Achievement', foreign_keys = "Achievement.created_by", backref='achievement_input', lazy=True)
 
+    #Relation with AchievementRevision
+    achievement_revision = db.relationship('AchievementRevision', backref='certificate_revision_input',lazy=True)
+
     #Relation with Certificate
     user_certificate = db.relationship('Certificate', backref='user_certificate', lazy=True)
+
+    #Relation with CertificateRevision
+    certificate_revision_input = db.relationship('CertificateRevision', backref='certificate_revision_input',lazy=True)
 
     def __repr__(self):
         return f"{self.id} - {self.username} - {self.fullname}"
