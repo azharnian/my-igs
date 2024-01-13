@@ -844,18 +844,18 @@ section.content div.achievement div.card:nth-child(3) {
   --clr: #009688;
 }  */
 #twelve-star {
-  height: 160px;
-  width: 160px;
-  background: gold;
+  height: 110px;
+  width: 110px;
+  /* background: gold; */
   position: relative;
-  right: 50px;
+  /* right: 30px; */
   z-index: 2;
 }
 
 #twelve-star:before {
-  height: 160px;
-  width: 160px;
-  background: gold;
+  height: 110px;
+  width: 110px;
+  /* background: gold; */
   content: "";
   position: absolute;
   /* Rotate transform*/
@@ -867,9 +867,9 @@ section.content div.achievement div.card:nth-child(3) {
 }
 
 #twelve-star:after {
-  height: 160px;
-  width: 160px;
-  background: gold;
+  height: 110px;
+  width: 110px;
+  /* background: gold; */
   content: "";
   position: absolute;
   /* Rotate transform*/
@@ -880,29 +880,70 @@ section.content div.achievement div.card:nth-child(3) {
   transform: rotate(-30deg);
 }
 section.content div.achievement div.bar {
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 150px;
-  width: 700px;
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+  height: 100px;
+  width: 500px;
   border-radius: 10px;
   background-color: #0081c6;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  font-size: 11px;
 }
 section.content div.achievement div.bar div.award {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+section.content div.achievement div.bar:nth-child(1) #twelve-star,
+section.content div.achievement div.bar:nth-child(1) #twelve-star:before,
+section.content div.achievement div.bar:nth-child(1) #twelve-star:after {
+  background: gold;
+}
+section.content div.achievement div.bar:nth-child(2) #twelve-star,
+section.content div.achievement div.bar:nth-child(2) #twelve-star:before,
+section.content div.achievement div.bar:nth-child(2) #twelve-star:after {
+  background: #a5a5a5;
+}
+section.content div.achievement div.bar:nth-child(3) #twelve-star,
+section.content div.achievement div.bar:nth-child(3) #twelve-star:before,
+section.content div.achievement div.bar:nth-child(3) #twelve-star:after {
+  background: #cd7f32;
+}
+section.content div.achievement div.bar:nth-child(4) #twelve-star,
+section.content div.achievement div.bar:nth-child(4) #twelve-star:before,
+section.content div.achievement div.bar:nth-child(4) #twelve-star:after {
+  background: pink;
+}
+section.content div.achievement div.bar:nth-child(5) #twelve-star,
+section.content div.achievement div.bar:nth-child(5) #twelve-star:before,
+section.content div.achievement div.bar:nth-child(5) #twelve-star:after {
+  background: black;
+  color: gold;
+}
 section.content div.achievement div.bar div.award i {
   font-size: 48px;
   z-index: 3;
   color: #0081c6;
 }
+section.content div.achievement div.bar div.award h1 {
+  font-size: 24px;
+  z-index: 3;
+}
+section.content div.achievement div.bar div.keterangan {
+  margin-left: 25px;
+}
+section.content div.achievement div.bar div.dokumentasi {
+  margin-left: 10px;
+}
 section.content div.achievement div.bar div.dokumentasi a {
   text-decoration: none;
   color: black;
+}
+section.content div.achievement div.bar div.dokumentasi div.line {
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
 }
 section.content div.achievement div.bar div.dokumentasi a:hover {
   text-decoration: underline;
