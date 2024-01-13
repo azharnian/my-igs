@@ -32,3 +32,16 @@ class Achievement(db.Model, BaseModel):
 
     def __repr__(self):
         return f'Achievement(id={self.id}, achievement={self.achievement}, organizer={self.organizer}, student={self.student}, type={self.achievement_type}, input_by={self.input_user})'
+    
+class AchievementRevision(db.Model, BaseModel):
+    __tablename__ = 'achievement_revisions'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    achievement_id = db.Column(db.Integer, db.ForeignKey('achievements.id'), nullable=False)
+    comment_content = db.Column(db.String(256), nullable=False)
+    created_by = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    created_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    comp_date_revision = db.Column(db.DateTime)
+    start_date_revision = db.Column(db.DateTime)
+    end_date_revision = db.Column(db.DateTime)
+
+    achievement = db.relationship('Achievement', backref='revisions')
