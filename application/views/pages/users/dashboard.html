@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<section class="content">
+    <div class="left">
+      <h1><span style="font-weight: 300">Halo, </span><span style="font-weight: 600">{{ current_user.fullname }}</span></h1>
+      <h2>Apa yang ingin kamu lakukan hari ini?</h2>
+      <div class="box">
+        <div class="bar 1"><a href="#">Lihat Absen Kehadiran</a></div>
+        <div class="bar 2"><a href="#">Lihat Pencapaian</a></div>
+        <div class="bar 3"><a href="#">Buka Sertifikat</a></div>
+        <div class="bar 4"><a href="#">Lihat Nilai</a></div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="info">
+        <h3>Berikut ini ringkasan akun kamu:</h3>
+      </div>
+
+      <div class="shelf">
+        <div class="absensi">
+          <div class="top">
+            <div class="left">
+              <div class="quantity">
+                <h3>Persentase Kehadiran</h3>
+                <h2>100%</h2>
+              </div>
+            </div>
+            <div class="scroll"></div>
+          </div>
+          <div class="bottom">
+            <div class="drawer1">
+              <h3 id="absen">00</h3>
+              <a href="#">Absen</a>
+            </div>
+            <div class="drawer2">
+              <h3 id="hadir">00</h3>
+              <a href="#">Hadir</a>
+            </div>
+            <div class="drawer3">
+              <h3 id="izin">00</h3>
+              <a href="#">Izin</a>
+            </div>
+          </div>
+        </div>
+        <div class="box 1"></div>
+        <div class="box 2"></div>
+        <div class="box 3"></div>
+        <!-- <div class="box 4"></div> -->
+        <!-- <div class="box 5"></div> -->
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}

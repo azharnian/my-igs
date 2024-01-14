@@ -1,0 +1,241 @@
+/* base-view */
+footer {
+  position: absolute;
+  bottom: 0px;
+  height: fit-content;
+  width: 100vw;
+  background-color: var(--secondary-color-1);
+  display: flex;
+  justify-content: center;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  margin-top: 24px;
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-bottom: 24px;
+}
+footer .container .top {
+  margin-bottom: 16px;
+}
+footer .container .top a {
+  padding-right: 70px;
+  text-decoration: none;
+  color: #fff;
+  word-wrap: break-word;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+footer .container .top a:hover {
+  opacity: 0.8;
+}
+
+footer .container span {
+  height: 0.1px;
+  width: calc(1440px - 90px);
+  opacity: 0.5;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+footer .container .bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+footer .container .bottom .left {
+  word-wrap: break-word;
+  opacity: 0.5;
+  font-size: 14px;
+}
+footer .container .bottom .right {
+  float: right;
+}
+footer .container .bottom .right a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  padding-left: 20px;
+  transition: 0.2s ease;
+}
+
+footer .container .bottom .right a:hover {
+  opacity: 0.8;
+}
+
+footer div.container div.top a:nth-child(4),
+footer div.container div.top a:nth-child(5) {
+  display: none;
+}
+
+/* max-width: 1540px */
+footer {
+  margin-top: -10px;
+  transform: translateY(20px);
+  position: relative;
+}
+
+/* max-width: 1600px & min-width: 1000px & max-height: 1500px*/
+footer {
+  position: absolute;
+  bottom: 0px;
+  height: fit-content;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+/* max-width: 1400px */
+footer .container {
+  margin-left: 190px;
+  margin-right: 190px;
+}
+footer .container span {
+  width: calc(1440px - 200px);
+}
+
+/* max-width: 1300px */
+footer .container {
+  margin-left: 250px;
+  margin-right: 250px;
+}
+footer .container span {
+  width: calc(1440px - 400px);
+}
+
+/* max-width: 1100px */
+footer .container {
+  margin-left: 410px;
+  margin-right: 430px;
+}
+footer .container span {
+  width: calc(1440px - 510px);
+}
+
+/* max-width: 1000px */
+
+footer {
+  overflow-y: hidden;
+  width: 100vw;
+  height: fit-content;
+  position: relative;
+  bottom: 0px;
+}
+footer div.container {
+  margin-left: 25px;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+footer div.container div.top {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+}
+footer div.container div.top a {
+  font-weight: 550;
+}
+footer div.container div.bottom {
+  display: flex;
+}
+footer div.container div.bottom div.left {
+  font-size: 10px;
+  opacity: 0.9;
+}
+footer div.container span {
+  width: 92vw;
+  height: 0.1px;
+}
+footer div.container div.top a:nth-child(4) {
+  display: block;
+}
+footer div.container div.top a:nth-child(5) {
+  display: block;
+}
+
+footer div.container div.bottom div.right {
+  display: none;
+}
+
+/* max-width: 800px */
+footer {
+  overflow: hidden;
+  position: relative;
+  bottom: 0px;
+}
+footer div.container span {
+  width: 92vw;
+  height: 0.1px;
+}
+
+/* max-width: 500px */
+
+footer {
+  position: relative;
+  overflow-y: hidden;
+  width: 100vw;
+  height: fit-content;
+}
+footer div.container {
+  margin-left: 25px;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 20px;
+}
+
+footer div.container div.top {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+}
+footer div.container div.top a {
+  font-weight: 550;
+}
+footer div.container div.bottom {
+  display: flex;
+}
+footer div.container div.bottom div.left {
+  font-size: 10px;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+footer div.container span {
+  width: 85vw;
+  height: 0.1px;
+  margin-top: 10px;
+}
+footer div.container div.top a:nth-child(4) {
+  display: block;
+}
+footer div.container div.top a:nth-child(5) {
+  display: block;
+}
+
+footer div.container div.bottom div.right {
+  display: none;
+}

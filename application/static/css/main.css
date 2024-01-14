@@ -1,0 +1,18 @@
+:root {
+    --primary-color: #fff;
+  
+    /* Secondary Colors */
+    --secondary-color-1: #303030;
+    --secondary-color-2: #003940; 
+    
+    /* Tertiary Colors */
+    --tertiary-color-1: #5E5E5E; 
+    --tertiary-color-2: #BE3144; 
+    --tertiary-color-3: #000;
+
+    /* Logo Image */
+    --logo-primary: igs-logos.png; /* https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704184277/igs-logos_rddh7e.png */
+    --logo-dark: igs-gray.png; /* https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704184277/igs-gray_iy60uv.png */
+    --logo-invert: igs-invert.png; /* https://res.cloudinary.com/dgrc4yo0j/image/upload/v1704184277/igs-invert_s9kznv.png */
+}
+  

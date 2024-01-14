@@ -1,0 +1,255 @@
+<header>
+    <div class="header--container">
+      <div class="header--logo" id="header--logo"></div>
+      <ul class="header--bar">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ACCOUNT</a></li>
+        <li><a href="#">SERVICE</a></li>
+      </ul>
+      <div class="header--account">
+        <div class="header--mail"></div>
+        <div class="header--call"></div>
+        <div class="header--notif">
+          <div class="box" id="notifBtn">
+            <div class="icon"></div>
+            <div class="notify"></div>
+          </div>
+          <div class="hidden-box" id="notifBox">
+            <div class="headerNotif">
+              <div class="left">Notifications</div>
+              <div class="right" id="notifCloseBtn">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <hr />
+            <div class="heroNotif">
+              <div class="unread"><span class="amountUnread">8</span> Unread</div>
+              <div class="read">Mark as Read</div>
+            </div>
+            <hr />
+            <div class="contentNotif">
+              <div class="box one">
+                <div class="line">
+                  <span class="line"></span>
+                  <div class="name">Today</div>
+                  <span class="line"></span>
+                </div>
+                <div class="notificationbox">
+                  <div class="notification">
+                    <div class="place">Home/Grades</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur.</div>
+                    <div class="time">1 Hours Ago</div>
+                  </div>
+                  <div class="notification">
+                    <div class="place">Home/Grades</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur.</div>
+                    <div class="time">1 Hours Ago</div>
+                  </div>
+                  <div class="notification">
+                    <div class="place">Home/Grades</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur.</div>
+                    <div class="time">1 Hours Ago</div>
+                  </div>
+                  <div class="notification">
+                    <div class="place">Home/Grades</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur.</div>
+                    <div class="time">1 Hours Ago</div>
+                  </div>
+                </div>
+              </div>
+              <div class="box one">
+                <div class="line">
+                  <span class="line"></span>
+                  <div class="name">Yesterday</div>
+                  <span class="line"></span>
+                </div>
+                <div class="notificationbox">
+                  <div class="notification">
+                    <div class="place">Home/Grades</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur.</div>
+                    <div class="time">24 Hours Ago</div>
+                  </div>
+                  <div class="notification">
+                    <div class="place">Home/Grades</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur.</div>
+                    <div class="time">24 Hours Ago</div>
+                  </div>
+                  <div class="notification">
+                    <div class="place">Home/Grades</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur.</div>
+                    <div class="time">24 Hours Ago</div>
+                  </div>
+                  <div class="notification">
+                    <div class="place">Home/Grades</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur.</div>
+                    <div class="time">24 Hours Ago</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header--prof" id="headerProf">
+          <div class="imageProf"></div>
+          <div class="box">
+            <div class="Firstname">{{ current_user.username }}</div>
+            <div class="Secondname"></div>
+
+            <div class="arrow" id="arrow"></div>
+          </div>
+        </div>
+        <div class="profnav" id="profNav">
+          <div class="wrapper">
+            <a href="#">
+              <i class="fa-solid fa-user"></i>
+              Profile
+            </a>
+          </div>
+          <div class="wrapper">
+            <a href="#">
+              <i class="fa-solid fa-gear"></i>
+              Settings & Privacy
+            </a>
+          </div>
+          <div class="wrapper">
+            <a href="#">
+              <i class="fa-solid fa-circle-question"></i>
+              Help & Support
+            </a>
+          </div>
+          <div class="wrapper" id="languageNavBtn">
+            <a href="#">
+              <i class="bx bx-globe"></i>
+              Language
+              <i class="bx bx-chevron-right" id="arrowlang"></i>
+            </a>
+          </div>
+          <div class="languageNav" id="languageNavWrapper">
+            <div class="wrapper" id="languageNav">
+              <label for="Indonesia">
+                <i class="blank"></i>
+                Indonesian
+              </label>
+              <input type="checkbox" id="Indonesia" />
+            </div>
+            <span></span>
+            <div class="wrapper" id="languageNav">
+              <label for="English">
+                <i class="blank"></i>
+                English
+              </label>
+              <input type="checkbox" id="English" />
+            </div>
+          </div>
+          <hr />
+          <div class="wrapper">
+            <a href="{{ url_for('projects.logout') }}" class="logout">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Log out
+            </a>
+          </div>
+          <div class="wrapper darkmode">
+            <i class="bx bx-moon"></i>
+            <p>Darkmode</p>
+            <div class="darkmodeWrapper">
+              <div class="switch" id="switch"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav">
+    <div class="top">
+      <div class="profile">
+        <div class="imageProf"></div>
+        <div class="box">
+          <div class="Firstname">{{ current_user.username }}</div>
+            <div class="Secondname"></div>
+        </div>
+      </div>
+      <div class="x">
+        <div class="cross"></div>
+        <div class="cross"></div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="wrapper">
+        <a href="#">
+          <i class="fa-solid fa-house"></i>
+          Dashboard
+        </a>
+      </div>
+      <div class="wrapper">
+        <a href="#">
+          <i class="fa-solid fa-list"></i>
+          Account
+        </a>
+      </div>
+      <div class="wrapper">
+        <a href="#">
+          <i class="bx bx-phone"></i>
+          Service
+        </a>
+      </div>
+      <div class="wrapper">
+        <a href="#">
+          <i class="fa-solid fa-user"></i>
+          Profile
+        </a>
+      </div>
+      <div class="wrapper">
+        <a href="#">
+          <i class="fa-solid fa-gear"></i>
+          Settings & Privacy
+        </a>
+      </div>
+      <div class="wrapper">
+        <a href="#">
+          <i class="fa-solid fa-circle-question"></i>
+          Help & Support
+        </a>
+      </div>
+      <div class="wrapper" id="languageMobileNavBtn">
+        <a href="#">
+          <div class="right"><i class="bx bx-globe"></i> Language</div>
+          <i class="bx bx-chevron-right" id="arrow2"></i>
+        </a>
+      </div>
+      <div class="languageMobileNav" id="languageMobileNavWrapper">
+        <div class="wrapper" id="languageMobileWrap">
+          <label for="Indonesia2">
+            <i class="blank"></i>
+            Indonesian
+          </label>
+          <input type="checkbox" id="Indonesia2" />
+        </div>
+        <span></span>
+        <div class="wrapper" id="languageMobileWrap">
+          <label for="English2">
+            <i class="blank"></i>
+            English
+          </label>
+          <input type="checkbox" id="English2" />
+        </div>
+      </div>
+      <hr />
+      <div class="wrapper logout">
+        <a href="{{ url_for('projects.logout') }}" class="logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          Log out
+        </a>
+      </div>
+      <div class="wrapper darkmode">
+        <i class="bx bx-moon"></i>
+        <p>Darkmode</p>
+        <div class="darkmodeWrapper">
+          <div class="switch" id="switch2"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
