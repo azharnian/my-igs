@@ -15,7 +15,7 @@
     flex-direction: column;
     gap: 35px;
     user-select: none;
-    color: #000;
+    color: var(--text);
     transform: translateY(55px) scale(1.2);
 }
   footer {
@@ -50,7 +50,7 @@
     flex-direction: column;
     gap: 35px;
     user-select: none;
-    color: #000;
+    color: var(--text);
     transform: translateY(55px) scale(1.2);
 }
 }
@@ -243,7 +243,7 @@
     display: block;
     width: 100%;
     height: 5px;
-    background-color: black;
+    background-color: var(--hidenav-button);
     border-radius: 5px;
     margin: 6px 0px;
     transition: all 0.4s ease 0s;
@@ -265,7 +265,7 @@
     top: 0px;
     height: 100vh;
     width: 100vw;
-    background-color: #303030;
+    background-color: var(--hidenav-background);
     z-index: 1000;
     transition: 0.5s ease;
     animation: showup 0.5s linear;
@@ -318,7 +318,7 @@
     justify-content: space-evenly;
     width: 95px;
     height: 110px;
-    background-color: white;
+    background-color: var(--hidenav-text);
     position: absolute;
     border-radius: 5px;
     transform: translate(-12px, 50px);
@@ -346,7 +346,7 @@ nav.mobile-nav div.header div.languageHide.show::before{
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 9px solid #fff;
+  border-bottom: 9px solid var(--hidenav-text);
   position: absolute;
   transform: translate(15px , -59px);
   animation: opactiy 0.2s linear;
@@ -354,7 +354,7 @@ nav.mobile-nav div.header div.languageHide.show::before{
 
 nav.mobile-nav div.header div.languageHide div.wrapper{
   padding-left: 20px;
-  color: black;
+  color: var(--hidenav-language-text);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -367,7 +367,7 @@ nav.mobile-nav div.header div.languageHide div.wrapper{
 
 nav.mobile-nav div.header div.languageHide div.wrapper:hover{
   padding-left: 20px;
-  color: black;
+  color: var(--hidenav-language-text);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -391,7 +391,7 @@ nav.mobile-nav div.header div.languageHide div.wrapper input[type = "checkbox"]{
 nav.mobile-nav div.header div.languageHide span.line{
   width: 100%;
   height: 1px;
-  background-color: gray;
+  background-color: var(--hidenav-language-line);
   opacity: 0.7;
 }
 
@@ -400,7 +400,7 @@ nav.mobile-nav div.header div.languageHide div.wrapper input[type = "checkbox"]:
   font-weight: 600;
   content: "\f00c";
   font-size: 20px;
-  color: black;
+  color: var(--hidenav-language-text);
   display: none;
 }
 
@@ -416,7 +416,7 @@ nav.mobile-nav div.header div.languageHide div#ID{
 nav.mobile-nav div.header div.languageHide span.line{
     width: 100%;
     height: 1px;
-    background-color: gray;
+    background-color: var(--hidenav-language-line);
     opacity: 0.7;
 }
 
@@ -452,12 +452,12 @@ nav.mobile-nav div.header button.hamburger_Second{
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
-    color: white;
+    color: var(--hidenav-text);
     font-size: 15px;
     font-weight: lighter;
   }
   nav.mobile-nav section.container a{
-    color: white;
+    color: var(--hidenav-text);
     text-decoration: none;
   }
 
@@ -468,7 +468,7 @@ nav.mobile-nav div.header button.hamburger_Second{
     width: 100vw;
     height: 1px;
     position: absolute;
-    background-color: gray;
+    background-color: var(--hidenav-language-line);
     left: 0px;
   }
 
