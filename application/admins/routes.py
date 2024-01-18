@@ -5,7 +5,7 @@ from werkzeug.security import check_password_hash
 
 from application.project.utils import log_activity, admin_required
 from application.users.forms import UserLoginForm, AddUserForm, UpdateUserForm, SearchUserForm, AssignAdminForm
-from application.users.resources import create_user, get_all_users, get_user_by_username, assign_admin
+from application.users.resources import create_user, get_all_users, get_user_by_username, get_user_by_id, update_user, remove_user, suspend_user, assign_admin
 
 admins = Blueprint('admins', __name__)
 
@@ -70,7 +70,7 @@ def add_user():
 @log_activity
 @login_required
 @admin_required
-def update_user(user_id):
+def updating_user(user_id):
     form = UpdateUserForm()
 
     if form.validate_on_submit():
@@ -82,6 +82,35 @@ def update_user(user_id):
     title = 'Update user'
     return render_template('pages/admins/manage_user/update_user.html', title=title, form=form)
 
+@admins.route('/remove/user', methods=['GET', 'POST'])
+@log_activity
+@login_required
+@admin_required
+def removing_user(user_id):
+    user = get_user_by_id(user_id)
+    res = remove_user(user_id)
+    if res['success']:
+        flash(f"{user.username} account removed.", "success")
+        return redirect(url_for('admins.search_user'))
+
+    title = 'Remove user'
+    return render_template('pages/admins/manage_user/remove_user.html', title=title)
+
+@admins.route('/suspend/user', methods=['GET', 'POST'])
+@log_activity
+@login_required
+@admin_required
+def suspending_user(user_id):
+    user = get_user_by_id(user_id)
+    res = suspend_user(user_id)
+    if res['success']:
+        flash(f"{user.username} account suspended.", "success")
+        return redirect(url_for('admins.search_user'))
+
+    title = 'Suspend user'
+    return render_template('pages/admins/manage_user/suspend_user.html', title=title)
+
+
 @admins.route('/assign/user', methods=['GET', 'POST'])
 @log_activity
 @login_required
@@ -92,6 +121,7 @@ def assign_admin():
     if form.validate_on_submit():
         res = assign_admin(form.data)
         if res ['success']:
+            flash(f"{form.username.data} account assigned as admin.", "success")
             return redirect(url_for('admins.search_user'))
         
     title = "Assign Admin"

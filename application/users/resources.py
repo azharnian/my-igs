@@ -3,7 +3,7 @@ import logging
 from werkzeug.security import generate_password_hash
 
 from application import db
-from application.project.utils import log_activity, admin_required
+from application.project.utils import log_activity
 from application.users.models import *
 
 @log_activity
@@ -56,11 +56,21 @@ def get_user_by_email(user_email):
     return ress
 
 @log_activity
+def get_user_by_id(user_id):
+    try:
+        ress = User.query.filter_by(id=user_id).first()
+    except Exception as e:
+        logging.error(f"{str(e)}")
+        raise e
+    
+    return ress
+
+@log_activity
 def update_user(user_id, new_user_data):
     try:
         user = User.query.get(int(user_id))
         user['username'] = new_user_data['username'],
-        user['phone'] = new_user_data['phone']
+        user['password'] = new_user_data['new_password']
     except Exception as e:
         logging.error(f"{str(e)}")
         raise e
