@@ -19,3 +19,10 @@ class AddAchievementForm(FlaskForm):
 class UpdateAchievementForm(AddAchievementForm):
     submit = SubmitField("Update")
 
+class AddRevisionForm(FlaskForm):
+    achievement_id = IntegerField("Achievement ID", validators=[DataRequired()])
+    comment_content = TextAreaField("Comment", validators=[DataRequired()])
+    comp_date_revision = DateField("Revised Competition Date", validators=[Optional()])
+    start_date_revision = DateField("Revised Start Date", validators=[Optional()])
+    end_date_revision = DateField("Revised End Date", validators=[Optional()])
+    submit = SubmitField("Add Revision")
