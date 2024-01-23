@@ -202,4 +202,19 @@ document.addEventListener("DOMContentLoaded", function () {
     languageMobileNav.classList.toggle("show");
     arrow2.classList.toggle("show");
   });
+
+  //dokumentasi
+  const opendokbtn1 = document.getElementById("opendokbtn1")
+  const openpigbtn1 = document.getElementById("openpigbtn1")
+  const dokumentasi1 = document.getElementById("dokumentasi1")
+  const closebtn1 = document.getElementById("closebtn1")
+  opendokbtn1.addEventListener("click", function(){
+    dokumentasi1.classList.toggle("show");
+  })
+  openpigbtn1.addEventListener("click", function(){
+    dokumentasi1.classList.toggle("show");
+  })
+  closebtn1.addEventListener("click", function(){
+    dokumentasi1.classList.toggle("show");
+  })
 });
