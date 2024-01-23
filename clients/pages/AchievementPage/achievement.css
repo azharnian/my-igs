@@ -951,6 +951,62 @@ section.content div.achievement div.bar div.dokumentasi a:hover {
 section.content div.achievement div.bar div.dokumentasi div.piagam {
   text-align: center;
 }
+
+section.dokumentasi{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+section.dokumentasi div.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+section.dokumentasi div.container div.right{
+  width: 450px;
+  height: 500px;
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right : 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+}
+
+section.dokumentasi div.container div.right div.wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+section.dokumentasi div.container div.right div.wrapper div.bottom{
+  width: 100%;
+  background-color: #f6f8fa;
+  border-radius: 5px;
+  border: 1px solid #d9dfe5;
+  padding: 5px 12px;
+}
+
+section.dokumentasi div.container div.left{
+  height: 500px;
+}
+
+section.dokumentasi div.container div.left img{
+  max-height: 100%;
+}
+
 footer {
   background-color: var(--footer--background);
   margin-top: auto;
