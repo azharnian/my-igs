@@ -51,7 +51,7 @@ header div.container {
 header.fixed {
   z-index: 100;
   backdrop-filter: blur(10px);
-  border-bottom: 2px solid #faf7ff50 ;
+  border-bottom: 2px solid var(--header--fixed) ;
 }
 
 header div.container div.logo{
@@ -75,7 +75,7 @@ header div.container div.left {
 header div.container div.left div.call{
     width: 25px;
     height: 25px;
-    background-image: url(assets/bx-phone.svg);
+    background-image: url(assets/phone.svg);
     z-index: 101;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -127,7 +127,7 @@ header div.container div.left div.languageHide{
     justify-content: space-evenly;
     width: 95px;
     height: 110px;
-    background-color: #5E5E5E;
+    background-color: var(--languagenav);
     position: absolute;
     border-radius: 5px;
     top: 20px;
@@ -153,7 +153,7 @@ header div.container div.left div.languageHide::before{
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 9px solid #5E5E5E;
+    border-bottom: 9px solid var(--languagenav);
     position: absolute;
     top: -7px;
     left: 60px;
@@ -167,7 +167,7 @@ header div.container div.left div.languageHide.show::before{
 
 header div.container div.left div.languageHide div.wrapper{
     padding-left: 20px;
-    color: white;
+    color: var(--languagenav-text);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -179,7 +179,7 @@ header div.container div.left div.languageHide div.wrapper{
 
 header div.container div.left div.languageHide div.wrapper:hover{
   padding-left: 20px;
-  color: white;
+  color: var(--languagenav-text);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -205,7 +205,7 @@ header div.container div.left div.languageHide div.wrapper input[type = "checkbo
   font-weight: 600;
   content: "\f00c";
   font-size: 20px;
-  color: white;
+  color: var(--languagenav-text);
   display: none;
 }
 
@@ -221,7 +221,7 @@ header div.container div.left div.languageHide div#ID{
 header div.container div.left div.languageHide span.line{
     width: 100%;
     height: 1px;
-    background-color: gray;
+    background-color: var(--languagenav-line);
     opacity: 0.7;
 }
 header div.container button.hamburger {
@@ -267,7 +267,7 @@ section.content form div.left div.top {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: black;
+  color: var(--text);
 }
 
 section.content form div.left div.top h1 {
@@ -302,7 +302,7 @@ section.content form div.right{
     flex-direction: column;
     gap: 35px;
     user-select: none;
-    color: #000;
+    color: var(--text);
     transform: translateY(55px) scale(1.2);
 }
 
@@ -316,7 +316,7 @@ section.content form div.right div.inputbox{
 }
 
 section.content form div.right div.inputbox label {
-  color: #000;
+  color: var(--text);
   font-size: 20px;
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
@@ -328,17 +328,17 @@ section.content form div.right div.inputbox input {
   border: none;
   height: fit-content;
   width: 89%;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--text);
   outline: none;
   font-family: Arial, Helvetica, sans-serif;
-  color: #303030;
+  color: var(--input-text);
   font-weight: 300;
   padding-bottom: 6px;
   font-size: 28px;
 }
 
 section.content form div.right div.inputbox input::placeholder {
-  color: #303030;
+  color: var(--input-text);
   font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
@@ -350,7 +350,7 @@ section.content form div.right button{
     width: 113px;
     border-radius: 200px;
     border: none;
-    background: var(--tertiary-color-3);
+    background: var( --section-form-button);
     color: #fff;
     font-size: 20px;
     font-family: Lato;
@@ -362,15 +362,15 @@ section.content form div.right button{
     transition: 0.2s ease;
 }
 
-section.content form button:hover,
-section.content form button:focus{
-    background: var(--tertiary-color-1);
+section.content form div.right button:hover,
+section.content form div.right button:focus{
+    background: var(--section-form-button-hover);
     transition: 0.2s ease;
 }
 
 section.content form a#Register,
 section.content form a#Forgot {
-  color: #000;
+  color: var(--text);
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;;
   font-weight: 400;
@@ -392,7 +392,7 @@ footer {
     bottom: 0px;
     height: fit-content;
     width: 100vw;
-    background-color: var(--secondary-color-1);
+    background-color: var(--footer);
     display: flex;
     justify-content: center;
     font-family:  'Quicksand', sans-serif;
@@ -401,7 +401,7 @@ footer .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: #fff;
+  color: var(--footer-text);
   margin-top: 24px;
   margin-left: 90px;
   margin-right: 90px;
@@ -413,7 +413,7 @@ footer .container .top {
 footer .container .top a {
   padding-right: 70px;
   text-decoration: none;
-  color: #fff;
+  color: var(--footer-text);
   word-wrap: break-word;
   font-size: 14px;
   transition: 0.2s ease;
@@ -427,7 +427,7 @@ footer .container span{
   height: 0.1px;
   width: calc(1440px - 90px);
   opacity: 0.5;
-  background-color: gray;
+  background-color: var(--footer-line);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -451,7 +451,7 @@ footer .container .bottom .right {
 footer .container .bottom .right a {
   font-size: 14px;
   text-decoration: none;
-  color: #fff;
+  color: var(--footer-text);
   padding-left: 20px;
   transition: 0.2s ease;
 }
