@@ -20,9 +20,14 @@ class AddUserForm(FlaskForm):
 
 class UpdateUserForm(AddUserForm):
     username = StringField("Username", validators=[DataRequired(), Length(min = 4)])
-    phone = StringField("Phone Number", validators=[DataRequired(), Length(min = 4)])
+    new_password = PasswordField("New Password", validators=[DataRequired(), Length(min=8)])
+    confirm_new_password = PasswordField("Confirm New Password", validators=[DataRequired(), Length(min=8), EqualTo("new_password", message = "Password must match!")])
     submit = SubmitField("Update User")
 
 class SearchUserForm(FlaskForm):
     username = StringField("Username", validators=[DataRequired(), Length(min = 4)])
     submit = SubmitField('Search')
+
+class AssignAdminForm(FlaskForm):
+    username = StringField("Username", validators=[DataRequired(), Length(min = 4)])
+    submit = SubmitField('Assign')
