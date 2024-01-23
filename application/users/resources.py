@@ -6,6 +6,7 @@ from application import db
 from application.project.utils import log_activity
 from application.users.models import *
 
+@log_activity
 def create_user(user_data):
     try:
         user = User(
@@ -24,6 +25,7 @@ def create_user(user_data):
     user.save()
     return {'success' : True}
 
+@log_activity
 def get_all_users():
     try:
         ress = User.query.all()
@@ -33,6 +35,7 @@ def get_all_users():
     
     return ress
 
+@log_activity
 def get_user_by_username(user_username):
     try:
         ress = User.query.filter_by(username=user_username).first()
@@ -42,6 +45,7 @@ def get_user_by_username(user_username):
     
     return ress
 
+@log_activity
 def get_user_by_email(user_email):
     try:
         ress = User.query.filter_by(email=user_email).first()
@@ -51,17 +55,29 @@ def get_user_by_email(user_email):
     
     return ress
 
+@log_activity
+def get_user_by_id(user_id):
+    try:
+        ress = User.query.filter_by(id=user_id).first()
+    except Exception as e:
+        logging.error(f"{str(e)}")
+        raise e
+    
+    return ress
+
+@log_activity
 def update_user(user_id, new_user_data):
     try:
         user = User.query.get(int(user_id))
         user['username'] = new_user_data['username'],
-        user['phone'] = new_user_data['phone']
+        user['password'] = new_user_data['new_password']
     except Exception as e:
         logging.error(f"{str(e)}")
         raise e
     user.update()
     return {'success' : True}
 
+@log_activity
 def remove_user(user_id):
     try:
         user = User.query.get(int(user_id))
@@ -71,6 +87,7 @@ def remove_user(user_id):
     user.remove()
     return {'success' : True}
 
+@log_activity
 def suspend_user(user_id):
     try:
         user = User.query.get(int(user_id))
@@ -78,5 +95,16 @@ def suspend_user(user_id):
         logging.error(f"{str(e)}")
         raise e
     user.is_active = False
+    user.update()
+    return {'success' : True}
+
+@log_activity
+def assign_admin(username):
+    try:
+        user = get_user_by_username(username)
+    except Exception as e:
+        logging.error(f"{str(e)}")
+        raise e
+    user.is_admin = True
     user.update()
     return {'success' : True}
