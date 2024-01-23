@@ -16,6 +16,9 @@ class AddCertificateForm(FlaskForm):
     description   = StringField("Description", validators=[DataRequired()])
     submit        = SubmitField("Add")
 
+class ReviseCertificate(FlaskForm):
+    description   = StringField("Description", validators=[DataRequired()])
+    submit        = SubmitField("Revise")
 
 class UpdateCertificateForm(AddCertificateForm):
     description   = StringField("Description", validators=[DataRequired()])
