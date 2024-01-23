@@ -16,6 +16,7 @@ def create_user(user_data):
             last_name = user_data['last_name'],
             fullname = user_data['first_name']+ ' ' + user_data['last_name'],
             username = user_data['username'],
+            is_student = True,
             password = generate_password_hash(user_data['password'], method='pbkdf2:sha256')
         )
     except Exception as e:

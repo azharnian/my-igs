@@ -1,7 +1,5 @@
-from flask import Blueprint, render_template, flash, redirect, url_for, abort
-from flask_login import login_required, current_user, logout_user, login_user
-
-from werkzeug.security import check_password_hash
+from flask import Blueprint, render_template, flash, redirect, url_for
+from flask_login import login_required
 
 from application.project.utils import log_activity, admin_required
 from application.users.forms import UserLoginForm, AddUserForm, UpdateUserForm, SearchUserForm, AssignAdminForm
@@ -317,3 +315,5 @@ def assign_admin():
         
     title = "Assign Admin"
     return render_template('pages/admins/manage_user/assign_admin.html', title=title, form=form)
+
+from application.admins.users import routes
