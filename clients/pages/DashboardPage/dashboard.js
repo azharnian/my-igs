@@ -50,6 +50,17 @@ document.addEventListener("DOMContentLoaded", function () {
     body.classList.toggle("dark");
   });
 
+  //service
+  const serviceNav = document.getElementById("serviceNavWrapper");
+  const serviceNavBtn = document.getElementById("serviceNavBtn");
+  const chevronservice = document.getElementById("arrowserv");
+
+  serviceNavBtn.addEventListener("click", () => {
+    serviceNav.classList.toggle("show");
+    chevronservice.classList.toggle("show");
+    serviceNavBtn.classList.toggle("show");
+  });
+
   
   //language
   const languageNav = document.getElementById("languageNavWrapper");
