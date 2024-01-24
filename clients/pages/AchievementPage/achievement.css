@@ -1141,6 +1141,30 @@ section.dokumentasi div.container div.right div.wrapper.seven div.bottom{
 
 section.dokumentasi div.container div.left{
   height: 550px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+section.dokumentasi div.container div.left div.nxtarw{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  right: 0px;
+  background-image: url(assets/chevron-right-2.svg);
+  background-size: 100% 100%;
+}
+
+section.dokumentasi div.container div.left div.prevarw{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  left: 0px;
+  background-image: url(assets/chevron-right-2.svg);
+  background-size: 100% 100%;
+  rotate: 180deg;
 }
 
 section.dokumentasi div.container div.left img{

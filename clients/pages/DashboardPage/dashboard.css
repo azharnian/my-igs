@@ -509,7 +509,7 @@ header div.header--container div.header--account div.profnav div.serviceNav.show
   opacity: 1;
 }
 
-header div.header--container div.header--account div.profnav div.serviceNav div.wrapper label i {
+header div.header--container div.header--account div.profnav div.serviceNav div.wrapper a i {
   margin-right: 1rem;
   font-size: 1.4rem;
   width: 2.3rem;
@@ -523,7 +523,7 @@ header div.header--container div.header--account div.profnav div.serviceNav div.
   background-color: var(--header--profnav--languagenav-hover);
 }
 
-header div.header--container div.header--account div.profnav div.serviceNav div.wrapper#serviceNav label {
+header div.header--container div.header--account div.profnav div.serviceNav div.wrapper#serviceNav a {
   margin-left: 0rem;
   display: flex;
   align-items: center;
