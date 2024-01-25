@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -1039,10 +1039,6 @@ section.dokumentasi div.container div.right{
   width: 450px;
   height: 550px;
   background-color: #fff;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 25px;
-  padding-right : 25px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -1050,7 +1046,7 @@ section.dokumentasi div.container div.right{
   border-left: 1px solid #d9dfe5;
 }
 
-section.dokumentasi div.container div.right div.wrapper{
+/* section.dokumentasi div.container div.right div.wrapper{
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -1137,6 +1133,52 @@ section.dokumentasi div.container div.right div.wrapper.six div.datewrapper div.
 
 section.dokumentasi div.container div.right div.wrapper.seven div.bottom{
   height: 60px;
+} */
+
+section.dokumentasi div.container div.right div.top{
+  background-color: #c8d8f8;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Unica One', sans-serif;
+}
+
+section.dokumentasi div.container div.right div.top h1{
+  font-weight: 500;
+  font-size: 40pt;
+}
+
+section.dokumentasi div.container div.right div.data{
+  height: calc(100% - 25%);
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+
+section.dokumentasi div.container div.right div.wrapper span{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 13pt;
+  gap: 7px;
+}
+
+section.dokumentasi div.container div.right div.wrapper.description div.textbox{
+  width: 100%;
+  background-color: #f6f8fa;
+  border-radius: 5px;
+  border: 1px solid #d9dfe5;
+  padding: 5px 12px;
+  height: 110px;
+  margin-top: 10px;
+  font-size: 11pt;
 }
 
 section.dokumentasi div.container div.left{
@@ -1169,6 +1211,7 @@ section.dokumentasi div.container div.left div.prevarw{
 
 section.dokumentasi div.container div.left img{
   max-height: 100%;
+  min-height: 100%;
 }
 
 footer {
