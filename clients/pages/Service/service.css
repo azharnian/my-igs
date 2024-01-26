@@ -707,6 +707,48 @@ section.content {
     justify-content: space-between;
   }
 
+section.content div.container{
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+section.content div.container div.right{
+  height: 100%;
+  width: 20vw;
+}
+
+
+section.content div.container div.left{
+  background-color: #fff;
+  box-shadow: 0px 0px 3px 0px rgba(128,128,128,0.75);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(128,128,128,0.75);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(128,128,128,0.75);
+  width: 45vw;
+  height: 100%;
+}
+
+section.content div.container div.left div.top{
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+section.content div.container div.left form{
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section.content div.container div.left form
+
 footer {
     background-color: var(--footer--background);
     margin-top: auto;
