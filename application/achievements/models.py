@@ -4,7 +4,7 @@ from datetime import datetime
 
 class AchievementType(db.Model, BaseModel):
 
-    __tablename__ = "achievement_types"
+    __tablename__ = "achievement_typesss"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     category = db.Column(db.String(64), nullable=False)
     level = db.Column(db.String(64), nullable=False)
