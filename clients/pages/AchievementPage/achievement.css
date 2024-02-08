@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -476,7 +476,7 @@ header div.header--container div.header--account div.profnav div.wrapper a i#arr
   font-size: 1.5rem;
   margin-left: 4.5rem;
   transition: 0.25s ease;
-} 
+}
 
 header div.header--container div.header--account div.profnav div.wrapper a i#arrowserv.show {
   transform: rotate(90deg);
@@ -509,7 +509,7 @@ header div.header--container div.header--account div.profnav div.serviceNav.show
   opacity: 1;
 }
 
-header div.header--container div.header--account div.profnav div.serviceNav div.wrapper a i {
+header div.header--container div.header--account div.profnav div.serviceNav div.wrapper label i {
   margin-right: 1rem;
   font-size: 1.4rem;
   width: 2.3rem;
@@ -523,7 +523,7 @@ header div.header--container div.header--account div.profnav div.serviceNav div.
   background-color: var(--header--profnav--languagenav-hover);
 }
 
-header div.header--container div.header--account div.profnav div.serviceNav div.wrapper#serviceNav a {
+header div.header--container div.header--account div.profnav div.serviceNav div.wrapper#serviceNav label {
   margin-left: 0rem;
   display: flex;
   align-items: center;
@@ -697,260 +697,305 @@ nav.mobile-nav {
   display: none;
 }
 section.content {
-  padding-top: 120px;
-  margin-left: 90px;
+  height: fit-content;
+  margin-top: 110px;
   margin-right: 90px;
-  margin-bottom: 50px;
-  height: fit-content;
-  display: flex;
-  justify-content: space-between;
+  margin-left: 90px;
 }
-section.content div.left h1 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 70px;
-  margin-bottom: 10px;
-  color: var(--sectioncontent--h1);
-}
-section.content div.left h2 {
-  font-size: 30px;
-  font-weight: 400;
-  margin-bottom: 24px;
-  font-family: "Poppins", sans-serif;
-  color: var(--sectioncontent--h2);
-}
-section.content div.left div.box {
+section.content div.account div.name {
   width: fit-content;
-  height: fit-content;
+  height: 100%;
+  font-size: 24px;
+  color: var(--content--account--name--color);
 }
-section.content div.left div.box div.bar {
+section.content div.achievement-name {
+  margin-top: 30px;
+  text-align: center;
+}
+section.content div.achievement-name i:nth-child(1) {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+section.content div.achievement-name i:nth-child(3) {
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+section.content div.achievement-name {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  --s: 50px; /* the ribbon size */
+  --d: 20px; /* the depth */
+  --c: 20px; /* the cutout part */
+  padding: 0 calc(var(--s) + var(--d)) var(--d); /* we need some padding so the text doesn't overlap the ribbon part */
+  background: conic-gradient(at left var(--s) bottom var(--d), #0000 25%, #0008 0 37.5%, #0004 0) 0 /50% no-repeat, conic-gradient(at right var(--s) bottom var(--d), #0004 62.5%, #0008 0 75%, #0000 0) 100%/50% no-repeat;
+  clip-path: polygon(
+    0 var(--d),
+    var(--s) var(--d),
+    var(--s) 0,
+    calc(100% - var(--s)) 0,
+    calc(100% - var(--s)) var(--d),
+    100% var(--d),
+    calc(100% - var(--c)) calc(50% + var(--d) / 2),
+    100% 100%,
+    calc(100% - var(--s) - var(--d)) 100%,
+    calc(100% - var(--s) - var(--d)) calc(100% - var(--d)),
+    calc(var(--s) + var(--d)) calc(100% - var(--d)),
+    calc(var(--s) + var(--d)) 100%,
+    0 100%,
+    var(--c) calc(50% + var(--d) / 2)
+  );
+  background-color: #cc333f; /* the main color */
+  /* width: fit-content; */
+  /* background-color: #0081c6; */
+}
+section.content div.achievement {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+#twelve-star {
+  height: 110px;
+  width: 110px;
+  /* background: gold; */
   position: relative;
-  border-radius: 54px;
-  border: 0px solid var(--content--left--bar--border);
-  background-color: var(--content--left--bar--background--hover);
-  box-shadow: var(--content--left--bar--boxshadow);
-  -webkit-box-shadow: var(--content--left--bar--boxshadow);
-  -moz-box-shadow: var(--content--left--bar--boxshadow);
-  margin-bottom: 8px;
+  /* right: 30px; */
+  /* z-index: 2; */
+}
+
+#twelve-star:before {
+  height: 110px;
+  width: 110px;
+  /* background: gold; */
+  content: "";
+  position: absolute;
+  /* Rotate transform*/
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+#twelve-star:after {
+  height: 110px;
+  width: 110px;
+  /* background: gold; */
+  content: "";
+  position: absolute;
+  /* Rotate transform*/
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+section.content div.achievement div.bar {
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+  height: 100px;
+  width: 500px;
+  border-radius: 10px;
+  background-color: #c8d8f8;
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+}
+section.content div.achievement div.bar div.award {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  height: 64px;
-  width: fit-content;
-  padding-left: 30px;
-  padding-right: 30px;
-  vertical-align: middle;
-  -moz-transform: perspective(1px) translateZ(0);
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  overflow: hidden;
 }
-
-section.content div.left div.box div.bar:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--content--left--bar--background);
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-  -moz-transform: scaleX(1);
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
-  -moz-transform-origin: 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -moz-transition-property: transform;
-  -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-  -moz-transition-duration: 0.25s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  -moz-transition-timing-function: ease-out;
-  overflow: hidden;
+section.content div.achievement div.bar:nth-child(1) #twelve-star,
+section.content div.achievement div.bar:nth-child(1) #twelve-star:before,
+section.content div.achievement div.bar:nth-child(1) #twelve-star:after {
+  background: gold;
 }
-
-section.content div.left div.box div.bar a {
+section.content div.achievement div.bar:nth-child(2) #twelve-star,
+section.content div.achievement div.bar:nth-child(2) #twelve-star:before,
+section.content div.achievement div.bar:nth-child(2) #twelve-star:after {
+  background: #a5a5a5;
+}
+section.content div.achievement div.bar:nth-child(3) #twelve-star,
+section.content div.achievement div.bar:nth-child(3) #twelve-star:before,
+section.content div.achievement div.bar:nth-child(3) #twelve-star:after {
+  background: #cd7f32;
+}
+section.content div.achievement div.bar:nth-child(4) #twelve-star,
+section.content div.achievement div.bar:nth-child(4) #twelve-star:before,
+section.content div.achievement div.bar:nth-child(4) #twelve-star:after {
+  background: pink;
+}
+section.content div.achievement div.bar:nth-child(5) #twelve-star,
+section.content div.achievement div.bar:nth-child(5) #twelve-star:before,
+section.content div.achievement div.bar:nth-child(5) #twelve-star:after {
+  background: black;
+  color: gold;
+}
+section.content div.achievement div.bar div.award i {
+  font-size: 48px;
+  z-index: 3;
+  color: #0081c6;
+}
+section.content div.achievement div.bar div.award h1 {
+  font-size: 24px;
+  z-index: 3;
+}
+section.content div.achievement div.bar div.keterangan {
+  margin-left: 25px;
+}
+section.content div.achievement div.bar div.dokumentasi {
+  margin-left: auto;
+  margin-right: auto;
+}
+section.content div.achievement div.bar div.dokumentasi a {
   text-decoration: none;
-  color: var(--content--left--bar--color);
+  color: black;
 }
-section.content div.left div.box div.bar:hover,
-section.content div.left div.box div.bar:focus,
-section.content div.left div.box div.bar:active {
-  color: white;
-}
-
-section.content div.left div.box div.bar:hover:before,
-section.content div.left div.box div.bar:focus:before,
-section.content div.left div.box div.bar:active:before {
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -moz-transform: scaleX(0);
-}
-
-section.content div.right {
-  width: 400px;
-  height: fit-content;
-  /* background-color: #1d324f; */
-}
-section.content div.right div.info h3 {
-  font-family: "Quicksand", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  margin-top: 21px;
-  color: var(--content--info);
-}
-section.content div.right div.shelf {
+section.content div.achievement div.bar div.dokumentasi div.line {
+  height: 1px;
   width: 100%;
-  height: fit-content;
-  margin-top: 20px;
+  background-color: #fff;
 }
-section.content div.right div.shelf div.absensi {
-  height: 240px;
-  border-radius: 12px;
+section.content div.achievement div.bar div.dokumentasi a:hover {
+  text-decoration: underline;
 }
-section.content div.right div.shelf div.absensi div.top {
-  height: 50%;
-  border-bottom: 1px solid var(--content--right--absensi--top--background);
-  background-color: var(--content--right--absensi--top--background);
-  border-top-right-radius: 12px;
-  border-top-left-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 32px;
-  padding-right: 32px;
+section.content div.achievement div.bar div.dokumentasi div.piagam {
+  text-align: center;
 }
-section.content div.right div.shelf div.absensi div.top div.left {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+
+section.dokumentasi {
+  width: 100%;
   height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-section.content div.right div.shelf div.absensi div.top div.left div.quantity {
-  height: 50px;
+section.dokumentasi.show {
   display: flex;
-  flex-direction: column;
-  align-content: flex-end;
-  color: var(--content--right--absensi--color);
-  transform: translateY(-7px);
 }
-section.content div.right div.shelf div.absensi div.top div.left div.quantity h3 {
-  font-size: 16px;
+
+section.dokumentasi div.close {
+  position: absolute;
+  font-size: 25pt;
+  right: 20px;
+  top: 10px;
+  color: white;
+  transition: 0.2s ease;
 }
-section.content div.right div.shelf div.absensi div.top div.left div.quantity h2 {
-  font-size: 30px;
-  color: #fff;
+
+section.dokumentasi div.close:hover {
+  opacity: 0.7;
 }
-section.content div.right div.shelf div.absensi div.top div.scroll {
-  height: 48px;
-  width: 48px;
-  background-image: url(assets/chevron-right-2.svg);
-}
-section.content div.right div.shelf div.absensi div.top div.scroll:hover {
-  opacity: 0.5;
-}
-section.content div.right div.shelf div.absensi div.bottom {
-  height: 50%;
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 12px;
-  background-color: var(--content--right--absensi--bottom--background);
+
+section.dokumentasi div.container {
   display: flex;
   flex-direction: row;
-  color: var(--content--right--absensi--color);
+  align-items: center;
+  justify-content: center;
 }
-section.content div.right div.shelf div.absensi div.bottom div.drawer1 {
-  width: 33.5%;
-  border-right: 1px solid var(--content--right--absensi--top--background);
+
+section.dokumentasi div.container div.right {
+  width: 450px;
+  height: 550px;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 12px;
-  padding-bottom: 20px;
+  gap: 5px;
+  font-size: 13px;
+  border-left: 1px solid #d9dfe5;
 }
 
-section.content div.right div.shelf div.absensi div.bottom div.drawer1 h3,
-section.content div.right div.shelf div.absensi div.bottom div.drawer2 h3,
-section.content div.right div.shelf div.absensi div.bottom div.drawer3 h3 {
-  font-size: 35px;
-  font-weight: 400;
-}
-
-section.content div.right div.shelf div.absensi div.bottom div.drawer1 a {
-  color: var(--content--right--absensi--color);
-  text-decoration: none;
-}
-section.content div.right div.shelf div.absensi div.bottom div.drawer1 a:hover {
-  opacity: 0.8;
-}
-section.content div.right div.shelf div.absensi div.bottom div.drawer2 {
-  width: 33%;
-  border-right: 1px solid var(--content--right--absensi--top--background);
+section.dokumentasi div.container div.right div.top {
+  background-color: #c8d8f8;
+  height: 25%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-  font-size: 12px;
-  padding-bottom: 20px;
-}
-section.content div.right div.shelf div.absensi div.bottom div.drawer2 a {
-  color: var(--content--right--absensi--color);
-  text-decoration: none;
-}
-section.content div.right div.shelf div.absensi div.bottom div.drawer2 a:hover {
-  opacity: 0.8;
-}
-section.content div.right div.shelf div.absensi div.bottom div.drawer3 {
-  width: 33.5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 12px;
-  padding-bottom: 20px;
-}
-section.content div.right div.shelf div.absensi div.bottom div.drawer3 a {
-  color: var(--content--right--absensi--color);
-  text-decoration: none;
-}
-section.content div.right div.shelf div.absensi div.bottom div.drawer3 a:hover {
-  opacity: 0.8;
-}
-section.content div.right div.shelf div.box:nth-child(2) {
-  background-color: var(--content--right--achievement--background);
-  padding-left: 32px;
-  padding-right: 32px;
-  color: var(--content--right--achievement--color);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  font-family: "Unica One", sans-serif;
 }
 
-section.content div.right div.shelf div.box:nth-child(3) {
-  /* background-color: #007780; */
-  background-color: var(--content--right--serti--background);
-}
-section.content div.right div.shelf div.box:nth-child(4) {
-  /* background-color: #12a889; */
-  background-color: var(--content--right--grade--background);
+section.dokumentasi div.container div.right div.top h1 {
+  font-weight: 500;
+  font-size: 40pt;
 }
 
-section.content div.right div.shelf div.box {
-  height: 140px;
+section.dokumentasi div.container div.right div.data {
+  height: calc(100% - 25%);
   width: 100%;
-  border-radius: 12px;
-  margin-top: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
+
+section.dokumentasi div.container div.right div.wrapper span {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 13pt;
+  gap: 7px;
+}
+
+section.dokumentasi div.container div.right div.wrapper.description div.textbox {
+  width: 100%;
+  background-color: #f6f8fa;
+  border-radius: 5px;
+  border: 1px solid #d9dfe5;
+  padding: 5px 12px;
+  height: 110px;
+  margin-top: 10px;
+  font-size: 11pt;
+}
+
+section.dokumentasi div.container div.left {
+  height: 550px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+section.dokumentasi div.container div.left div.nxtarw {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  right: 0px;
+  background-image: url(assets/chevron-right-2.svg);
+  background-size: 100% 100%;
+}
+
+section.dokumentasi div.container div.left div.prevarw {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  left: 0px;
+  background-image: url(assets/chevron-right-2.svg);
+  background-size: 100% 100%;
+  rotate: 180deg;
+}
+
+section.dokumentasi div.container div.left img {
+  max-height: 100%;
+  min-height: 100%;
+}
+
 footer {
   background-color: var(--footer--background);
   margin-top: auto;

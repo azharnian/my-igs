@@ -1,0 +1,670 @@
+@media screen and (min-width: 2300px) {
+  header div.header--container div.header--account div.header--prof {
+    transform: translateX(0px);
+  }
+  header div.header--container div.header--account {
+    transform: translateX(0px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header div.header--container ul.header--bar {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    transform: translateX(40px);
+  }
+
+  header div.header--container div.header--account div.header--prof div.box div.Secondname {
+    display: none;
+  }
+  header div.header--container div.header--account div.profnav {
+    position: absolute;
+    width: 250px;
+    height: fit-content;
+    background-color: white;
+    top: 65px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.3s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header div.header--container {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+  header div.header--container div.header--account div.header--prof {
+    transform: translateX(0px);
+  }
+  footer div.container {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+  footer div.container div.top {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+  }
+  body.is-active {
+    overflow-y: hidden;
+  }
+  header {
+    width: 100%;
+    height: 90px;
+    font-weight: 400;
+    /* z-index: 100; */
+    /* background-color: lightsalmon; */
+  }
+  header div.header--container {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header div.header--container div.header--logo {
+    height: 65px;
+    width: 65px;
+    display: block;
+  }
+  header div.header--container ul.header--bar a {
+    display: none;
+  }
+  header div.header--container div.header--account {
+    display: none;
+  }
+  header div.header--container button.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  header div.header--container button.hamburger div.bar,
+  button.hamburger:after,
+  button.hamburger:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--hamburgermenu--background);
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+  nav.mobile-nav.is-active {
+    display: flex;
+    flex-direction: column;
+  }
+  nav.mobile-nav {
+    display: none;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 110;
+    background-color: var(--mobile-nav--background);
+    transition: 0.4s;
+  }
+  nav.mobile-nav div.top {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav.mobile-nav div.top div.profile {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  nav.mobile-nav div.top div.profile div.imageProf {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-image: var(--mobile-nav--imageProf);
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+  }
+
+  nav.mobile-nav div.top div.profile div.box {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    gap: 5px;
+    color: var(--mobile-nav--profile--box--color);
+  }
+
+  nav.mobile-nav div.x {
+    /* background-color: lightcoral; */
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  nav.mobile-nav div.x div.cross {
+    height: 5px;
+    border-radius: 5px;
+    width: 35px;
+    background-color: var(--mobile-nav--cross--background);
+  }
+  nav.mobile-nav div.x div.cross:nth-child(1) {
+    border-radius: 5px;
+    transform: rotate(45deg) translate(8px, -2px);
+    transform-origin: 0 0;
+  }
+  nav.mobile-nav div.x div.cross:nth-child(2) {
+    transform-origin: 0 100%;
+    transform: rotate(-45deg) translate(6px, 3px);
+  }
+
+  nav.mobile-nav.is-active div.content {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper {
+    height: 50px;
+    /* background-color: lightseagreen; */
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper a {
+    /* background-color: lightblue; */
+    text-decoration: none;
+    color: var(--mobile-nav--wrapper--a--color);
+    display: flex;
+    align-items: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper a i {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    /* text-align: center; */
+    color: var(--header--profnav--boxicon--color);
+    line-height: 2.3rem;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper:hover {
+    background-color: var(--mobile-nav--wrapper--hover);
+    padding-left: 1.5rem;
+    transition: background-color 0.2s, padding-left 0.2s;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper:nth-child(7) div.right {
+    display: flex;
+    align-items: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper:nth-child(7) a {
+    /* background-color: lightpink; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper#languageMobileNavBtn.show {
+    background-color: var(--mobile-nav--wrapper--hover);
+  }
+  nav.mobile-nav.is-active div.content div.wrapper a i#arrow2 {
+    transition: 0.25s ease;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper a i#arrow2.show {
+    transform: rotate(90deg);
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav {
+    max-height: 0px;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show {
+    max-height: 400px;
+    display: block;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav div.wrapper#languageMobileWrap {
+    opacity: 0;
+    background-color: var(--header--profnav--languagenav-wrapper);
+    transition: 0.2s ease;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav span {
+    opacity: 0;
+    background: var(--header--profnav--languagenav-span);
+    width: 100%;
+    height: 1px;
+    transition: 0.2s ease;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap,
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show span {
+    opacity: 1;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav div.wrapper label i {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--header--profnav--boxicon--color);
+    line-height: 2.3rem;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap:hover {
+    background-color: var(--header--profnav--languagenav-hover);
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap label {
+    margin-left: 0rem;
+    display: flex;
+    align-items: center;
+    color: var(--header--text);
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap input {
+    padding-left: 3rem;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 20px;
+    outline: none;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap input[type="checkbox"]::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f00c";
+    font-size: 20px;
+    color: var(--header--text);
+    display: none;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap input[type="checkbox"]:checked::after {
+    display: block;
+  }
+  nav.mobile-nav.is-active div.content div.languageMobileNav.show div.wrapper#languageMobileWrap input#English {
+    padding-left: 5rem;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode {
+    height: 90%;
+    background-color: var(--mobile-nav--DarkmodeWrapper);
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode p {
+    /* background-color: lightblue; */
+    text-decoration: none;
+    color: var(--mobile-nav--wrapper--a--color);
+    display: flex;
+    align-items: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode i {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    /* text-align: center; */
+    color: var(--mobile-nav--boxicon--color);
+    line-height: 2.3rem;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode div.darkmodeWrapper {
+    margin-left: 1rem;
+    width: 50px;
+    height: 36.8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode:hover {
+    padding-left: 10px;
+    background-color: none;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode div.darkmodeWrapper div.switch {
+    width: 44px;
+    height: 22px;
+    background-color: var(--mobile-nav--Darkmodeswitch);
+    position: relative;
+    border-radius: 25px;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.darkmode div.darkmodeWrapper div.switch::before {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    left: 5px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: var(--mobile-nav--Darkmodebtn);
+    transition: all 0.15s ease-in-out;
+  }
+  nav.mobile-nav.is-active div.content div.wrapper.logout:hover {
+    padding-left: 1.5rem;
+    transition: 0.2s;
+    z-index: 100;
+  }
+  body.dark nav.mobile-nav.is-active div.content div.wrapper.darkmode div.darkmodeWrapper div.switch::before {
+    left: 24px;
+  }
+  section.content {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  footer {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    bottom: 0px;
+  }
+  footer div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+
+  footer div.container div.top {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+  }
+  footer div.container div.top a {
+    font-weight: 550;
+  }
+  footer div.container div.bottom {
+    display: flex;
+  }
+  footer div.container div.bottom div.left {
+    font-size: 10px;
+    opacity: 0.9;
+  }
+  footer div.container span {
+    width: inherit;
+    height: 0.1px;
+  }
+  footer div.container div.top a:nth-child(4) {
+    display: block;
+  }
+  footer div.container div.top a:nth-child(5) {
+    display: block;
+  }
+  footer div.container div.bottom div.right {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  section.content div.achievement-name {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* section.content div.account div.profile {
+    height: 80px;
+    width: 80px;
+  } */
+  section.content div.account div.name {
+    font-size: 20px;
+  }
+  section.content div.achievement-name {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  section.content div.achievement div.bar div.keterangan {
+    font-size: 90%;
+  }
+  section.content div.achievement div.bar div.dokumentasi a {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  section.content div.achievement div.bar div.keterangan {
+    font-size: 85%;
+  }
+  section.content div.achievement div.bar div.dokumentasi a {
+    font-size: 85%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section.content div.account div.profile {
+    height: 80px;
+    width: 80px;
+    margin-right: 15px;
+  }
+  section.content div.account div.name {
+    font-size: 20px;
+  }
+  section.content div.achievement-name {
+    font-size: 14px;
+  }
+  section.content div.achievement-name i {
+    opacity: 0;
+  }
+  section.content div.achievement div.bar {
+    height: 88px;
+  }
+  section.content div.achievement div.bar div.keterangan {
+    font-size: 80%;
+  }
+  section.content div.achievement div.bar div.dokumentasi a {
+    font-size: 80%;
+  }
+  #twelve-star,
+  #twelve-star:before,
+  #twelve-star::after {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  section.content div.achievement div.bar {
+    height: 80px;
+  }
+  section.content div.achievement div.bar div.keterangan {
+    font-size: 75%;
+  }
+  section.content div.achievement div.bar div.dokumentasi a {
+    font-size: 75%;
+  }
+  #twelve-star,
+  #twelve-star:before,
+  #twelve-star::after {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  section.content div.achievement div.bar {
+    height: 70px;
+  }
+  section.content div.achievement div.bar div.keterangan {
+    font-size: 70%;
+  }
+  section.content div.achievement div.bar div.dokumentasi a {
+    font-size: 70%;
+  }
+  #twelve-star,
+  #twelve-star:before,
+  #twelve-star::after {
+    height: 75px;
+    width: 75px;
+  }
+  section.content div.achievement div.bar div.award i {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section.content div.achievement div.bar {
+    height: 68px;
+  }
+  section.content div.achievement div.bar div.keterangan {
+    font-size: 65%;
+    margin-left: 15px;
+  }
+  section.content div.achievement div.bar div.dokumentasi a {
+    font-size: 65%;
+  }
+  #twelve-star,
+  #twelve-star:before,
+  #twelve-star::after {
+    height: 72px;
+    width: 72px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  section.content div.achievement div.bar {
+    height: 65px;
+  }
+  section.content div.achievement div.bar div.keterangan {
+    font-size: 7px;
+    margin-left: 15px;
+  }
+  section.content div.achievement div.bar div.keterangan h1 {
+    font-size: 10px;
+  }
+  section.content div.achievement div.bar div.dokumentasi a {
+    font-size: 7px;
+  }
+  #twelve-star,
+  #twelve-star:before,
+  #twelve-star::after {
+    height: 65px;
+    width: 65px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  section.content div.achievement div.bar div.dokumentasi a {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  section.content div.account div.profile {
+    height: 50px;
+    width: 50px;
+  }
+  section.content div.account div.name {
+    font-size: 16px;
+  }
+  section.content div.achievement-name {
+    --s: 25px; /* the ribbon size */
+  }
+  section.content div.achievement-name {
+    font-size: 12px;
+  }
+  section.content div.achievement div.bar {
+    height: fit-content;
+  }
+  section.content div.achievement div.bar div.keterangan {
+    font-size: 6px;
+  }
+  #twelve-star,
+  #twelve-star:before,
+  #twelve-star::after {
+    height: 60px;
+    width: 60px;
+  }
+  footer div.container div.top a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  section.content div.achievement div.bar {
+    height: 50px;
+  }
+  section.content div.achievement div.bar div.keterangan {
+    font-size: 5px;
+  }
+  section.content div.achievement div.bar div.dokumentasi a {
+    font-size: 5px;
+  }
+  section.content div.achievement div.bar div.award i {
+    font-size: 30px;
+  }
+  section.content div.achievement div.bar div.award h1 {
+    font-size: 12px;
+  }
+  #twelve-star,
+  #twelve-star:before,
+  #twelve-star::after {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  section.content div.achievement div.bar {
+    height: 50px;
+  }
+  section.content div.achievement div.bar div.keterangan {
+    margin-left: 10px;
+  }
+  section.content div.achievement div.bar div.keterangan h1 {
+    font-size: 7.5px;
+  }
+  section.content div.achievement div.bar div.keterangan p {
+    font-size: 5px;
+  }
+  section.content div.achievement div.bar div.dokumentasi a {
+    font-size: 5px;
+  }
+  section.content div.achievement div.bar div.award i {
+    font-size: 30px;
+  }
+  section.content div.achievement div.bar div.award h1 {
+    font-size: 12px;
+  }
+  #twelve-star,
+  #twelve-star:before,
+  #twelve-star::after {
+    height: 48px;
+    width: 48px;
+  }
+}

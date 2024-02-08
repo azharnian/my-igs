@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Achievement</title>
+    <link rel="stylesheet" href="achievement.css" />
+    <link rel="stylesheet" href="achievement-responsive.css" />
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="dashboard.css" />
-    <link rel="stylesheet" href="dashboard-responsive.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   </head>
@@ -127,17 +127,17 @@
             </div>
             <div class="serviceNav" id="serviceNavWrapper">
               <div class="wrapper" id="serviceNav">
-                <a href="#">
+                <label>
                   <i class="blank"></i>
                   Add Achievement
-                </a>
+                </label>
               </div>
               <span></span>
               <div class="wrapper" id="serviceNav">
-                <a href="#">
+                <label>
                   <i class="blank"></i>
                   Add Sertificate
-                </a>
+                </label>
               </div>
             </div>
             <!-- <div class="wrapper">
@@ -294,52 +294,177 @@
       </div>
     </nav>
     <section class="content">
-      <div class="left">
-        <h1><span style="font-weight: 300">Halo, </span><span style="font-weight: 600">User</span></h1>
-        <h2>Apa yang ingin kamu lakukan hari ini?</h2>
-        <div class="box">
-          <div class="bar 1"><a href="#">Lihat Absen Kehadiran</a></div>
-          <div class="bar 2"><a href="#">Lihat Pencapaian</a></div>
-          <div class="bar 3"><a href="#">Buka Sertifikat</a></div>
-          <div class="bar 4"><a href="#">Lihat Nilai</a></div>
-        </div>
+      <div class="achievement-name">
+        <i class="fa-solid fa-trophy"></i>
+        <h1>Pencapaian Kamu</h1>
+        <i class="fa-solid fa-trophy"></i>
       </div>
-      <div class="right">
-        <div class="info">
-          <h3>Berikut ini ringkasan akun kamu:</h3>
-        </div>
-
-        <div class="shelf">
-          <div class="absensi">
-            <div class="top">
-              <div class="left">
-                <div class="quantity">
-                  <h3>Persentase Kehadiran</h3>
-                  <h2>100%</h2>
-                </div>
-              </div>
-              <div class="scroll"></div>
+      <div class="achievement">
+        <div class="bar">
+          <div id="twelve-star" class="award">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="keterangan">
+            <h1>Olimpiade Sains Nasional</h1>
+            <p>Bidang Biologi, Puspresnas</p>
+            <p><span style="font-weight: bold">Rank</span> : Juara 1/Medalis Emas</p>
+            <p><span style="font-weight: bold">Deskripsi</span> : Didampingi oleh Sir Nando</p>
+            <p><i class="fa-solid fa-location-dot"></i> Palembang, 3-10 Februari 2022</p>
+          </div>
+          <div class="dokumentasi">
+            <div class="piagam">
+              <a href="#" id="openpigbtn1">Lihat Piagam</a>
             </div>
-            <div class="bottom">
-              <div class="drawer1">
-                <h3 id="absen">00</h3>
-                <a href="#">Absen</a>
-              </div>
-              <div class="drawer2">
-                <h3 id="hadir">00</h3>
-                <a href="#">Hadir</a>
-              </div>
-              <div class="drawer3">
-                <h3 id="izin">00</h3>
-                <a href="#">Izin</a>
-              </div>
+            <div class="line"></div>
+            <div class="foto">
+              <a href="#" id="opendokbtn1">Buka Foto Dokumentasi</a>
             </div>
           </div>
-          <div class="box 1"></div>
-          <div class="box 2"></div>
-          <div class="box 3"></div>
-          <!-- <div class="box 4"></div> -->
-          <!-- <div class="box 5"></div> -->
+        </div>
+        <div class="bar">
+          <div id="twelve-star" class="award">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="keterangan">
+            <h1>Olimpiade Sains Nasional</h1>
+            <p>Bidang Biologi, Puspresnas</p>
+            <p><span style="font-weight: bold">Rank</span> : Juara 2/Medalis Perak</p>
+            <p><span style="font-weight: bold">Deskripsi</span> : Didampingi oleh Sir Nando</p>
+            <p><i class="fa-solid fa-location-dot"></i> Palembang, 3-10 Februari 2022</p>
+          </div>
+          <div class="dokumentasi">
+            <div class="piagam">
+              <a href="#">Lihat Piagam</a>
+            </div>
+            <div class="line"></div>
+            <div class="foto">
+              <a href="#">Buka Foto Dokumentasi</a>
+            </div>
+          </div>
+        </div>
+        <div class="bar">
+          <div id="twelve-star" class="award">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="keterangan">
+            <h1>Olimpiade Sains Nasional</h1>
+            <p>Bidang Biologi, Puspresnas</p>
+            <p><span style="font-weight: bold">Rank</span> : Juara 3/Medalis Perunggu</p>
+            <p><span style="font-weight: bold">Deskripsi</span> : Didampingi oleh Sir Nando</p>
+            <p><i class="fa-solid fa-location-dot"></i> Palembang, 3-10 Februari 2022</p>
+          </div>
+          <div class="dokumentasi">
+            <div class="piagam">
+              <a href="#">Lihat Piagam</a>
+            </div>
+            <div class="line"></div>
+            <div class="foto">
+              <a href="#">Buka Foto Dokumentasi</a>
+            </div>
+          </div>
+        </div>
+        <div class="bar">
+          <div id="twelve-star" class="award">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="keterangan">
+            <h1>Olimpiade Sains Nasional</h1>
+            <p>Bidang Biologi, Puspresnas</p>
+            <p><span style="font-weight: bold">Rank</span> : Juara Favorit</p>
+            <p><span style="font-weight: bold">Deskripsi</span> : Didampingi oleh Sir Nando</p>
+            <p><i class="fa-solid fa-location-dot"></i> Palembang, 3-10 Februari 2022</p>
+          </div>
+          <div class="dokumentasi">
+            <div class="piagam">
+              <a href="#">Lihat Piagam</a>
+            </div>
+            <div class="line"></div>
+            <div class="foto">
+              <a href="#">Buka Foto Dokumentasi</a>
+            </div>
+          </div>
+        </div>
+        <div class="bar">
+          <div id="twelve-star" class="award"><h1>TOP 10</h1></div>
+          <div class="keterangan">
+            <h1>Olimpiade Sains Nasional</h1>
+            <p>Bidang Biologi, Puspresnas</p>
+            <p><span style="font-weight: bold">Rank</span> : TOP 10</p>
+            <p><span style="font-weight: bold">Deskripsi</span> : Didampingi oleh Sir Nando</p>
+            <p><i class="fa-solid fa-location-dot"></i> Palembang, 3-10 Februari 2022</p>
+          </div>
+          <div class="dokumentasi">
+            <div class="piagam">
+              <a href="#">Lihat Piagam</a>
+            </div>
+            <div class="line"></div>
+            <div class="foto">
+              <a href="#">Buka Foto Dokumentasi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="dokumentasi" id="dokumentasi1">
+      <div class="close" id="closebtn1">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="container">
+        <div class="left">
+          <img src="assets/test2.jpeg" alt="" />
+          <!-- <div class="nxtarw">
+            <i class="fa-solid fa-"></i>
+          </div>
+          <div class="prevarw">
+            <i></i>
+          </div> -->
+        </div>
+        <div class="right">
+          <div class="top">
+            <h1 class="Name">ONMIPA 2022</h1>
+          </div>
+          <div class="data">
+            <div class="wrapper category">
+              <span
+                >Kategori :
+                <p>Biologi</p></span
+              >
+            </div>
+            <div class="wrapper penyelenggara">
+              <span
+                >Penyelenggara :
+                <p>Puspernas</p></span
+              >
+            </div>
+            <div class="wrapper rank">
+              <span
+                >Rank :
+                <p>Medali Perunggu/Juara 3</p></span
+              >
+            </div>
+            <div class="wrapper Date">
+              <span
+                >Tanggal Kompetisi :
+                <p>30 - 31 Februari 2024</p></span
+              >
+            </div>
+            <div class="wrapper DoDate">
+              <span
+                >Tanggal Pelaksaan :
+                <p>30 Februari 2024</p></span
+              >
+            </div>
+            <div class="wrapper location">
+              <span
+                >Lokasi Kompetisi :
+                <p>Universitas IGS</p></span
+              >
+            </div>
+            <div class="wrapper description">
+              <span>Deskripsi : </span>
+              <div class="textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quasi id porro nobis natus pariatur. Odio in illo atque iste cupiditate quod obcaecati dolor omnis. Nobis debitis facere quod suscipit.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -365,5 +490,5 @@
       </div>
     </footer>
   </body>
-  <script src="dashboard.js"></script>
+  <script src="achievement.js"></script>
 </html>
