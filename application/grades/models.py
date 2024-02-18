@@ -27,4 +27,3 @@ class Grade(db.Model, BaseModel):
 
     def __repr__(self):
         return f''
-    

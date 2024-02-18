@@ -86,7 +86,6 @@ class AttendanceType(db.Model, BaseModel):
     def __repr__(self):
         return f'{self.id} - {self.name}'
 
-
 class Attendance(db.Model, BaseModel):
 
     __tablename__ = 'attendances'
