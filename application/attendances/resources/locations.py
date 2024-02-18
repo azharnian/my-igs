@@ -46,11 +46,11 @@ def get_location_by_id(location_id):
 def update_location(location_id, new_location_data):
     try:
         location = Location.query.get(int(location_id))
-        location['created_by'] = new_location_data['created_by'],
-        location['code'] = new_location_data['code'],
-        location['name'] = new_location_data['name'],
-        location['longitude'] = new_location_data['longitude'],
-        location['latitude'] = new_location_data['latitude'],
+        location['created_by'] = new_location_data['created_by']
+        location['code'] = new_location_data['code']
+        location['name'] = new_location_data['name']
+        location['longitude'] = new_location_data['longitude']
+        location['latitude'] = new_location_data['latitude']
         location['note'] = new_location_data['note']
     except Exception as e:
         logging.error(f"{str(e)}")
@@ -67,7 +67,6 @@ def remove_location(location_id):
         raise e
     location.remove()
     return {'success' : True}
-
 
 @log_activity
 def disable_location(location_id):
