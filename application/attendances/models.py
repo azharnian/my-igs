@@ -10,7 +10,7 @@ class Location(db.Model, BaseModel):
 
     __tablename__ = 'locations'
     id = db.Column(db.Integer, primary_key=True)
-    active = db.Column(db.Boolean, nullable=False, default=True)
+    is_active = db.Column(db.Boolean, nullable=False, default=True)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
     created_by = db.Column(db.Integer, db.ForeignKey('users.id'), default=1)
     code = db.Column(db.String(256), unique=True, nullable=False)
@@ -86,12 +86,11 @@ class AttendanceType(db.Model, BaseModel):
     def __repr__(self):
         return f'{self.id} - {self.name}'
 
-
 class Attendance(db.Model, BaseModel):
 
     __tablename__ = 'attendances'
     id = db.Column(db.Integer, primary_key=True)
-    active = db.Column(db.Boolean, nullable=False, default=True)
+    is_active = db.Column(db.Boolean, nullable=False, default=True)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
     created_by = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False, default=1)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)

@@ -4,7 +4,7 @@ from werkzeug.security import generate_password_hash
 
 from application import db
 from application.project.utils import log_activity
-from application.users.models import *
+from application.users.models import User
 
 @log_activity
 def create_user(user_data):
