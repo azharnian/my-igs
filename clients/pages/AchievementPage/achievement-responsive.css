@@ -34,6 +34,17 @@
     transition: max-height 0.3s ease-in-out;
   }
 }
+@media screen and (max-width: 1024px) {
+  section.dokumentasi div.container div.card div.left {
+    height: 430px;
+  }
+  section.dokumentasi div.container div.card div.right {
+    height: 430px;
+  }
+  section.dokumentasi div.container div.card div.right div.wrapper span {
+    font-size: 10pt;
+  }
+}
 
 @media screen and (max-width: 1000px) {
   header div.header--container {
@@ -43,6 +54,7 @@
   header div.header--container div.header--account div.header--prof {
     transform: translateX(0px);
   }
+
   footer div.container {
     margin-left: 45px;
     margin-right: 45px;
@@ -377,6 +389,26 @@
     margin-left: 30px;
     margin-right: 30px;
   }
+  section.dokumentasi div.container div.card div.left {
+    height: 380px;
+    width: 380px;
+  }
+  section.dokumentasi div.container div.card div.right {
+    height: 380px;
+    width: 400px;
+  }
+  section.dokumentasi div.container div.card div.right div.data {
+    gap: 5px;
+    padding-top: 5px;
+  }
+  section.dokumentasi div.container div.card div.right div.wrapper span {
+    font-size: 10pt;
+  }
+  section.dokumentasi div.container div.card div.right div.wrapper.description div.textbox {
+    font-size: 9pt;
+    margin-top: 5px;
+    height: 90px;
+  }
   footer {
     width: 100%;
     height: fit-content;
@@ -429,6 +461,32 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  section.dokumentasi div.container div.card div.left {
+    height: 300px;
+    width: 300px;
+  }
+  section.dokumentasi div.container div.card div.right {
+    height: 300px;
+    width: 300px;
+  }
+  section.dokumentasi div.container div.card div.right div.top h1 {
+    font-size: 30pt;
+  }
+  section.dokumentasi div.container div.card div.right div.data {
+    gap: 2px;
+    padding-top: 5px;
+  }
+  section.dokumentasi div.container div.card div.right div.wrapper span {
+    font-size: 8pt;
+  }
+  section.dokumentasi div.container div.card div.right div.wrapper.description div.textbox {
+    font-size: 7pt;
+    margin-top: 5px;
+    height: 80px;
+  }
+}
+
 @media screen and (max-width: 650px) {
   section.content div.achievement-name {
     font-size: 18px;
@@ -436,6 +494,30 @@
 }
 
 @media screen and (max-width: 600px) {
+  section.dokumentasi div.container {
+    perspective: 500px;
+  }
+  section.dokumentasi div.container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  section.dokumentasi div.container div.card {
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+
+  section.dokumentasi div.container div.card div.left,
+  section.dokumentasi div.container div.card div.right {
+    position: absolute;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    backface-visibility: hidden;
+  }
+  section.dokumentasi div.container div.card div.right {
+    /* background-color: lightcoral; */
+    transform: rotateY(180deg);
+  }
+
   /* section.content div.account div.profile {
     height: 80px;
     width: 80px;
@@ -554,6 +636,9 @@
     height: 72px;
     width: 72px;
   }
+  section.content div.achievement div.bar div.award h1 {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 390px) {
@@ -640,6 +725,26 @@
 }
 
 @media screen and (max-width: 310px) {
+  section.dokumentasi div.container div.card div.left {
+    height: 250px;
+    width: 250px;
+  }
+  section.dokumentasi div.container div.card div.right {
+    height: 250px;
+    width: 250px;
+  }
+  section.dokumentasi div.container div.card div.right div.data {
+    gap: 5px;
+    padding-top: 5px;
+  }
+  section.dokumentasi div.container div.card div.right div.wrapper span {
+    font-size: 6pt;
+  }
+  section.dokumentasi div.container div.card div.right div.wrapper.description div.textbox {
+    font-size: 5pt;
+    margin-top: 2px;
+    height: 55px;
+  }
   section.content div.achievement div.bar {
     height: 50px;
   }
